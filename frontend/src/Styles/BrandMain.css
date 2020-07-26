@@ -1,0 +1,110 @@
+
+
+
+
+.p3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/Images/Brand/p3_cook.png") no-repeat; 
+    background-size: contain;
+
+    background-position: left top;
+
+    height: 100vh;
+}
+
+.p3 > .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 50%;
+    color: #242424;
+}
+.p3 > .text_wrapper > .main_text_div > p {
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.75rem;
+    line-height: 80px;
+
+    /* or 133% */
+}
+
+.p3 > .text_wrapper > .sub_text_div {
+   margin-top: 1.1rem;
+
+}
+.p3 > .text_wrapper > .sub_text_div > p {
+    vertical-align:middle;
+
+    font-style: normal;
+    /*font-weight: bold;*/
+    /*font-size: 2.5rem;*/
+    font-size: 1.875rem;
+    
+/* or 320% */
+}
+.p3 > .text_wrapper > .sub_text_div > img {
+    vertical-align:middle;
+    margin-bottom: 21px;
+}
+
+.p4 {
+    background-color: #242424;
+    height: 600vh;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 6.5rem;
+}
+
+.p4 > .text_wrapper {
+    margin-bottom: 50px;
+    color: white;
+}
+
+.p4 > .text_wrapper > .main_text_div > p {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.125rem;
+    line-height: 80px;
+}
+
+
+
+.p5 {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.p5 > .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    color: #242424;
+
+}
+.p5 > .text_wrapper > .main_text_div > p {
+    line-height: 7.5rem;
+
+ 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.375rem;
+
+}
+
+.p5 > .text_wrapper > .main_text_div > img {
+    margin-left: 14em;
+}
+
+.bold {
+    font-weight: bold;
+}
+

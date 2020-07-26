@@ -1,0 +1,19 @@
+
+
+
+
+.bps2 > .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 7%;
+    color: #242424;
+}
+
+.bps2 > .text_wrapper > .main_text_div {
+
+    margin-bottom: 2em;
+}
+.bps2 > .text_wrapper > .main_text_div > p:first-child {
+    line-height: 3rem;
+}
