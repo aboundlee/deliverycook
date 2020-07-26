@@ -11,7 +11,7 @@ const Page = styled.section`
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
+    height: 100%;
 /*    color: #242424; */
     color: #fff;  
     background-color: #242424; 

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import "../../../Styles/BusinessSucess.css";
-import "../../../Styles/animation.scss";
-// import AOS from 'aos';
+//import "../../../Styles/BusinessSucess.css";
+import "../../Styles/animation.module.scss";
 
 import Section1 from './Section1.js'
 import Section2 from './Section2.js'
@@ -13,7 +12,6 @@ import Section6 from './Section6.js'
 
 
 
-import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import path from 'path';
@@ -21,7 +19,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
   
-const FullpageWrapper = () => {
+const Success= () => {
      
       return (
       <ReactFullpage
@@ -45,4 +43,5 @@ const FullpageWrapper = () => {
   };
   
   
-  export default FullpageWrapper;
+export default Success;
+

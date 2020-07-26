@@ -53,7 +53,7 @@ export default createGlobalStyle`
         body {background:#fff}
         body,th,td,input,select,textarea,button {font-size:14px;line-height:1.5;} /* color값은 디자인가이드에 맞게사용 */
         
-        a {color:#333;text-decoration:none}
+        a {color: unset;text-decoration:none}
         a:active, a:hover {text-decoration:none}
         address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 
@@ -109,10 +109,7 @@ html {
         font-size:14px;
         font-family: 'Noto Sans Korean', sans-serif  !important;
     }
-    a {
-        color:${props => props.theme.blueColor};
-        text-decoration:none;
-    }
+
     p {
         font-family: 'Noto Sans Korean', sans-serif  !important;
     }

@@ -11,7 +11,6 @@ import { Page, Bold } from './Styles';
 
 const Page4 = styled(Page)`
     position:relative;
-    height: 100%;
 
     /*max-height: 1000px;*/
 
@@ -19,6 +18,7 @@ const Page4 = styled(Page)`
     background-position: center;
     background-size: cover;
 
+    height: 100%;
     color: white;
 
 `;

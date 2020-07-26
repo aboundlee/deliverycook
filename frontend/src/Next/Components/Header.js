@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import Link from 'next/link'
 import styled, {css} from "styled-components";
-
-import { Link, withRouter, useLocation } from "react-router-dom";
-
-import { connect } from 'react-redux';
-import { actionCreators } from './Store';
+import { withRouter } from 'next/router'
 
 
-import '../Styles/Header.css';
+import '../Styles/Header.module.css';
+
 
 const NavBar = styled.div`
     z-index: 30;
@@ -128,7 +125,7 @@ const MenuItem = styled.li`
 
 `;
 
-const HeaderLink = styled(Link)`
+const HeaderLink = styled.a`
     text-decoration: none;
     color: #fff;
     line-height: 65px;
@@ -136,6 +133,7 @@ const HeaderLink = styled(Link)`
 
     &:hover {
         color: #E50012;
+        cursor: pointer;
     }
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
@@ -231,7 +229,7 @@ const MobileMenuItem = styled.i`
 
 `;
 
-const MobileHeaderLink = styled(Link)`
+const MobileHeaderLink = styled.a`
 
     display: none;
 
@@ -262,7 +260,8 @@ const ToBusiness = styled.img`
 `;
 
 
-const Header = withRouter(({changePageTo}) => {
+
+const Header = ({ router }) => {
     let menus = [];
     let links = [];
     let pageChanger = true;
@@ -272,8 +271,10 @@ const Header = withRouter(({changePageTo}) => {
     let isBrandPage; 
     const brandHeaders = ['/','/about','/store','/news'];
     const businessHeaders = ['/business','/success','/info','/consult'] ;
-    let headerLocation = useLocation().pathname;
+
+    let headerLocation = router.pathname;
  
+
     if (businessHeaders.includes(headerLocation)) {
         isBrandPage = false;
     }
@@ -281,6 +282,7 @@ const Header = withRouter(({changePageTo}) => {
     else if (brandHeaders.includes(headerLocation)){
         isBrandPage = true;
     }
+
 
     if (isBrandPage) {
         menus = ["브랜드소개", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
@@ -291,10 +293,9 @@ const Header = withRouter(({changePageTo}) => {
         links = ["success", "info", "consult", "/"];
         pageChanger = "brandPage";
     }
-    window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
 
     function onClick () {
-        changePageTo(pageChanger);
         setTrigger();
         setShowMenu(false);
     }
@@ -310,24 +311,26 @@ const Header = withRouter(({changePageTo}) => {
   return (
         <NavBar>
         <NavContainer>
-            <Link to="/" onClick={clearMenu}>
+            <Link href="/">
+                <HeaderLink onClick={clearMenu}>
                 <Logo src="/Images/Logo.svg"  alt="Logo"/> 
+                </HeaderLink>
             </Link>
             <MenuBox active={showMenu}>
                     <Menu className="navlinks">
                         <MenuItem>
-                            <HeaderLink to={links[0]} onClick={clearMenu}>{menus[0]}</HeaderLink>
+                            <Link href={links[0]}><HeaderLink onClick={clearMenu}>{menus[0]}</HeaderLink></Link>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={clearMenu}>{menus[1]}</HeaderLink>
+                            <Link href={links[1]}><HeaderLink onClick={clearMenu}>{menus[1]}</HeaderLink></Link>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={clearMenu}>{menus[2]}</HeaderLink>
+                            <Link href={links[2]}><HeaderLink onClick={clearMenu}>{menus[2]}</HeaderLink></Link>
                         </MenuItem>
                         <MenuItem>
                             { showMenu 
-                            ? (<p><HeaderLink to={links[3]} onClick={clearMenu}>{menus[4]}</HeaderLink></p>)
-                            : (<HeaderLink to={links[3]} onClick={onClick}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></HeaderLink>)
+                            ? (<p><Link href={links[3]}><HeaderLink onClick={clearMenu}>{menus[4]}</HeaderLink></Link></p>)
+                            : (<Link href={links[3]}><HeaderLink  onClick={onClick}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></HeaderLink></Link>)
                             }
                         </MenuItem>
                     </Menu>
@@ -338,16 +341,11 @@ const Header = withRouter(({changePageTo}) => {
                 <MobileMenuItem></MobileMenuItem>
             </MobileMenu>
             
-            <MobileHeaderLink onClick={onClick} to={links[3]}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></MobileHeaderLink>
+            <Link href={links[3]}><MobileHeaderLink  onClick={onClick}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></MobileHeaderLink></Link>
         </NavContainer>
     </NavBar>
   );
-});
+};
 
-function mapDispatchToProps(dispatch, ownProps) {
-    return {
-        changePageTo: brandCategory => dispatch(actionCreators.changePageTo(brandCategory))
-    };
-}
 
-export default connect(null,mapDispatchToProps)(Header);
+export default  withRouter(Header);

@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 import Table from "../../Components/Table";
 
 const Wrapper = styled.div`
- height: 100%;
+ height: 100vh;
  width: 100%;
 
 

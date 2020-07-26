@@ -15,7 +15,7 @@ const Page = styled.section`
 
     position: relative;
     color: black;
-    height: 100vh;
+    height: 100%;
 `;
 
 /* section 2 */

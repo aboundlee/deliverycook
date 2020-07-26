@@ -6,6 +6,7 @@ import Fade from 'react-reveal/Fade';
 import { useForm } from 'react-hook-form';
 import TextModal from '../../Components/Modal';
 
+import KakaoMessage from '../KakaoMessage';
 
 const Page = styled.section`
     display: flex;
@@ -280,11 +281,23 @@ export default () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
-    const { register, errors, handleSubmit } = useForm();
-    const onSubmit = data => {
-      alert(JSON.stringify(data));
+
+    const { register, errors, reset, handleSubmit } = useForm();
+    const onSubmit = ({name, phone, address,check},e) => {
+        if (errors.name) {
+            alert ("성함을 입력해주세요.");
+        } else if (errors.phone) {
+            alert ("연락처를 입력해주세요.(예시 : 01099999999)");
+        } else if (errors.address) {
+            alert ("희망지역 입력해주세요.");
+        } else if (errors.check) {
+            alert ("개인정보 수집에 동의해주세요.");
+        } 
+        console.log({name, phone, address,check});
+
+        e.target.reset();
+        KakaoMessage({name, phone, address});
     };
-    console.log(errors);
 
 
     return (

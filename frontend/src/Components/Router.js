@@ -10,7 +10,7 @@ import BrandStore from "../Routes/Brand/BrandStore";
 import BrandNews from "../Routes/Brand/BrandNews";
 
 import BusinessMain from "../Routes/Business/Main/BusinessMain";
-import BusinessSucess from "../Routes/Business/Sucess/BusinessSucess";
+import BusinessSuccess from "../Routes/Business/Success/BusinessSuccess";
 import BusinessInfo from "../Routes/Business/BusinessInfo";
 import BusinessConsult from "../Routes/Business/BusinessConsult";
 
@@ -25,7 +25,7 @@ const BrandRoutes = ({changePageTo}) => {
         <Route exact path="/news" component={BrandNews} />
         
         <Route exact path="/business" component={BusinessMain} />
-        <Route exact path="/success" component={BusinessSucess} />
+        <Route exact path="/success" component={BusinessSuccess} />
         <Route exact path="/info" component={BusinessInfo} />
         <Route exact path="/consult" component={BusinessConsult} />
     </>

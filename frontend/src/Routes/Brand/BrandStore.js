@@ -13,7 +13,7 @@ const Page = styled.section`
 
     color: #FFFFFF;
     background-color: #242424;
-    height: 100%;
+    height: 100vh;
 `;
 
 const Text = styled.p`
