@@ -67,7 +67,7 @@ const App = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>딜리버리쿡</title>
-		<meta property="og:url" content="https://deliverycook.com" />
+		<meta property="og:url" content="https://deliverycook.com/" />
 		<meta property="og:site_name" content="딜리버리쿡" key="ogsitename" />
 
 		<meta property="og:title" content="딜리버리쿡" key="ogtitle" />
