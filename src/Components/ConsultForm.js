@@ -206,7 +206,6 @@ export default () => {
         } else if (errors.check) {
             alert ("개인정보 수집에 동의해주세요.");
         } 
-        console.log({name, phone, address,check});
 
         e.target.reset();
         KakaoMessage({name, phone, address});
