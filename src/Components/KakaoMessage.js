@@ -78,10 +78,9 @@ console.log(key);
         });
 
 
-    //const result1 = await axios.post(url, postData1, postConfig);
+    const result1 = await axios.post(url, postData1, postConfig);
     const result2 = await axios.post(url, postData2, postConfig);
 console.log(result2);
-/*
     if (result1.error) {
         console.log( "error: " + result1.error);
         alert( "error: " + result1.error);
@@ -90,15 +89,12 @@ console.log(result2);
     } else {
         alert ("성공적으로 문의하였습니다.")
     }
-*/
   
     if (result2.error) {
         console.log( "error: " + result2.error);
-        alert( "error: " + result2.error);
         alert ("에러가 발생하였습니다. 다시 시도해주세요.");
 
     } else {
-        console.log( "성공: " + result2);
         alert ("성공적으로 문의하였습니다.")
     }
 };
