@@ -77,9 +77,10 @@ const KakaoMessage = async ({name, phone, address}) => {
         });
 
 
-    const result1 = await axios.post(url, postData1, postConfig);
+    //const result1 = await axios.post(url, postData1, postConfig);
     const result2 = await axios.post(url, postData2, postConfig);
 console.log(result2);
+/*
     if (result1.error) {
         console.log( "error: " + result1.error);
         alert( "error: " + result1.error);
@@ -88,6 +89,7 @@ console.log(result2);
     } else {
         alert ("성공적으로 문의하였습니다.")
     }
+*/
   
     if (result2.error) {
         console.log( "error: " + result2.error);
