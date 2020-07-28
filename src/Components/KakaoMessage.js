@@ -98,6 +98,7 @@ console.log(result2);
         alert ("에러가 발생하였습니다. 다시 시도해주세요.");
 
     } else {
+        console.log( "성공: " + result2);
         alert ("성공적으로 문의하였습니다.")
     }
 };
