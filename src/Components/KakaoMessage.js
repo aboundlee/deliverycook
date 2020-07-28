@@ -19,7 +19,6 @@ const getNow = () => {
 const KakaoMessage = async ({name, phone, address}) => {
 
     const key = process.env.REACT_APP_ORANGE_MSG_KEY;
-console.log(key);
     const url = "https://www.apiorange.com/api/send/notice.do";
     const temp_number = 11754;
     const time = getNow();
