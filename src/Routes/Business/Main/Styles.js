@@ -11,6 +11,6 @@ export const Page = styled.section`
 
 
 export const Bold = styled.span`
-    font-weight: 900;
+    font-weight: bold;
 
 `;

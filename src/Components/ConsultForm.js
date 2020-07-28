@@ -207,8 +207,8 @@ export default () => {
             alert ("개인정보 수집에 동의해주세요.");
         } 
 
-        e.target.reset();
         KakaoMessage({name, phone, address});
+        e.target.reset();
     };
 
      
