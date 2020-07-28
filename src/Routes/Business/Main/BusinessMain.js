@@ -26,7 +26,6 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 const FullpageWrapper = () => {
    
-	console.log( process.env.REACT_APP_FULLPAGE_KEY);
     return (
     <ReactFullpage
         licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}

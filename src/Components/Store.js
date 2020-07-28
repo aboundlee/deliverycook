@@ -25,7 +25,6 @@ const changePageTo = (pageCategory) => {
 
 
 const reducer = (state=[], action) => {
-    console.log(action);
     switch (action.type) {
         case CHANGE_BRAND:
             //return [{isBrandPage: true}, ...state];
