@@ -10,8 +10,8 @@ import Footer from '../../../Components/Footer';
 
 import ReactFullpage from "@fullpage/react-fullpage";
 
-import dotenv from 'dotenv';
-dotenv.config();
+//import dotenv from 'dotenv';
+//dotenv.config();
 
   
 

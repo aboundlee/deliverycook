@@ -14,8 +14,8 @@ import Section6 from './Section6.js'
 import ReactFullpage from "@fullpage/react-fullpage";
 
 
-import dotenv from 'dotenv';
-dotenv.config();
+//import dotenv from 'dotenv';
+//dotenv.config();
 
   
 const FullpageWrapper = () => {

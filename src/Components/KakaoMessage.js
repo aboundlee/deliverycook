@@ -1,7 +1,7 @@
 import axios from 'axios';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 // dotenv.config({ path: path.join(__dirname,'../.env') });
-dotenv.config();
+//dotenv.config();
 
 const getNow = () => {
     const now = new Date();
