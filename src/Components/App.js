@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Helmet} from "react-helmet";
-import HashLoader from "react-spinners/HashLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 
 
 
@@ -59,7 +59,15 @@ const App = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>딜리버리쿡</title>
+		<meta property="og:url" content="https://deliverycook.com" />
+		<meta property="og:site_name" content="딜리버리쿡" key="ogsitename" />
+
+		<meta property="og:title" content="딜리버리쿡" key="ogtitle" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
+		<meta property="og:description" content="딜리버리쿡 입니다."/>
                 <meta name="description" content="딜리버리쿡 입니다." data-react-helmet="true"/>
+		<meta name="keywords" content="web, web development, web design, web plan, community"/> 
             </Helmet>
          
       <Router>
@@ -68,7 +76,7 @@ const App = () => {
 	{ loading 
         ? (
       <LoadingWrapper>
-      <HashLoader
+      <ClipLoader
           size={50}
           color={"#E50012"}
           loading={loading}

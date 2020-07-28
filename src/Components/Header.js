@@ -269,8 +269,10 @@ const Header = withRouter(({changePageTo}) => {
     let [showMenu, setShowMenu] = useState(false);
 
     let isBrandPage; 
-    const brandHeaders = ['/','/about','/store','/news'];
-    const businessHeaders = ['/business','/success','/info','/consult'] ;
+    //const brandHeaders = ['/','/about','/store','/news'];
+    //const businessHeaders = ['/','/business','/success','/info','/consult'] ;
+    const brandHeaders = ['/about','/store','/news'];
+    const businessHeaders = ['/','/business','/success','/info','/consult'] ;
     let headerLocation = useLocation().pathname;
  
     if (businessHeaders.includes(headerLocation)) {
