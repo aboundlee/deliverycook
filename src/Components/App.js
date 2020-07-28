@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {Helmet} from "react-helmet";
+import HashLoader from "react-spinners/HashLoader";
+
+
 
 //import { gql } from 'apollo-boost';
 
 import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
@@ -25,12 +28,21 @@ const Wrapper = styled.div`
     height: 100%;
 `;
 
+const LoadingWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 const App = () => {
 
   const [modalVisible, setModalVisible] =useState(false);
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
+    setLoading(false);
     setTimeout(function(){
         setModalVisible(true);
     }, 1000);
@@ -53,11 +65,23 @@ const App = () => {
       <Router>
 
         <Header/>
+	{ loading 
+        ? (
+      <LoadingWrapper>
+      <HashLoader
+          size={50}
+          color={"#E50012"}
+          loading={loading}
+        />
+      </LoadingWrapper>
+	) 
+	: (
       <Wrapper>
-        <Routes/>
-        <CircleModal/>
-
+          <Routes/>
+          <CircleModal/>
       </Wrapper>
+	)}
+
       </Router>
 
       
