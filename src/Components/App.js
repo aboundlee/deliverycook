@@ -37,8 +37,10 @@ const LoadingWrapper = styled.div`
 `;
 
 const Thumbnail = styled.div`
-    display: none;
    background: url("/Images/thumbnail.png") no-repeat; 
+    width: 100%;
+    height: 100%;
+    display: none;
 
 `;
 const App = () => {
