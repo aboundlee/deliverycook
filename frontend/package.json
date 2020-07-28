@@ -21,6 +21,7 @@
     "intersection-observer": "^0.11.0",
     "jquery": "^3.5.1",
     "mobile-detect": "^1.4.4",
+    "netlify-cli": "^2.58.0",
     "next": "^9.4.4",
     "next-transpile-modules": "^3.3.0",
     "node-sass": "^4.14.1",
@@ -82,9 +83,9 @@
     "react-snap": "^1.23.0"
   },
   "reactSnap": {
-	 "include": [
-	    "/"
-	  ],
+    "include": [
+      "/"
+    ],
     "puppeteerExecutablePath": "/usr/bin/google-chrome-stable"
   }
 }
