@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import "../../../Styles/BrandMain.css";
-import Fade from 'react-reveal/Fade';
 
 import Section1 from './Section1';
 import Section2 from './Section2';
@@ -12,20 +10,10 @@ import Footer from '../../../Components/Footer';
 
 import ReactFullpage from "@fullpage/react-fullpage";
 
-import path from 'path';
 import dotenv from 'dotenv';
 dotenv.config();
 
   
-const Page = styled.section`
-width: 100%;
-
-`;
-
-const Bold = styled.span`
-font-weight: 900;
-
-`;
 
 
 const FullpageWrapper = () => {

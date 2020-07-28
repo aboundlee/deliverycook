@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 
 import { useForm } from 'react-hook-form';
 import TextModal from '../../Components/Modal';
@@ -144,12 +144,6 @@ const BrandLabel = styled.p`
     font-size: 2rem;
 `;
 
-const FormLabel = styled.p`
-    color: #fff;
-    font-size: 2rem;
-    display: inline-block;
-    margin: 0 25px;
-`;
 
 const Form = styled.form`
 

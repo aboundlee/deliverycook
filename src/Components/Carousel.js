@@ -79,7 +79,6 @@ const MenuCarosuel = ({category, mobileItem}) => {
             showDots={false}
             sliderClass=""
             slidesToSlide={1}
-            swipeable
             >
         <Item>
             <MenuImg src={"/Images/".concat(category,"/p2_menu1.png")} />

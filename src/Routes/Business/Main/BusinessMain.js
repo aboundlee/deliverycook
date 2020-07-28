@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "../../../Styles/BusinessMain.css";
 
 // import Section1 from './Section1';
@@ -19,7 +18,7 @@ import BrandSection1 from '../../Brand/Main/Section1';
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
 
-import path from 'path';
+//import path from 'path';
 import dotenv from 'dotenv';
 // dotenv.config({ path: path.join(__dirname,'../../../.env') });
 dotenv.config();

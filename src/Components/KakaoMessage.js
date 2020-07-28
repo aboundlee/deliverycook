@@ -1,7 +1,4 @@
-import styled from "styled-components";
-import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import path from 'path';
 import dotenv from 'dotenv';
 // dotenv.config({ path: path.join(__dirname,'../.env') });
 dotenv.config();
@@ -79,13 +76,21 @@ const KakaoMessage = async ({name, phone, address}) => {
             TRAN_REPLACE_TYPE : ""
         });
 
-    //const { state, refetch } = useAxios({url, postData1, postConfig});
 
-    const result = await axios.post(url, postData2, postConfig);
+    const result1 = await axios.post(url, postData1, postConfig);
+    const result2 = await axios.post(url, postData2, postConfig);
+    if (result1.error) {
+        console.log( "error: " + result1.error);
+        alert( "error: " + result1.error);
+        alert ("에러가 발생하였습니다. 다시 시도해주세요.");
+
+    } else {
+        alert ("성공적으로 문의하였습니다.")
+    }
   
-    if (result.error) {
-        console.log( "error: " + result.error);
-        alert( "error: " + result.error);
+    if (result2.error) {
+        console.log( "error: " + result2.error);
+        alert( "error: " + result2.error);
         alert ("에러가 발생하였습니다. 다시 시도해주세요.");
 
     } else {

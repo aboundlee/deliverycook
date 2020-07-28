@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "../../../Styles/animation.scss";
 // import AOS from 'aos';
 
@@ -14,7 +13,7 @@ import Section6 from './Section6.js'
 
 import ReactFullpage from "@fullpage/react-fullpage";
 
-import path from 'path';
+
 import dotenv from 'dotenv';
 dotenv.config();
 

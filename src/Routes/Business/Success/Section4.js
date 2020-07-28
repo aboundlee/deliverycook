@@ -96,10 +96,6 @@ const Content = styled.p`
 `;
 
 
-const Bold = styled.span`
-    font-weight: bold;
-`;
-
 const Section4 = () =>    {
 
 

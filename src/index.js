@@ -9,19 +9,10 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './Components/Store';
 
-import ReactDOM, { hydrate, render } from "react-dom";
+import  { render } from "react-dom";
 
 const rootElement = document.getElementById("root");
 
-if (rootElement.hasChildNodes()) {
-	hydrate(
-	  <Provider store={store}>
-	  
-	    <App />
-	    </Provider>
-	  ,rootElement
-	);
-} else {
 	render(
 	  <Provider store={store}>
 	  
@@ -29,7 +20,6 @@ if (rootElement.hasChildNodes()) {
 	    </Provider>
 	  ,rootElement
 	);
-}
 
 
 // If you want your app to work offline and load faster, you can change

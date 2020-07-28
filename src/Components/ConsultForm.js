@@ -47,17 +47,7 @@ const MainText = styled.p`
 const Bold = styled.span`
     font-weight: bold;
 `;
-const BrandLabel = styled.p`
-    color: #fff;
-    font-size: 2rem;
-`;
 
-const FormLabel = styled.p`
-    color: #fff;
-    font-size: 1.3rem;
-    display: inline-block;
-    margin: 0 25px;
-`;
 
 const Form = styled.form`
 
@@ -219,7 +209,7 @@ export default () => {
         console.log({name, phone, address,check});
 
         e.target.reset();
-        // KakaoMessage({name, phone, address});
+        KakaoMessage({name, phone, address});
     };
 
      

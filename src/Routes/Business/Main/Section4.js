@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styled, { css, keyframes } from "styled-components";
 
 import Fade from 'react-reveal/Fade';
