@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import styled, {css} from "styled-components";
 import { withRouter } from 'next/router'
 
 
-import '../Styles/Header.module.css';
 
 
 const NavBar = styled.div`
@@ -267,7 +266,7 @@ const Header = ({ router }) => {
     let pageChanger = true;
     let [trigger, setTrigger] = useState();
     let [showMenu, setShowMenu] = useState(false);
-
+    const [loading, setLoading] = useState(false);
     let isBrandPage; 
     const brandHeaders = ['/','/about','/store','/news'];
     const businessHeaders = ['/business','/success','/info','/consult'] ;
@@ -296,16 +295,27 @@ const Header = ({ router }) => {
     //window.scrollTo(0, 0);
 
     function onClick () {
+
+
         setTrigger();
         setShowMenu(false);
     }
 
     function clickMenu () {
+
        setShowMenu(!showMenu);
     }
 
    function clearMenu () {
         setShowMenu(false);
+   }
+   useEffect (()=>{
+    setLoading(true);
+
+
+   },[]);
+   if (loading) {
+    window.scrollTo(0, 0);
    }
 
   return (

@@ -11,7 +11,6 @@ import { Page, Bold } from './Styles';
 const Page5 = styled(Page)`
     position:relative;
     height: 100%;
-    /*max-height: 1000px;*/
 
     background: url("/Images/Business/p4.png") no-repeat; 
     background-position: center;

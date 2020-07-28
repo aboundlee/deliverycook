@@ -11,15 +11,21 @@ const Page = styled.section`
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    background: url("/Images/Business/bps1.png") no-repeat; 
-    background-position: center;
-    background-size: cover;
     height: 100%;
-    width: 100%;
+
     color: black;
     position: relative;
 `;
 
+const Background = styled.div`
+   background: url("/Images/Business/bps1.png") no-repeat; 
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+   position: absolute;
+   top:0;
+`;
 const Bold = styled.span`
     font-weight: 900;
 
@@ -125,7 +131,7 @@ const Section1 = () =>    {
 
     return( 
         <Page> 
-
+        <Background/>
         <TextContainer>
             <Fade bottom distance={'30%'}> 
                 <MainTextContainer>

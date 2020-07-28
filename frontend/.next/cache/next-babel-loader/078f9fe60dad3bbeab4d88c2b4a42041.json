@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport About from \"../Routes/Brand/BrandAbout\";\nexport default (() => {\n  return __jsx(About, null);\n});","map":null,"metadata":{},"sourceType":"module"}

@@ -14,10 +14,17 @@ const Page = styled.section`
     justify-content: center;
 
     color: #FFFFFF;
+    height: 100%;
+`;
+const Background = styled.div`
     background: url("/Images/Brand/p1.png") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100%;
+    width: 100%;
+   position: absolute;
+    top: 0;
+    left: 0;
 `;
 
 const TextContainer = styled.div`
@@ -72,6 +79,7 @@ const Section1 = () => {
 
     return (
         <Page>
+	<Background/>
         <Fade duration={2000}> 
         <TextContainer>
             <MainTextContainer>

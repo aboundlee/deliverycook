@@ -25,7 +25,7 @@ const KakaoMessage = async ({name, phone, address}) => {
     const url = "https://www.apiorange.com/api/send/notice.do";
     const temp_number = 11754;
     const time = getNow();
-   console.log(key);
+
 
     const postConfig = {
         headers: {

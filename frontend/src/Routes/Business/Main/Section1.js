@@ -20,9 +20,11 @@ const Background = styled.div`
    background: url("/Images/Business/p1.png") no-repeat; 
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
+    left: 0;
+    left: 0;
     text-align: center;
     display: flex;
     align-items: center;

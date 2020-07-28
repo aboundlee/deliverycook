@@ -94,7 +94,7 @@ const Section1 = () =>    {
 
     return (
         <Page1 className="bp1"  id="scroll-section-1">
-        <Background>
+        <Background/>
         <Filter/>
             <TextContainer>
                 <Fade bottom distance={'30%'}>  

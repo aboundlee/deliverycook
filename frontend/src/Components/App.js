@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import {Helmet} from "react-helmet";
+
 //import { gql } from 'apollo-boost';
 
 import { ThemeProvider } from "styled-components";
@@ -23,16 +25,6 @@ const Wrapper = styled.div`
     height: 100%;
 `;
 
-/*
-const styles = {
-  
-  overlay?: CSSProperties | undefined; 
-  modal?: CSSProperties | undefined; 
-  closeButton?: {CSSProperties} | undefined; 
-  closeIcon?: CSSProperties | undefined; 
-};
-*/
-
 const App = () => {
 
   const [modalVisible, setModalVisible] =useState(false);
@@ -52,6 +44,11 @@ const App = () => {
   return (
   <ThemeProvider theme={Theme}>
          <GlobalStyles />
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>딜리버리쿡</title>
+                <meta name="description" content="딜리버리쿡 입니다." data-react-helmet="true"/>
+            </Helmet>
          
       <Router>
 

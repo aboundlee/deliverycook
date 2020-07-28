@@ -177,7 +177,7 @@ const Section4 = () => {
             else {
                 setSlide(slide-1);
             }
-          }, 1500);
+          }, 1200);
         
 
     return (

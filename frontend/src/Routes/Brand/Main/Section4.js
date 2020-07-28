@@ -6,32 +6,62 @@ import Fade from 'react-reveal/Fade';
 
 
 const Page = styled.section`
-width: 100%;
+    width: 100%;
+    background-color: #242424;
+    height: 600vh;
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+
+    padding-top: 6.5rem;
 
 `;
 
 const Bold = styled.span`
-font-weight: 900;
+    font-weight: 900;
+`;
+const TextContainer = styled.div`
+    margin-bottom: 50px;
+    color: #fff;
 
 `;
 
+const MainTextContainer = styled.div`
 
+`;
+const MainText = styled.p`
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.125rem;
+    line-height: 5rem;
+
+`;
+
+const Hilight = styled.img`
+
+    @media screen and (max-width:480px) {
+        width: 12rem;
+    } 
+
+
+`;
 const Section4 = () => {
 
     return (
 
-        <Page className="p4">
-        <div className="text_wrapper">
+        <Page>
+        <TextContainer>
         <Fade bottom cascade distance={'30%'}> 
 
-            <div className="main_text_div">
-                <p><Bold>테이블</Bold>까지 <br/>
-                가는 길</p>
-                <img src="/Images/Brand/p4_redline.svg" className="highlight" alt="highlight"></img>
+            <MainTextContainer>
+                <MainText><Bold>테이블</Bold>까지 <br/>
+                가는 길</MainText>
+                <Hilight src="/Images/Brand/p4_redline.svg" alt="highlight"></Hilight>
 
-            </div>
+            </MainTextContainer>
         </Fade>
-        </div>
+        </TextContainer>
         </Page>
     );
 };

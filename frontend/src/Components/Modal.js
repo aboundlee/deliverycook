@@ -23,6 +23,7 @@ const ModalHeader = styled.h1`
 const ModalContents = styled.p`
     margin: 20px;
 
+    width: 100%;
     color: #242424;
     font-size: 12px;
 `;
@@ -81,7 +82,7 @@ const TextModal = ({show, handleShow, handleClose}) =>  {
                             <br/>① 법령에 따른 개인정보 보유.이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유, 이용기간 내에서 개인정보를 처리, 보유합니다.
                             <br/>② 개인정보의 보유 기간은 5년입니다.
                          </ModalContents>
-                        <Close href="javascript:void(0);" onClick={() => handleClose()}>닫기</Close>
+                        <Close href="#" onClick={e => {e.preventDefault();handleClose()}}>닫기</Close>
                     </ModalContainer>
                 </Modal>
             </section>

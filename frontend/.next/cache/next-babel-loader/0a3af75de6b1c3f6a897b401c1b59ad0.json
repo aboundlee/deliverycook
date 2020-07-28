@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Success from \"../Next/Components/Success/BusinessSuccess\";\nexport default (function () {\n  return __jsx(Success, null);\n});","map":null,"metadata":{},"sourceType":"module"}
