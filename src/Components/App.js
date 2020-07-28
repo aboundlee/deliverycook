@@ -35,6 +35,12 @@ const LoadingWrapper = styled.div`
     align-items: center;
     justify-content: center;
 `;
+
+const Thumbnail = styled.div`
+    display: none;
+   background: url("/Images/thumbnail.png") no-repeat; 
+
+`;
 const App = () => {
 
   const [modalVisible, setModalVisible] =useState(false);
@@ -65,8 +71,8 @@ const App = () => {
 		<meta property="og:title" content="딜리버리쿡" key="ogtitle" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
-		<meta property="og:description" content="딜리버리쿡 입니다."/>
-                <meta name="description" content="딜리버리쿡 입니다." data-react-helmet="true"/>
+		<meta property="og:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
+                <meta name="description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요." data-react-helmet="true"/>
 		<meta name="keywords" content="web, web development, web design, web plan, community"/> 
             </Helmet>
          
@@ -89,7 +95,7 @@ const App = () => {
           <CircleModal/>
       </Wrapper>
 	)}
-
+     <Thumbnail/>
       </Router>
 
       
