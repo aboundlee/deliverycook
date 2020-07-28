@@ -30,7 +30,6 @@ $color--dark-line  : darken($color--line, 15);
 body {
 height: 100%;
 overflow-x: hidden;
-background: $color--cream;
 
 &.js-lock-scroll {
   overflow: hidden !important;
