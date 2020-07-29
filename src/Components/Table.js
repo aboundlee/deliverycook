@@ -31,6 +31,7 @@ const TableContainer = styled.div`
 
     @media (max-width: 480px) { 
         margin-top: 20%;
+   	padding: 0 5%;
     }
 `;
 

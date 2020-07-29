@@ -63,6 +63,7 @@ export default () => {
           licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}
           navigation
 
+          scrollOverflow = {true}
           render={({ state, fullpageApi }) => {
           return (
               <ReactFullpage.Wrapper>
