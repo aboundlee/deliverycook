@@ -5,8 +5,12 @@ import Fade from 'react-reveal/Fade';
 
 import Table from "../../Components/Table";
 
+import DivLinker from '../../Components/DivLinker';
+import ReactFullpage from "@fullpage/react-fullpage";
+
+
 const Wrapper = styled.div`
- height: 100vh;
+ height: 100%;
  width: 100%;
 
 
@@ -54,20 +58,33 @@ const FullFade = styled(Fade)`
 `;
 export default () => {
   
-    return (
-        <Wrapper>
-            <FullFade bottom distance={'10%'}> 
-	  <Page> 
-	    <Table/>
-            <Caption>           
-               <CaptionTitle>**업종변경창업비용</CaptionTitle>
-               <CaptionContents>기존 운영중인 점포 업종변경시 시설 및 간판, 주장집기, 기기 사용이 가능해서 일부만 수정후 창업이 가능합니다. 
-		<br/>매장상황에 따라 비용이 다르기 때문에 상담을 통해 안내 받으세요!</CaptionContents>
-            </Caption>
-          </Page>
-            </FullFade>
-          
-	</Wrapper>
-    );
+      return (
+      <ReactFullpage
+          licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}
+          navigation
+
+          render={({ state, fullpageApi }) => {
+          return (
+              <ReactFullpage.Wrapper>
+              <div className="section">
+		<Wrapper>
+		    <FullFade bottom distance={'10%'}> 
+		  <Page> 
+		    <Table/>
+		    <Caption>           
+		       <CaptionTitle>**업종변경창업비용</CaptionTitle>
+		       <CaptionContents>기존 운영중인 점포 업종변경시 시설 및 간판, 주장집기, 기기 사용이 가능해서 일부만 수정후 창업이 가능합니다. 
+			<br/>매장상황에 따라 비용이 다르기 때문에 상담을 통해 안내 받으세요!</CaptionContents>
+		    </Caption>
+		  </Page>
+		    </FullFade>
+		  
+		</Wrapper>
+              </div>
+	    <div className="section  fp-auto-height"><DivLinker link={'/info'} text="창업 문의하기"/></div>
+              </ReactFullpage.Wrapper>
+          );
+      }}
+       />);
 };
   

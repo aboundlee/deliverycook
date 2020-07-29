@@ -11,6 +11,8 @@ import Section7 from './Section7';
 import Footer from '../../../Components/Footer';
 
 import BrandSection1 from '../../Brand/Main/Section1';
+import DivLinker from '../../../Components/DivLinker';
+
 
 // import AOS from 'aos';
 
@@ -41,6 +43,7 @@ const FullpageWrapper = () => {
             <div className="section"><Section5/></div>
             <div className="section"><Section6/></div>
             <div className="section"><Section7/><Footer/></div>
+	    <div className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북 보기"/></div>
             </ReactFullpage.Wrapper>
         );
     }}

@@ -8,6 +8,7 @@ import Section3 from './Section3.js'
 import Section4 from './Section4.js'
 import Section5 from './Section5.js'
 import Section6 from './Section6.js'
+import DivLinker from '../../../Components/DivLinker';
 
 
 
@@ -34,6 +35,7 @@ const FullpageWrapper = () => {
               <div className="section"><Section4/></div>
               <div className="section"><Section5/></div>
               <div className="section"><Section6/></div>
+	    <div className="section  fp-auto-height"><DivLinker link={'/info'} text="창업안내 보기"/></div>
               </ReactFullpage.Wrapper>
           );
       }}

@@ -17,7 +17,7 @@ const Page2 = styled(Page)`
     justify-content: center;
     color: #FFFFFF;
     display: flex;
-    height: 100vh;
+    height: 100%;
     @media (max-width: 480px) {
         flex-direction: column-reverse;
     }
