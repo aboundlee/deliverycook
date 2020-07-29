@@ -81,7 +81,7 @@ export default () => {
 		  
 		</Wrapper>
               </div>
-	    <div className="section  fp-auto-height"><DivLinker link={'/info'} text="창업 문의하기"/></div>
+	    <div className="section  fp-auto-height"><DivLinker link={'/consult'} text="창업 문의하기"/></div>
               </ReactFullpage.Wrapper>
           );
       }}
