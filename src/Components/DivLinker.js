@@ -19,12 +19,14 @@ const Background = styled.div`
     justify-content: center;
     background-color: #242424;
 
+/*
     filter:alpha(opacity=8);
     -moz-opacity:0.8;
     -khtml-opacity: 0.8;
     opacity: 0.8;
+*/
     &:hover {
-	    background: url("/Images/Business/bps1.png") no-repeat; 
+	    background: url("/Images/Business/LinkToSuccess.png") no-repeat; 
 	    background-position: center;
 	    background-size: cover;
 	    filter:alpha(opacity=10);
@@ -38,6 +40,8 @@ const Background = styled.div`
 
 const MainTextContainer = styled.div`
 
+    display: flex;
+   flex-direction: column; 
     color: #fff;
 `;
 
@@ -46,7 +50,7 @@ const MainText = styled.p`
     font-style: normal;
     font-weight: normal;
     font-size: 3rem;
-    line-height: 5rem;
+    line-height: 4rem;
 
     display: inline;
 
@@ -56,9 +60,18 @@ const MainText = styled.p`
 
 `;
 
+const Bold = styled.span`
+ font-weight: bold;
+`;
+
+const Highlight = styled.img`
+   width: 14.25rem;
+
+`;
 const DivLinker = ({link, text, background=''}) => {
 
 
+//10.25rem
     
 
     return (
@@ -66,7 +79,8 @@ const DivLinker = ({link, text, background=''}) => {
             <Link to={link}>
 		<Background>
 		<MainTextContainer>
-                	<MainText>{text}</MainText>
+                	<MainText><Bold>{text}</Bold> 보기</MainText>
+			<Highlight src="/Images/Business/Link_redline.svg" alt="highlight" />
 		</MainTextContainer>
 		</Background>
 

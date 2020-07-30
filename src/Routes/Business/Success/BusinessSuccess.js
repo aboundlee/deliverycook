@@ -35,7 +35,7 @@ const FullpageWrapper = () => {
               <div className="section"><Section4/></div>
               <div className="section"><Section5/></div>
               <div className="section"><Section6/></div>
-	    <div className="section  fp-auto-height"><DivLinker link={'/info'} text="창업안내 보기"/></div>
+	    <div className="section  fp-auto-height"><DivLinker link={'/info'} text="창업안내"/></div>
               </ReactFullpage.Wrapper>
           );
       }}

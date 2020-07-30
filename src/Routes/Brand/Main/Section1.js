@@ -67,7 +67,7 @@ const SubText = styled.p`
 `;
 
 
-const Hilight = styled.img`
+const Highlight = styled.img`
     vertical-align:middle;
     margin-top: 1px;
 `;
@@ -89,7 +89,7 @@ const Section1 = () => {
             </MainTextContainer>
             <SubTextContainer>
                 <SubText>딜리버리쿡</SubText>
-                <Hilight src="/Images/Brand/highlight.svg" alt="highlight"></Hilight>
+                <Highlight src="/Images/Brand/highlight.svg" alt="highlight"></Highlight>
             </SubTextContainer>
         
         </TextContainer>

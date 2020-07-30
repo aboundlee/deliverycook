@@ -31,7 +31,7 @@ const NavContainer = styled.div`
 `;
 const Logo = styled.img`
     float: left;
-    width: auto;
+    width: 186px;
     height: auto;
     padding-left: 3rem;
 
@@ -80,6 +80,8 @@ const Menu = styled.ul`
     font-weight: 500;
     @media screen and (max-width:768px) {
         flex-direction: column;
+	align-items: center;
+	justify-content: center;
         width: 100%;
         height: 100vh;
         right: 0;
@@ -102,12 +104,9 @@ const MenuItem = styled.li`
     padding-right: 3rem;
     @media screen and (max-width:768px) {
         width: 100%;
-        text-align: left;
+        text-align: center;
         padding: 0;
 
-        &:first-child {
-        margin-top: 15%;
-         }
 
         &:last-child a {
             text-align: center;
@@ -288,7 +287,7 @@ const Header = withRouter(({changePageTo}) => {
         links = ["about", "store", "news", "/business"];
         pageChanger = "businessPage";
     } else {
-        menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드"];
+        menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 페이지"];
         links = ["success", "info", "consult", "/"];
         pageChanger = "brandPage";
     }
@@ -312,7 +311,7 @@ const Header = withRouter(({changePageTo}) => {
         <NavBar>
         <NavContainer>
             <Link to="/" onClick={clearMenu}>
-                <Logo src="/Images/Logo.svg"  alt="Logo"/> 
+                <Logo src="/Images/Logo_KR.png"  alt="Logo"/> 
             </Link>
             <MenuBox active={showMenu}>
                     <Menu className="navlinks">
