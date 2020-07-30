@@ -107,11 +107,11 @@ html {
         background-color:${props => props.theme.bgColor};
         color:${props => props.theme.blackColor};
         font-size:14px;
-        font-family: 'Noto Sans Korean', sans-serif  !important;
+        font-family: 'Noto Sans KR', sans-serif  !important;
     }
 
     p {
-        font-family: 'Noto Sans Korean', sans-serif  !important;
+        font-family: 'Noto Sans KR', sans-serif  !important;
     }
 
 

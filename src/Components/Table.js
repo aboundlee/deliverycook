@@ -7,13 +7,13 @@ function createData(category, contents, cost, top='', bottom='', color='#fff',bo
 }
 
 const rows = [
-  createData('가맹비', '상호, 상표사용권, 브랜드 운영 노하우 전수', '300', '2px solid #fff',''),
-  createData('교육비', '레시피제공, 이론 + 조리 + 현장교육비용', '200'),
+  createData('가맹비', '상호, 상표사용권, 브랜드 운영 노하우 전수', '500', '2px solid #fff',''),
+  createData('교육비', '레시피제공, 이론 + 조리 + 현장교육비용', '300'),
   createData('인테리어', '실측 후 견적가', '직접시공가능'),
   createData('간판', '4m 기준 배달형', '직접시공가능'),
-  createData('주방기기', '냉장고, 찬냉장고, 화구, 등', '600'),
-  createData('홍보물', '전단지, 종이자석, 배너, 온라인, 어플 홍보비, 기타홍보비용', '150'),
-  createData('합계','' ,'1,250', '2px solid #E50012', '2px solid #E50012','#E50012',true),
+  createData('주방기기+집기', '냉장고, 찬냉장고, 화구, 등', '800'),
+  createData('홍보물', '전단지, 종이자석, 리플릿, 온라인, 어플 홍보비, 기타', '150'),
+  createData('합계','' ,'1,750', '2px solid #E50012', '2px solid #E50012','#E50012',true),
   createData('별도사항', '컴퓨터, 오토바이, 휴대용 카드 단말기, 초도물류 등', '', '', '2px solid #fff')
 ];
 
@@ -131,7 +131,7 @@ export default () => {
             <TableRow>
             <TableH top_color='2px solid #fff'>구분</TableH>
             <TableData top_color='2px solid #fff'>내용</TableData>
-            <TableData top_color='2px solid #fff'>10평 (100% 배달형)</TableData>
+            <TableData top_color='2px solid #fff'>10평 (Take out + 배달형)</TableData>
           </TableRow>
         </TableHead>
         <TableBody>
