@@ -14,7 +14,7 @@ const Page = styled.section`
     background: url("/Images/Business/bps1.png") no-repeat; 
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     color: black;
     position: relative;

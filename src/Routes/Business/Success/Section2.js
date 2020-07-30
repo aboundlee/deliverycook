@@ -12,7 +12,7 @@ const Page = styled.section`
     justify-content: center;
     position: relative;
     color: #242424;
-    height: 100vh;
+    height: 100%;
 `;
 
 

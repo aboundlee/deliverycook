@@ -21,6 +21,15 @@ const NavBar = styled.div`
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    @media screen and (max-width:768px) {
+        ${props => {
+            if (props.active) {
+                return css `
+                    height: 100%;
+                `;
+            }
+        }}
+    }
 
 `;
 
@@ -28,6 +37,9 @@ const NavContainer = styled.div`
     @media screen and (min-width: 768px) and (max-width: 1024px) {
         margin: 0;
     }  
+    @media screen and (max-width:768px) {
+    height:100%;
+    }
 `;
 const Logo = styled.img`
     float: left;
@@ -55,7 +67,7 @@ const MenuBox = styled.div`
         ${props => {
             if (props.active) {
                 return css `
-                    height: auto;
+                    height: 100%;
                     display: block;
                     position: absolute;
                     top: 0;
@@ -83,16 +95,12 @@ const Menu = styled.ul`
 	align-items: center;
 	justify-content: center;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         right: 0;
         left: 0;
         bottom: 0;
         background-color: #E50012;
-        opacity: 0.9;
 
-        filter:alpha(opacity=90);
-        -moz-opacity:0.9;
-        -khtml-opacity: 0.9;
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -115,11 +123,17 @@ const MenuItem = styled.li`
             margin: 0 auto;
             padding: 0;
 
-            border: 2px solid #fff;
-            border-radius: 35px;
-            color: #fff;
-            margin-top: 20px;
+
+            color: #E50012; 
+	    margin-top: 20px;
+	    height: 130px;
+       	    line-height: 130px;
+
             width: 80%;
+	    background: url("/Images/mobile_HeaderLink.png") no-repeat; 
+	    background-position: center;
+	    background-size: contain;
+
         }
       
     }
@@ -140,7 +154,10 @@ const HeaderLink = styled(Link)`
     @media screen and (max-width:768px) {
         text-align: center;
         width: 100%;
-        font-size: 4rem;
+        font-weight: bold;
+
+    	text-shadow: none; 
+        font-size: 3rem;
         padding: 20px;
         &:hover {
             color: #fff;
@@ -159,7 +176,7 @@ const MobileMenu = styled.span`
     cursor: pointer;
     width: 30px;
     height: 25px;
-    margin: auto;
+    margin-top: 20px;
     position: absolute;
     left: 30px;
     top: 0;
@@ -287,7 +304,7 @@ const Header = withRouter(({changePageTo}) => {
         links = ["about", "store", "news", "/business"];
         pageChanger = "businessPage";
     } else {
-        menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 페이지"];
+        menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
         links = ["success", "info", "consult", "/"];
         pageChanger = "brandPage";
     }
@@ -308,7 +325,7 @@ const Header = withRouter(({changePageTo}) => {
    }
 
   return (
-        <NavBar>
+        <NavBar active={showMenu}>
         <NavContainer>
             <Link to="/" onClick={clearMenu}>
                 <Logo src="/Images/Logo_KR.png"  alt="Logo"/> 
@@ -332,7 +349,7 @@ const Header = withRouter(({changePageTo}) => {
                         </MenuItem>
                     </Menu>
             </MenuBox>
-            <MobileMenu active={showMenu} onClick={clickMenu}>
+           <MobileMenu active={showMenu} onClick={clickMenu}>
                 <MobileMenuItem></MobileMenuItem>
                 <MobileMenuItem></MobileMenuItem>
                 <MobileMenuItem></MobileMenuItem>
