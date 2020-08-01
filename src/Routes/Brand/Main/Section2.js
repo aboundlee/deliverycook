@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 import Fade from 'react-reveal/Fade';
-import MenuCarosuel from "../../../Components/Carousel"
+import MenuCarosuel from "../../../Components/BigCarousel"
 
 
 
@@ -12,9 +12,7 @@ background-color: #242424;
     
     text-align: center;
     color: #FFFFFF;
-    padding-top: 6.5rem;
-    height: 100vh;
-    min-height: 56.25rem;
+    height: 100%;
 
 `;
 
@@ -24,9 +22,14 @@ font-weight: 900;
 `;
 
 const TextContainer = styled.div`
+    padding-top: 6.5rem;
 
     margin-bottom: 50px;
     height: 30%;
+    @media (max-width: 480px) {
+    padding-top: 14.5vh;
+    }
+
 `;
 
 
@@ -39,7 +42,7 @@ const MainText = styled.p`
     font-style: normal;
     font-weight: 900;
     font-size: 3.125rem;
-    line-height: 80px;
+    line-height: 5rem;
 `;
 
 const SubText = styled.p`
@@ -55,6 +58,10 @@ margin-top: 14px;
 
 const Hilight = styled.img`
     margin-right: 11em;
+    @media (max-width: 480px) {
+    margin-right: 10em;
+    width: 10rem;
+    }
 
 `;
 

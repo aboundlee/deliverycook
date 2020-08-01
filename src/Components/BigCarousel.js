@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 
 const Item = styled.div`
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,20 +13,25 @@ const Item = styled.div`
 
 const MenuImg = styled.img`
     z-index: 1;
+    width: 60%;
+    max-width: 400px;
 `;
 const LogoImg = styled.img`
     margin-top: 20px;
-
+    width: 30%;
 
 `;
-const MenuCarosuel = () => {
+
+
+const MenuCarosuel = ({category, mobileItem}) => {
+
 
     return (
         <Carousel
             additionalTransfrom={0}
             autoPlay
             autoPlaySpeed={1000}
-            transitionDuration={500}
+            transitionDuration={1500}
             focusOnSelect={false}
             infinite
 
@@ -35,7 +39,7 @@ const MenuCarosuel = () => {
             swipeable={false}
 
             draggable={false}
-            className=""
+            className="Carosel"
 
             containerClass="container"
             dotListClass=""
@@ -60,7 +64,7 @@ const MenuCarosuel = () => {
                     max: 464,
                     min: 0
                 },
-                items: 1,
+                items: parseInt(mobileItem),
                 partialVisibilityGutter: 1
                 },
                 tablet: {
@@ -75,31 +79,30 @@ const MenuCarosuel = () => {
             showDots={false}
             sliderClass=""
             slidesToSlide={1}
-            swipeable
             >
         <Item>
-            <MenuImg src={"/Images/Brand/p2_menu1.svg"} />
-            <LogoImg src={"/Images/Brand/p2_logo1.svg"} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu1.png")} />
+            <LogoImg src={"/Images/".concat(category,"/p2_logo1.svg")} />
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/Brand/p2_menu2.svg"} />
-            <LogoImg src={"/Images/Brand/p2_logo2.svg"} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu2.png")} />
+            <LogoImg src={"/Images/".concat(category,"/p2_logo2.svg")} />
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/Brand/p2_menu3.svg"} />
-            <LogoImg src={"/Images/Brand/p2_logo3.svg"} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu3.png")} />
+            <LogoImg src={"/Images/".concat(category,"/p2_logo3.svg")} />
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/Brand/p2_menu4.svg"} />
-            <LogoImg src={"/Images/Brand/p2_logo4.svg"} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu4.png")} />
+            <LogoImg src={"/Images/".concat(category,"/p2_logo4.svg")} />
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/Brand/p2_menu5.svg"} />
-            <LogoImg src={"/Images/Brand/p2_logo5.svg"} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu5.png")} />
+            <LogoImg src={"/Images/".concat(category,"/p2_logo5.svg")} />
 
         </Item>
         </Carousel>

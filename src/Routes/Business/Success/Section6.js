@@ -88,7 +88,7 @@ const Contents = styled.div`
 const Content = styled.p`
     font-size: 1.5rem;
     display: inline;
-    line-height: 1.813rem;
+    line-height: 2rem;
 
 `;
 

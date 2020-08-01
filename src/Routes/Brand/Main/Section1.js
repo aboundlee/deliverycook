@@ -70,6 +70,10 @@ const SubText = styled.p`
 const Highlight = styled.img`
     vertical-align:middle;
     margin-top: 1px;
+    @media (max-width: 480px) {
+    width: 8rem;
+    }
+
 `;
 
 const Bold = styled.span`

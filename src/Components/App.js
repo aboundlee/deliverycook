@@ -75,8 +75,10 @@ const App = () => {
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
 		<meta property="og:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
+
                 <meta name="description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요." data-react-helmet="true"/>
 		<meta name="keywords" content="web, web development, web design, web plan, community"/> 
+
             </Helmet>
          
       <Router>

@@ -232,6 +232,7 @@ const Submit = styled.input`
     border: 2px solid #fff;
     color: #fff;
     border-radius: 35px;
+    margin-left: 3rem;
 
     &:hover {
         background-color: #E50012;

@@ -287,7 +287,7 @@ const Header = withRouter(({changePageTo}) => {
     let isBrandPage; 
     //const brandHeaders = ['/','/about','/store','/news'];
     //const businessHeaders = ['/','/business','/success','/info','/consult'] ;
-    const brandHeaders = ['/about','/store','/news'];
+    const brandHeaders = ['/brand','/about','/store','/news'];
     const businessHeaders = ['/','/business','/success','/info','/consult'] ;
     let headerLocation = useLocation().pathname;
  
@@ -305,7 +305,7 @@ const Header = withRouter(({changePageTo}) => {
         pageChanger = "businessPage";
     } else {
         menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
-        links = ["success", "info", "consult", "/"];
+        links = ["success", "info", "consult", "/brand"];
         pageChanger = "brandPage";
     }
     window.scrollTo(0, 0);

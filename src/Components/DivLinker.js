@@ -8,6 +8,9 @@ const Wrapper = styled.div`
     width: 100%;
     height: 30vh;
 
+	    background: url("/Images/Business/LinkToSuccess.png") no-repeat; 
+	    background-position: center;
+	    background-size: cover;
 `;
 
 const Background = styled.div`
@@ -19,21 +22,8 @@ const Background = styled.div`
     justify-content: center;
     background-color: #242424;
 
-/*
-    filter:alpha(opacity=8);
-    -moz-opacity:0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
-*/
     &:hover {
-	    background: url("/Images/Business/LinkToSuccess.png") no-repeat; 
-	    background-position: center;
-	    background-size: cover;
-	    filter:alpha(opacity=10);
-	    -moz-opacity:1;
-	    -khtml-opacity: 1;
-	    opacity: 1;
-
+    	background-color: transparent;
     }
 `;
 
@@ -65,7 +55,7 @@ const Bold = styled.span`
 `;
 
 const Highlight = styled.img`
-   width: 14.25rem;
+   width: 16rem;
 
 `;
 const DivLinker = ({link, text, background=''}) => {

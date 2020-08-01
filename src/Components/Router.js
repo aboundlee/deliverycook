@@ -18,8 +18,9 @@ const BrandRoutes = ({changePageTo}) => {
 
     return (
     <>
-{/*        <Route exact path="/" component={BrandMain} />*/}
         <Route exact path="/" component={BusinessMain} />
+
+        <Route exact path="/brand" component={BrandMain} />
 
         <Route exact path="/about" component={BrandAbout} />
         <Route exact path="/store" component={BrandStore} />
