@@ -11,7 +11,7 @@ import styled, {css} from "styled-components";
 
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./Router";
 import Header from "./Header";
 import PopUpModal from "./ImageModal";

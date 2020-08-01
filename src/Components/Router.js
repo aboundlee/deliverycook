@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom';
 //import { connect } from 'react-redux';
 //import { actionCreators } from './Store';
 
@@ -14,55 +14,32 @@ import BusinessSuccess from "../Routes/Business/Success/BusinessSuccess";
 import BusinessInfo from "../Routes/Business/BusinessInfo";
 import BusinessConsult from "../Routes/Business/BusinessConsult";
 
-const BrandRoutes = ({changePageTo}) => {
-
-    return (
-    <>
-        <Route exact path="/" component={BusinessMain} />
-
-        <Route exact path="/brand" component={BrandMain} />
-
-        <Route exact path="/about" component={BrandAbout} />
-        <Route exact path="/store" component={BrandStore} />
-        <Route exact path="/news" component={BrandNews} />
-        
-        <Route exact path="/business" component={BusinessMain} />
-        <Route exact path="/success" component={BusinessSuccess} />
-        <Route exact path="/info" component={BusinessInfo} />
-        <Route exact path="/consult" component={BusinessConsult} />
-    </>
-    )
-};
 
 
 const AppRouter = () => {
     return (
-        <Router>
+        <> 
             <Switch>
                  
-                <BrandRoutes/> 
+        <Route exact path="/" component={withRouter(BusinessMain)} />
+
+        <Route exact path="/brand" component={withRouter(BrandMain)} />
+
+        <Route exact path="/about" component={withRouter(BrandAbout)} />
+        <Route exact path="/store" component={withRouter(BrandStore)} />
+        <Route exact path="/news" component={withRouter(BrandNews)} />
+        
+        <Route exact path="/business" component={withRouter(BusinessMain)} />
+        <Route exact path="/success" component={withRouter(BusinessSuccess)} />
+        <Route exact path="/info" component={withRouter(BusinessInfo)} />
+        <Route exact path="/consult" component={withRouter(BusinessConsult)} />
                  
             </Switch>
-        </Router>
+        </>
     );
 };
 
 
-
-/*function mapStateToProps(state, ownProps) {
-    return { isBrandPage: state.isBrandPage };
-  }
-  
-  
-  
-function mapDispatchToProps(dispatch, ownProps) {
-    return {
-        changePageTo: brandCategory => dispatch(actionCreators.changePageTo(brandCategory))
-    };
-}
-  export default connect(mapStateToProps, mapDispatchToProps)(AppRouter);
-
-*/
 
 AppRouter.propTypes = {
     isBrandPage: PropTypes.bool

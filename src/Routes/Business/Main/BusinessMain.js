@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../Styles/BusinessMain.css";
+import {withRouter} from 'react-router-dom';
 
 // import Section1 from './Section1';
 import Section2 from './Section2';
@@ -52,7 +53,7 @@ const FullpageWrapper = () => {
 };
 
 
-export default FullpageWrapper;
+ export default withRouter(FullpageWrapper);
 
 
 //              <button onClick={() => fullpageApi.moveSectionDown()}>

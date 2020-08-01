@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../Styles/animation.scss";
+import {withRouter} from 'react-router-dom';
 // import AOS from 'aos';
 
 import Section1 from './Section1.js'
@@ -44,4 +45,4 @@ const FullpageWrapper = () => {
   };
   
   
-  export default FullpageWrapper;
+ export default withRouter(FullpageWrapper);

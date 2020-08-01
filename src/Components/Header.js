@@ -4,6 +4,7 @@ import styled, {css} from "styled-components";
 import { Link, withRouter, useLocation } from "react-router-dom";
 
 import { connect } from 'react-redux';
+import { compose } from 'redux';
 import { actionCreators } from './Store';
 
 
@@ -278,7 +279,7 @@ const ToBusiness = styled.img`
 `;
 
 
-const Header = withRouter(({changePageTo}) => {
+const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
     let pageChanger = true;
@@ -360,7 +361,7 @@ const Header = withRouter(({changePageTo}) => {
         </NavContainer>
     </NavBar>
   );
-});
+};
 
 function mapDispatchToProps(dispatch, ownProps) {
     return {
@@ -368,4 +369,4 @@ function mapDispatchToProps(dispatch, ownProps) {
     };
 }
 
-export default connect(null,mapDispatchToProps)(Header);
+export default compose(withRouter,connect(null,mapDispatchToProps))(Header);
