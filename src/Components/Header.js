@@ -145,6 +145,7 @@ const HeaderLink = styled(Link)`
     color: #fff;
     line-height: 65px;
     font-size: 20px;
+    cursor: pointer;
 
     &:hover {
         color: #E50012;
