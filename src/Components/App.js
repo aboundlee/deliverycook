@@ -78,6 +78,8 @@ const App = () => {
 
                 <meta name="description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요." data-react-helmet="true"/>
 		<meta name="keywords" content="web, web development, web design, web plan, community"/> 
+		<meta name="naver-site-verification" content="005e934209b78a32053989a501ca8bb2e006feab" />
+
 
             </Helmet>
          
