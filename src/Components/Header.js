@@ -307,7 +307,7 @@ const Header = ({changePageTo}) => {
         pageChanger = "businessPage";
     } else {
         menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
-        links = ["success", "info", "consult", "/brand"];
+        links = ["success", "info", "consult", "/"];
         pageChanger = "brandPage";
     }
     window.scrollTo(0, 0);
