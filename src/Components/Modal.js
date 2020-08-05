@@ -15,8 +15,10 @@ const ModalContainer =styled.div`
 const ModalHeader = styled.h1`
     margin: 20px;
     color: #242424;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
+    line-height: 1rem;
+
 `;
 
 
@@ -25,7 +27,9 @@ const ModalContents = styled.p`
 
     width: 100%;
     color: #242424;
-    font-size: 12px;
+    font-size: 0.7rem;
+    line-height: 1rem;
+
 `;
 
 const Bold = styled.span`

@@ -99,21 +99,29 @@ const Phone = styled.img`
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
-    height: 477px;
+    height: 29.813rem;
     width: auto;    
 
     @media (max-width: 480px) {
         height: 400px;
     }
+    
+
+    ${'' /* @media (min-width: 1600px) {
+        height: 630px;
+
+    } */}
+
 `;
 
 const ScreenContainer = styled.div`
     position: absolute;
-    bottom: 90px;
+    width: 9.688rem;
+    height: 21.25rem;
+    bottom: 5.625rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 155px;
-    height: 340px;
+
     overflow: hidden;
 
     @media (max-width: 480px) {
@@ -121,6 +129,13 @@ const ScreenContainer = styled.div`
         height: 290px;
         bottom: 73px;
     }
+
+    ${'' /* @media (min-width: 1600px) {
+        width: 200px;
+        height: 450px;
+        bottom: 123px;
+    } */}
+
 `;
 
 

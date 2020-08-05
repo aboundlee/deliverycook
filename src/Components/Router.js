@@ -21,9 +21,9 @@ const AppRouter = () => {
         <> 
             <Switch>
                  
-        <Route exact path="/" component={withRouter(BusinessMain)} />
+        <Route exact path="/" component={withRouter(BrandMain)} />
 
-        <Route exact path="/brand" component={withRouter(BrandMain)} />
+        {/* <Route exact path="/brand" component={withRouter(BrandMain)} /> */}
 
         <Route exact path="/about" component={withRouter(BrandAbout)} />
         <Route exact path="/store" component={withRouter(BrandStore)} />

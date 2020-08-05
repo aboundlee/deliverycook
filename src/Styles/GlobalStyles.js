@@ -64,14 +64,19 @@ html {
     font-size: 16px;
 
 
-  
-    @media screen and (max-width:960px) {
-       font-size: 14px;
-    }
-
+ 
     @media (max-width: 480px) { 
         font-size: 10px;
     } 
+  
+    @media (min-width: 480px) and (max-width:960px) {
+       font-size: 14px;
+    }
+
+    @media (min-width:1600px) {
+       font-size: 17px;
+    }
+
 }
 #root {
     width: 100%;

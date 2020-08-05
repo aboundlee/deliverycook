@@ -1,0 +1,10 @@
+svg{
+  position:absolute;
+  width:600px;
+  top:60vh;
+  overflow:visible;
+  left: 50%;
+  transform: translate(-50%);
+  fill: none;
+}
+

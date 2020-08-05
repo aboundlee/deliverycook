@@ -44,7 +44,7 @@ const NavContainer = styled.div`
 `;
 const Logo = styled.img`
     float: left;
-    width: 186px;
+    width: 11.625rem;
     height: auto;
     padding-left: 3rem;
 
@@ -145,7 +145,7 @@ const HeaderLink = styled(Link)`
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
 
     &:hover {
@@ -270,7 +270,7 @@ const MobileHeaderLink = styled(Link)`
 
 const ToBusiness = styled.img`
     vertical-align: middle;
-
+    width: 5.875rem;
     @media screen and (max-width:768px) {
         display: block;
         width: 60px;
@@ -287,10 +287,10 @@ const Header = ({changePageTo}) => {
     let [showMenu, setShowMenu] = useState(false);
 
     let isBrandPage; 
-    //const brandHeaders = ['/','/about','/store','/news'];
-    //const businessHeaders = ['/','/business','/success','/info','/consult'] ;
-    const brandHeaders = ['/brand','/about','/store','/news'];
-    const businessHeaders = ['/','/business','/success','/info','/consult'] ;
+    // const brandHeaders = ['/','/about','/store','/news'];
+    // const businessHeaders = ['/','/business','/success','/info','/consult'] ;
+    const brandHeaders = ['/','/about','/store','/news'];
+    const businessHeaders = ['/business','/success','/info','/consult'] ;
     let headerLocation = useLocation().pathname;
  
     if (businessHeaders.includes(headerLocation)) {

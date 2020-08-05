@@ -37,7 +37,7 @@ const FullpageWrapper = () => {
         render={({ state, fullpageApi }) => {
         return (
             <ReactFullpage.Wrapper>
-            <div className="section"><BrandSection1/></div>
+            {/* <div className="section"><BrandSection1/></div> */}
 
             <div className="section"><Section2/></div>
             <div className="section"><Section4/></div>

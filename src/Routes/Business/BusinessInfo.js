@@ -49,6 +49,8 @@ const CaptionContents = styled.p`
   color: #fff;
   font-size: 1rem;
   width: 80%;
+  line-height: 1.35rem;
+
 `;
 
 const FullFade = styled(Fade)`

@@ -57,10 +57,16 @@ margin-top: 14px;
 `;
 
 const Hilight = styled.img`
-    margin-right: 11em;
+    margin-right: 13.5rem;
+    width: 11.688rem;
     @media (max-width: 480px) {
     margin-right: 10em;
     width: 10rem;
+    }
+
+    @media (min-width: 1600px) {
+    margin-right: 15.5rem;
+
     }
 
 `;
@@ -77,7 +83,7 @@ const Section2 = () => {
             <TextContainer>
 
                 <MainTextContainer>
-                    <MainText>오늘 땡기는 음식으로</MainText>
+                    <MainText>어떤 음식이 땡기시나요?</MainText>
                 </MainTextContainer>
 
                 <SubTextContainer>

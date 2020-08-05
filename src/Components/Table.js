@@ -83,6 +83,8 @@ const TableH = styled.th`
     
     @media (max-width: 480px) { 
         padding: 10px;
+        font-size: 1rem;
+
     }
 `;
 
@@ -120,6 +122,8 @@ const TableData = styled.th`
 
     @media (max-width: 480px) { 
         padding: 10px;
+        font-size: 1rem;
+
     }
 `;
 

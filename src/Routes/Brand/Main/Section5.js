@@ -75,7 +75,7 @@ const Section5 = () => {
         <Fade duration={2000}> 
         <TextContainer>
             <MainTextContainer>
-                <MainText>이제 믿을 수 있는 </MainText>
+                <MainText>이제 <Bold>믿을 수 있는</Bold> </MainText>
                 <MainText><Bold>배달음식</Bold>을 </MainText>
                 <MainText>드세요</MainText>
             </MainTextContainer>

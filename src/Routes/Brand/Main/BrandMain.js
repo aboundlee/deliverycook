@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../Styles/BrandMain.css";
 import {withRouter} from 'react-router-dom';
+import styled from 'styled-components';
 
 import Section1 from './Section1';
 import Section2 from './Section2';
@@ -9,23 +10,54 @@ import Section4 from './Section4';
 import Section5 from './Section5';
 import Footer from '../../../Components/Footer';
 
+import 'fullpage.js/vendors/scrolloverflow';
+
 import ReactFullpage from "@fullpage/react-fullpage";
 
 //import dotenv from 'dotenv';
 //dotenv.config();
 
-  
+import $ from 'jquery';
+
+
+
+const Section = styled.div`
+ height: 100%;
+ position: relative;
+`;
+
+
+
+const LongSection = styled.div`
+ height: 281.25rem;
+ position: relative;
+`;
 
 
 const FullpageWrapper = () => {
      
+
+    // return (<>
+    //     <Section className="section"><Section1/></Section>
+    //     <Section className="section"><Section2/></Section>
+    //     <Section className="section"><Section3/></Section>
+    //     <LongSection className="section"><Section4/></LongSection>
+    //     <Section className="section"><Section5/><Footer/></Section>
+    //     </>
+    // )
+
+    
       return (
       <ReactFullpage
           licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}
           navigation
+        //   scrollBar= {true}
 
           scrollOverflow = {true}
+
+       
           render={({ state, fullpageApi }) => {
+      
           return (
               <ReactFullpage.Wrapper>
               <div className="section"><Section1/></div>
@@ -45,38 +77,3 @@ const FullpageWrapper = () => {
  export default withRouter(FullpageWrapper);
 
 
-
-        /*
-        <Page className="p5">
-            <div className="text_wrapper">
-            <Fade bottom distance={'30%'}> 
-
-                <div className="main_text_div">
-                    <p><Bold>딜리버리쿡</Bold>은<br/>어떻게 <Bold>좋은 요리사</Bold>를 선별할까요?</p>
-                    <img src="/Images/Brand/p5_redline.svg" className="highlight" alt="highlight"></img>
-
-                </div>
-            </Fade>
-
-            </div>
-        </Page>
-
-        <Page className="p6">
-
-      
-        </Page>
-
-        <Page className="p7">
-
-        </Page>
-        */
-
-        
-/*
-
-          <div className="sub_text_div">
-                        <p>우리의 다짐,</p>
-                        <img src="/Images/Brand/p3_redline.svg" className="highlight" alt="highlight"></img>
-                </div>
-
-                */

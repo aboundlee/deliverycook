@@ -48,7 +48,8 @@ const Navigator = styled.div`
     right: 15%;
     bottom: 5%;
     height: 120px;
-    
+    line-height: 3.125rem;
+}
     @media screen and (max-width:870px) {
         height: 80px;
     }
