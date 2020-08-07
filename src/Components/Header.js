@@ -5,7 +5,7 @@ import { Link, withRouter, useLocation } from "react-router-dom";
 
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { actionCreators } from './Store';
+import { actionCreators } from './StoreRedux';
 
 
 import '../Styles/Header.css';

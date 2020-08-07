@@ -47,6 +47,9 @@ const TextContainer = styled.div`
 
     @media (max-width: 480px) {
         margin-bottom: 40px;
+   
+        padding-top: 3.5vh;
+
     }
 `;
 
