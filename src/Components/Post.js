@@ -18,10 +18,10 @@ const GridItem = styled(Grid)`
 
     
     &:hover {
-        background: rgba(229, 0, 18, 0.1);
+        background: rgba(0, 0, 0, 0.05);
     }
     $:active {
-        background: rgba(229, 0, 18, 0.1);
+        background: rgba(0, 0, 0, 0.05);
     }
 `;
 

@@ -73,10 +73,6 @@ html {
        font-size: 14px;
     }
 
-    @media (min-width:1600px) {
-       font-size: 17px;
-    }
-
 }
 #root {
     width: 100%;
