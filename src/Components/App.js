@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Helmet} from "react-helmet";
 import ClipLoader from "react-spinners/ClipLoader";
-
+import Loader from './Loader';
 
 
 //import { gql } from 'apollo-boost';
@@ -27,13 +27,6 @@ const Wrapper = styled.div`
     height: 100%;
 `;
 
-const LoadingWrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
 
 const Thumbnail = styled.div`
    background: url("/Images/thumbnail.png") no-repeat; 
@@ -90,13 +83,7 @@ const App = () => {
         <Header/>
 	{ loading 
         ? (
-      <LoadingWrapper>
-      <ClipLoader
-          size={50}
-          color={"#E50012"}
-          loading={loading}
-        />
-      </LoadingWrapper>
+            <Loader loading={loading}/>
 	) 
 	: (
       <Wrapper>

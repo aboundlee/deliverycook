@@ -18,10 +18,19 @@ const NavBar = styled.div`
     line-height: 65px;
     text-align: center;
 
+
     padding-top: 20px;
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    ${props => {
+            if (props.iswhiteheader) {
+                return css `
+                    height: 100px;
+                    background: #fff;
+                `;
+            }
+    }}
     @media screen and (max-width:768px) {
         ${props => {
             if (props.active) {
@@ -147,17 +156,27 @@ const HeaderLink = styled(Link)`
     line-height: 65px;
     font-size: 1.25rem;
     cursor: pointer;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
+
+
+    ${props => {
+            if (props.iswhiteheader) {
+                return css `
+                    color: #242424;
+                    text-shadow: none;
+                `;
+            }
+        }}
     &:hover {
         color: #E50012;
     }
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
     @media screen and (max-width:768px) {
         text-align: center;
         width: 100%;
         font-weight: bold;
-
+        color: #fff;
     	text-shadow: none; 
         font-size: 3rem;
         padding: 20px;
@@ -283,14 +302,16 @@ const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
     let pageChanger = true;
-    let [trigger, setTrigger] = useState();
-    let [showMenu, setShowMenu] = useState(false);
+    const [trigger, setTrigger] = useState();
+    const [showMenu, setShowMenu] = useState(false);
 
     let isBrandPage; 
+    let isWhiteHeader;
     // const brandHeaders = ['/','/about','/store','/news'];
     // const businessHeaders = ['/','/business','/success','/info','/consult'] ;
     const brandHeaders = ['/','/about','/store','/news'];
-    const businessHeaders = ['/business','/success','/info','/consult'] ;
+    const businessHeaders = ['/business','/success','/info','/consult'];
+    const whiteHeaders = ['/store','/news'];
     let headerLocation = useLocation().pathname;
  
     if (businessHeaders.includes(headerLocation)) {
@@ -300,6 +321,13 @@ const Header = ({changePageTo}) => {
     else if (brandHeaders.includes(headerLocation)){
         isBrandPage = true;
     }
+
+    if (whiteHeaders.includes(headerLocation)){
+        isWhiteHeader = true;
+    } else {
+        isWhiteHeader = false;
+    }
+
 
     if (isBrandPage) {
         menus = ["브랜드소개", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
@@ -327,7 +355,7 @@ const Header = ({changePageTo}) => {
    }
 
   return (
-        <NavBar active={showMenu}>
+        <NavBar active={showMenu} iswhiteheader={isWhiteHeader? 1 : 0}>
         <NavContainer>
             <Link to="/" onClick={clearMenu}>
                 <Logo src="/Images/Logo_KR.png"  alt="Logo"/> 
@@ -335,13 +363,13 @@ const Header = ({changePageTo}) => {
             <MenuBox active={showMenu}>
                     <Menu className="navlinks">
                         <MenuItem>
-                            <HeaderLink to={links[0]} onClick={clearMenu}>{menus[0]}</HeaderLink>
+                            <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>{menus[0]}</HeaderLink>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={clearMenu}>{menus[1]}</HeaderLink>
+                            <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>{menus[1]}</HeaderLink>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={clearMenu}>{menus[2]}</HeaderLink>
+                            <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>{menus[2]}</HeaderLink>
                         </MenuItem>
                         <MenuItem>
                             { showMenu 
