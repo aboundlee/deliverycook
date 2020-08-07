@@ -31,7 +31,7 @@ const Bold = styled.span`
     font-weight: bold;
 `;
 const TextContainer = styled.div`
-    margin-bottom: 50px;
+
     color: #fff;
     width: 100%;
 `;
@@ -60,10 +60,10 @@ const BigHighlight = styled.img`
     transform: translate(-50%);
     top: 240.438rem;
 
-@media screen and (max-width:480px) {
-    width: 22rem;
-    top: 175.438rem;
-} 
+    @media screen and (max-width:480px) {
+        width: 22rem;
+        top: 175.438rem;
+    } 
 `;
 
 const ImageContainer = styled.div`

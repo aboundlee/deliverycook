@@ -34,11 +34,19 @@ const InfoContainer = styled.div`
     width: 25rem;
     height: 40rem;
     left: 1rem;
+    top: 57%;
+    transform: translate(0, -50%);    
     background: #fff;
     display: flex;
     
 
     flex-direction: column;
+
+    @media (min-width: 1600px){
+        left: 3rem;
+
+
+    }
 
 `;
 const Title = styled.div`
