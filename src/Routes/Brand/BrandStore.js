@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 
 import StoreItem from '../../Components/StoreItem';
 import {Stores} from '../../Data/Stores'; //get Stores
+import Loader from '../../Components/Loader';
 
 dotenv.config();
 
@@ -193,7 +194,7 @@ export default () => {
         <RenderAfterNavermapsLoaded
         ncpClientId={process.env.REACT_APP_NAVERMAP_CLIENT_KEY} // 자신의 네이버 계정에서 발급받은 Client ID
         error={<p>Maps Load Error</p>}
-        loading={<p>Maps Loading...</p>}
+        loading={<Loader/>}
       >
         <Page>
         <Map/>
