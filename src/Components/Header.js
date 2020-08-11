@@ -11,7 +11,7 @@ import { actionCreators } from './StoreRedux';
 import '../Styles/Header.css';
 
 const NavBar = styled.div`
-    z-index: 30;
+    z-index: 101;
     width: 100%;
     height: 65px;
     position: fixed;

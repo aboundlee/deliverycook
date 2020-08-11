@@ -3,6 +3,7 @@ export const Stores = [
      "index"         : 1,
      "name"          : "동진주점",
      "address"       : "경남 진주시 하대로117번길 7",
+     "city"          : "경상남도",
      "phone_number"  : "0504-0999-1258",
      "lat"           : 35.1938264,
      "lng"           : 128.122139
@@ -11,6 +12,7 @@ export const Stores = [
      "index"         : 2,
      "name"          : "평택팽성점",
      "address"       : "경기 평택시 팽성읍 부용로55번길 22",
+     "city"          : "경기도",
      "phone_number"  : "031-658-8292",
      "lat"           : 36.9662114,
      "lng"           : 127.0588418
@@ -19,6 +21,7 @@ export const Stores = [
      "index"         : 3,
      "name"          : "창원대원점",
      "address"       : "경남 창원시 의창구 대원로33번길 19",
+     "city"          : "경상남도",
      "phone_number"  : "055-276-9966",
      "lat"           : 35.232054,
      "lng"           : 128.6493325
@@ -27,6 +30,7 @@ export const Stores = [
      "index"         : 4,
      "name"          : "예산점",
      "address"       : "충남 예산군 예산읍 산성공원1길 36",
+     "city"          : "충청남도",
      "phone_number"  : "041-335-9295",
      "lat"           : 36.6931265,
      "lng"           : 126.8311487 
@@ -35,6 +39,7 @@ export const Stores = [
      "index"         : 5,
      "name"          : "서산점",
      "address"       : "충남 서산시 고운로 153",
+     "city"          : "충청남도",
      "phone_number"  : "041-664-9392",
      "lat"           : 36.783542,
      "lng"           : 126.4502309  
@@ -43,6 +48,7 @@ export const Stores = [
      "index"         : 6,
      "name"          : "인덕원점",
      "address"       : "경기 안양시 동안구 흥안대로517번길 39",
+     "city"          : "경기도",
      "phone_number"  : "031-424-9295",
      "lat"           : 37.3998605,
      "lng"           : 126.9720239  
@@ -51,6 +57,7 @@ export const Stores = [
      "index"         : 7,
      "name"          : "역곡점",
      "address"       : "경기 부천시 범안로 54",
+     "city"          : "경기도",
      "phone_number"  : "032-342-8292",
      "lat"           : 37.4769039,
      "lng"           : 126.805425 
@@ -59,6 +66,7 @@ export const Stores = [
      "index"         : 8,
      "name"          : "강릉점",
      "address"       : "강원 강릉시 화부산로141번안길 13",
+     "city"          : "강원도",
      "phone_number"  : "033-643-7771",
      "lat"           : 37.7667198,
      "lng"           : 128.8931668 

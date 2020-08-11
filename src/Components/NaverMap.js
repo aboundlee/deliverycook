@@ -55,15 +55,13 @@ const MapContainer = styled.div`
 
 
 
-const Map = () => {  
+const Map = ({onStoreClick, center, setCenter}) => {  
     //getCurrentLocation();
     let mapRef;
   
   
     let [mapBounds, setBounds] = useState(0); // 맵 전체 크기
-    let [center, setCenter] = useState({lat:37.5668144, lng:126.9783882}); // 지도의 center 값
     let [zoom, setZoom] = useState(0); // 지도의 zoom 값
-    let [posChanged, setPosChanged] = useState(0); // 지도 position 변화 감지.
 
 
 //     const addr ="경남 진주시 하대로117번길 7"
@@ -107,6 +105,7 @@ const Map = () => {
       }
     }
     
+
     
 
     return (
@@ -128,7 +127,7 @@ const Map = () => {
           >
 
             { renderStores  && renderStores.map((store, index) => (
-                <StoreMarker lat={store.lat} lng={store.lng} key={index}/>             
+                <StoreMarker store={store} key={index} onStoreClick={onStoreClick}/>             
             ))}
     
     

@@ -10,12 +10,9 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 
 const Wrapper = styled.div`
- height: 100%;
- width: 100%;
-
-
+    height: 100%;
+    width: 100%;
     background-color: #242424;
-
 `;
 
 const Page = styled.section`
@@ -27,8 +24,6 @@ const Page = styled.section`
     height: 100%;
     color: #fff;
     background-color: #242424;
-
-
 `;
 
 const Caption = styled.div`

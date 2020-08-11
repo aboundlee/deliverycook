@@ -12,9 +12,8 @@ const Item = styled.li`
     &:hover {
         background: rgba(229, 0, 18, 0.1);
     }
-    $:active {
+    $:focus {
         background: rgba(229, 0, 18, 0.1);
-
     }
 `;
 
@@ -27,8 +26,6 @@ const MarkerImg = styled.img`
 const Name = styled.p`
     font-size: 1.25rem;
     font-weight: bold;
-
-    
 `;
 
 const PhoneNumber = styled.p`
@@ -61,9 +58,13 @@ const FirstColumn = styled.div`
     
 `;
 
-const StoreItem = ({name,phoneNumber, address}) => {
+const StoreItem = ({name,phoneNumber, address, store, onStoreClick}) => {
+
     return (
-        <Item>
+        <Item onClick={()=>{
+            onStoreClick(store);
+
+            }}>
             <MarkerImg src="/Images/Brand/marker.png" alt="deliverycook"/>
             <Content>
                 <FirstColumn>

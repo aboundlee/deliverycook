@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import styled from "styled-components";
 
 import Fade from 'react-reveal/Fade';
 import MenuCarosuel from "../../../Components/BigCarousel"
+import Loader from '../../../Components/Loader';
 
 
 
@@ -74,7 +75,25 @@ const Hilight = styled.img`
 const CarosuelContainer = styled.div`
     height: 60%;
 `;
+function useAsync(asyncFn, onSuccess) {
+  useEffect(() => {
+    let isMounted = true;
+    asyncFn().then(data => {
+      if (isMounted) onSuccess(data);
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, [asyncFn, onSuccess]);
+}
+
 const Section2 = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    	setLoading(false);
+	return () => setLoading(true);
+  },[]);
 
     return (
         <Page>
@@ -96,7 +115,13 @@ const Section2 = () => {
         </Fade>
 
             <CarosuelContainer>
-                <MenuCarosuel category="Brand" mobileItem="1"/>
+		{ loading 
+		? (
+		    <Loader loading={loading}/>
+		) 
+		: (
+                <MenuCarosuel/>
+		)}
             </CarosuelContainer>
             
         </Page>

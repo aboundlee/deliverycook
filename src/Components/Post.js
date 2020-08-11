@@ -56,14 +56,15 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 0.5rem;
-
+    width: 100%;
+    text-align: left;
 `;
 
-const Post = ({index, title, subtitle}) => {
+const Post = ({index, title, subtitle, post, onPostClick}) => {
     const image_url = `/Images/Brand/News/${index}.png`;
     const image_alt = `deliverycook_${index}`;
     return (
-        <GridItem item lg={4} md={4} sm={6} xs={12}>
+        <GridItem item lg={4} md={4} sm={6} xs={12} onClick={()=>onPostClick(post)}>
         
             <ThumbNail src={image_url} alt={image_alt}/>
             <Content>

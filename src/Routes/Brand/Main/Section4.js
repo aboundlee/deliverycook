@@ -2,12 +2,11 @@ import React, {useRef, useState, useEffect} from 'react';
 import styled, {css} from "styled-components";
 
 import Fade from 'react-reveal/Fade';
-import useScript from '../../../Hooks/useScript';
 // import '../../../Styles/LineAnimation.css';
 //import '../../../Animations/LineAnimation.js';
 
  
-import $ from 'jquery';
+//import $ from 'jquery';
 
 
 
@@ -349,7 +348,7 @@ const Section4 = () => {
          // Scroll에 따라, svg선을 그려주는 함수.
         // input : 스크롤 값
     
-        let totalScroll = document.documentElement.scrollHeight;
+        //let totalScroll = document.documentElement.scrollHeight;
         let screenSize = document.documentElement.clientHeight;
         
     
@@ -453,7 +452,6 @@ const Section4 = () => {
             setOffsetY(-y+3*screen);
 
             listenToScroll(offsetY);
-            console.log(y);
 
             }
         }>

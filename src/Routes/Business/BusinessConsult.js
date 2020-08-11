@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 
-import Fade from 'react-reveal/Fade';
 
 import { useForm } from 'react-hook-form';
 import TextModal from '../../Components/Modal';

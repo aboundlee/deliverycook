@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {Helmet} from "react-helmet";
-import ClipLoader from "react-spinners/ClipLoader";
+//import ClipLoader from "react-spinners/ClipLoader";
 import Loader from './Loader';
 
 
 //import { gql } from 'apollo-boost';
 
 import { ThemeProvider } from "styled-components";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
@@ -42,14 +42,10 @@ const App = () => {
 
 
   useEffect(() => {
-
     setTimeout(function(){
     	setLoading(false);
         setModalVisible(true);
     }, 1000);
-
-    
-
   },[]);
 
 //        <PopUpModal visible={modalVisible} setVisible={() => setModalVisible(false)}/>

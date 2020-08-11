@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import StoreItem from '../../Components/StoreItem';
 import {Stores} from '../../Data/Stores'; //get Stores
 import Loader from '../../Components/Loader';
+import StoreModal from '../../Components/StoreModal';
 
 dotenv.config();
 
@@ -17,8 +18,9 @@ dotenv.config();
 const Page = styled.section`
     width: 100%;
     height: 100%;
-    padding-top: 7rem;
+
     text-align: center;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,18 +36,23 @@ const InfoContainer = styled.div`
     width: 25rem;
     height: 40rem;
     left: 1rem;
-    top: 57%;
-    transform: translate(0, -50%);    
+    top: 8rem;
     background: #fff;
     display: flex;
     
 
     flex-direction: column;
 
+    @media (max-width:480px) {
+        top: 50%;
+        transform: translate(0, -50%);    
+
+    }
     @media (min-width: 1600px){
         left: 3rem;
-
-
+        height: 45rem;
+        width: 28.125rem;
+        top: 10rem;
     }
 
 `;
@@ -145,21 +152,19 @@ const Submit = styled.input`
 
 `;
 
-const AddressSearch = styled.div`
- 
-`;
-const SearchButton = styled.button`
-  
-`;
 
 const StoresResult = styled.div`
   width: 100%;
   height: 15rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  @media (min-width: 1600px){
+    height: 30rem;
+
+    }
 `;
 
 const StoreLists = styled.ul`
-
+ 
 `;
 
 const Division = styled.div`
@@ -186,16 +191,54 @@ const Red = styled.span`
 
 export default () => {
     
-    const cities = ["서울","인천","대전","광주","대구","울산","부산","세종시","경기도","강원도","충청남도","충청북도","전라남도","전라북도","경상남도","경상북도","제주도"];
+    const cities = ["전체보기","서울","인천","대전","광주","대구","울산","부산","세종시","경기도","강원도","충청남도","충청북도","전라남도","전라북도","경상남도","경상북도","제주도"];
 
-    const { register, errors, reset, handleSubmit } = useForm();
-    const onSubmit = (data) => {
+    const { register, reset, handleSubmit } = useForm();
+    const [center, setCenter] = useState({lat:37.5668144, lng:126.9783882}); // 지도의 center 값
 
-        console.log(data);
+    const [searchingCity, setSearchingCity] = useState("");
+    const [searchingStore, setSearchingStore] = useState(Stores);
 
-        console.log(data.city);
-        console.log("!!");
+    const [selectedStore, setSelectedStore] = useState({});
+    // marker click 시, modal control
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleshow = () => setShow(true);
+
+    const onSubmit = ({city},e) => {
+
+        setSearchingCity(city);
+        let tempSearchingStore = [];
+        if (city==="전체보기") {
+            setSearchingStore(Stores);
+        } else {
+            for (let i = 1; i < Stores.length; i++) {
+                if (Stores[i].city === city) {
+                    tempSearchingStore.push(Stores[i]);
+                }
+            }
+            setSearchingStore(tempSearchingStore);
+        }      
+
+
+        // 만약 존재하면, 해당지역으로 좌표 이동.
+
+        if (tempSearchingStore) {
+            // setCenter({lat: lat, lng:lng});
+        }
+
+   
+
     };
+
+    const onStoreClick = (store) => {
+	handleshow();
+        setCenter({lat: store.lat, lng:store.lng});
+	setSelectedStore(store);
+
+    };
+
+    const searchedStore = Stores
 
     return (
 
@@ -205,7 +248,7 @@ export default () => {
         loading={<Loader/>}
       >
         <Page>
-        <Map/>
+        <Map center={center} setCenter={setCenter} onStoreClick={onStoreClick}/>
         <InfoContainer>
             <Title>
                 <Text>매장안내</Text>
@@ -218,7 +261,7 @@ export default () => {
                         <Select name="city" defaultValue={'DEFAULT'} ref={register} >
                             <option value="DEFAULT" disabled>시/도</option>
                             { cities  && cities.map((city, index) => (
-                                <option value={index} key={index}>{city}</option>             
+                                <option value={city} key={index}>{city}</option>             
                             ))}
                         </Select>
                         <Select name="region" defaultValue={'DEFAULT'} ref={register} >
@@ -233,20 +276,22 @@ export default () => {
             </SearchContainer>
             <Division>
                 <SmallText>
-                   <Red>딜리버리쿡</Red> 검색결과
+                   <Red>{searchingCity} 딜리버리쿡</Red> 검색결과
                 </SmallText>
             </Division>
             <StoresResult>
 
                 <StoreLists>
-                { Stores  && Stores.map((store, index) => (
-                    <StoreItem name={store.name} phoneNumber={store.phone_number} address={store.address}/>
+                { searchingStore  && searchingStore.map((store, index) => (
+                    <StoreItem name={store.name} phoneNumber={store.phone_number} address={store.address} store={store} onStoreClick={onStoreClick} key={index}/>
                             ))}
                 </StoreLists>
 
             </StoresResult>
         </InfoContainer>
-
+j
+	{ selectedStore && (
+	<StoreModal store={selectedStore} show={show} handleClose={handleClose}/>)}
 
 
         </Page>

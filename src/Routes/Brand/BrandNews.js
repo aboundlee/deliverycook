@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import styled from "styled-components";
 
 //import Fade from 'react-reveal/Fade';
 import Post from "../../Components/Post";
+import NewsModal from "../../Components/NewsModal";
 import { Posts } from "../../Data/News";
 import Grid from '@material-ui/core/Grid';
 
@@ -65,6 +66,17 @@ const GridPosts = styled(Grid)`
     margin: 3rem 0;
 `;
 export default () => {
+    const [selectedPost, setSelectedPost] = useState({});
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const onPostClick = (post) => {
+	handleShow();
+	setSelectedPost(post);
+
+    };
+
     return (
         <Page>
             <TitleWrapper>
@@ -76,9 +88,13 @@ export default () => {
             </TitleWrapper>
             <GridPosts container>
                 { Posts  && Posts.slice(0).reverse().map((post, index) => (
-                    <Post index={post.index} title={post.title} subtitle={post.subtitle} key={index}/>
+                    <Post index={post.index} title={post.title} subtitle={post.subtitle} key={index} post={post} onPostClick={onPostClick}/>
                             ))}
             </GridPosts>
+
+	{ selectedPost && (
+	<NewsModal post={selectedPost} show={show} handleClose={handleClose}/>)}
+
         </Page>
     );
   };
