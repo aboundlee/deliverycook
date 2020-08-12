@@ -70,7 +70,7 @@ const MainText = styled.p`
 `;
 
 const SubTextContainer = styled.div`
-   margin-top: 1.1rem;
+   margin-bottom: 1.1rem;
 
 `;
 
@@ -105,15 +105,15 @@ const Section3 = () => {
 
                 <Fade bottom distance={'30%'}> 
 
+                <SubTextContainer>
+                    <SubText>딜리버리쿡의 <Bold>특별함</Bold></SubText>
+                </SubTextContainer>
                 <MainTextContainer>
-                        <MainText>배달음식을<br/><Bold>믿고 먹을 수</Bold> 있어야 해요.</MainText>
+                        <MainText>배달음식을<br/><Bold>믿고 먹을 수</Bold> 있도록 하다.</MainText>
                         <Hilight src="/Images/Brand/p5_redline.svg" alt="highlight"></Hilight>
 
                 </MainTextContainer>
 
-                <SubTextContainer>
-                    <SubText>집에서 <Bold>먹는 배달음식</Bold>을<br/>집에서 <Bold>만든 음식</Bold>처럼 먹을 수 있는,</SubText>
-                </SubTextContainer>
                 </Fade>
             </TextContainer>
         </Page>    
