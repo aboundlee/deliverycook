@@ -106,7 +106,7 @@ const Section3 = () => {
                 <Fade bottom distance={'30%'}> 
 
                 <MainTextContainer>
-                        <MainText>배달음식도<br/><Bold>믿고 먹을 수</Bold> 있어야 해요.</MainText>
+                        <MainText>배달음식을<br/><Bold>믿고 먹을 수</Bold> 있어야 해요.</MainText>
                         <Hilight src="/Images/Brand/p5_redline.svg" alt="highlight"></Hilight>
 
                 </MainTextContainer>
