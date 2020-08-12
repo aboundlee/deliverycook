@@ -2,13 +2,13 @@ import React from "react";
 import "../../../Styles/BusinessMain.css";
 import {withRouter} from 'react-router-dom';
 
-// import Section1 from './Section1';
+import {isIE} from 'react-device-detect';
+
+import Section1 from './Section1';
 import Section2 from './Section2';
-// import Section3 from './Section3';
+import Section3 from './Section3';
 import Section4 from './Section4';
 import Section5 from './Section5';
-import Section6 from './Section6';
-import Section7 from './Section7';
 import Footer from '../../../Components/Footer';
 
 import BrandSection1 from '../../Brand/Main/Section1';
@@ -39,11 +39,11 @@ const FullpageWrapper = () => {
             <ReactFullpage.Wrapper>
             {/* <div className="section"><BrandSection1/></div> */}
 
+            <div className="section"><Section1/></div>
             <div className="section"><Section2/></div>
+            <div className="section"><Section3/></div>
             <div className="section"><Section4/></div>
-            <div className="section"><Section5/></div>
-            <div className="section"><Section6/></div>
-            <div className="section"><Section7/><Footer/></div>
+            <div className="section"><Section5/><Footer/></div>
 	    <div className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북"/></div>
             </ReactFullpage.Wrapper>
         );

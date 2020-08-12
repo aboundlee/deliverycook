@@ -15,11 +15,14 @@ const MenuImg = styled.img`
     z-index: 1;
     width: 80%;
     max-width: 400px;
+    height: auto;
+    min-height: 1px;
 `;
 const LogoImg = styled.img`
     margin-top: 20px;
-    width: 40%;
-
+    width: 50%;
+    height: auto;
+    min-height: 1px;
 `;
 
 

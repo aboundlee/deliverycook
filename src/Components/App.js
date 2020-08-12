@@ -48,7 +48,8 @@ const App = () => {
     }, 1000);
   },[]);
 
-//        <PopUpModal visible={modalVisible} setVisible={() => setModalVisible(false)}/>
+        //<PopUpModal visible={modalVisible} setVisible={() => setModalVisible(false)} />
+
 
   return (
   <ThemeProvider theme={Theme}>
@@ -85,6 +86,7 @@ const App = () => {
       <Wrapper>
           <Routes/>
           <CircleModal/>
+
       </Wrapper>
 	)}
      <Thumbnail/>

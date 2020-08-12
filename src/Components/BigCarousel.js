@@ -23,7 +23,7 @@ const LogoImg = styled.img`
 
 `;
 
-const delay = () => new Promise(resolve => setTimeout(() => resolve(false), 1000));
+const delay = () => new Promise(resolve => setTimeout(() => resolve(false), 500));
 
 function useAsync(asyncFn, onSuccess) {
   useEffect(() => {

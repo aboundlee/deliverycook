@@ -1,9 +1,12 @@
+
 import React, {useState,useEffect} from 'react';
 import styled from "styled-components";
 
 import Fade from 'react-reveal/Fade';
 import MenuCarosuel from "../../../Components/BigCarousel"
 import Loader from '../../../Components/Loader';
+import Grid from '@material-ui/core/Grid';
+import GridContent from '../../../Components/GridContent';
 
 
 
@@ -57,35 +60,23 @@ margin-top: 14px;
 
 `;
 
-const Hilight = styled.img`
-    margin-right: 13.5rem;
-    width: 11.688rem;
+const Highlight = styled.img`
+    width: 8.688rem;
+    margin-right: 9rem;
     @media (max-width: 480px) {
-    margin-right: 10em;
-    width: 10rem;
+      width: 8rem;
+      margin-right: 10rem;
     }
 
-    @media (min-width: 1600px) {
-    margin-right: 15.5rem;
-
-    }
 
 `;
 
-const CarosuelContainer = styled.div`
-    height: 60%;
+const GridContainer = styled(Grid)`
+    margin-top: 3rem;
+   @media(max-width: 480px) {
+    margin-top: 0rem;
+  }
 `;
-function useAsync(asyncFn, onSuccess) {
-  useEffect(() => {
-    let isMounted = true;
-    asyncFn().then(data => {
-      if (isMounted) onSuccess(data);
-    });
-    return () => {
-      isMounted = false;
-    };
-  }, [asyncFn, onSuccess]);
-}
 
 const Section2 = () => {
   const [loading, setLoading] = useState(true);
@@ -94,6 +85,9 @@ const Section2 = () => {
     	setLoading(false);
 	return () => setLoading(true);
   },[]);
+   const onGridClick = () => {
+
+  };
 
     return (
         <Page>
@@ -102,22 +96,24 @@ const Section2 = () => {
             <TextContainer>
 
                 <MainTextContainer>
-                    <MainText>딜리버리쿡의 브랜드는 <br/>무엇이 특별할까요?</MainText>
+                    <MainText>믿음을 만드는 3가지 이유</MainText>
                 </MainTextContainer>
 
+                <SubTextContainer>
+                    <SubText><Bold>3 COOK</Bold>으로 요리하다</SubText>
+                    <Highlight src="/Images/Brand/p2_redline.svg" alt="highlight"></Highlight>
+
+                </SubTextContainer>
 
             </TextContainer>
         </Fade>
 
-            <CarosuelContainer>
-		{ loading 
-		? (
-		    <Loader loading={loading}/>
-		) 
-		: (
-                <MenuCarosuel/>
-		)}
-            </CarosuelContainer>
+            <GridContainer container>
+                    <GridContent title={"재료"} img_url={"1"} onGridClick={onGridClick}/>
+                    <GridContent title={"환경"} img_url={"3"} onGridClick={onGridClick}/>
+                    <GridContent title={"사람"} img_url={"2"} onGridClick={onGridClick}/>
+            </GridContainer>
+
             
         </Page>
 

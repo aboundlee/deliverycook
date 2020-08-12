@@ -58,6 +58,7 @@ const Close = styled.a`
     border: 2px solid #fff;
     border-radius: 6px;
      border: 2px solid #E50012;
+	color: #E50012;
     &:hover {
         background-color: #E50012;
 	color: #fff;

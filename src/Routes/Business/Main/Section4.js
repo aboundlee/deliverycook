@@ -1,229 +1,123 @@
-import React, {useState} from 'react';
-import styled, { css, keyframes } from "styled-components";
+import React from 'react';
+import styled from "styled-components";
 
 import Fade from 'react-reveal/Fade';
 
+
 import './Styles';
-import useInterval from "../../../Hooks/useInterval";
 
 import { Page, Bold } from './Styles';
 
 
-const Page4 = styled(Page)`
-    position:relative;
-    height: 100%;
+const Page6 = styled(Page)`
+    text-align: right;
+    display: flex;
+    align-items: center;
 
-    /*max-height: 1000px;*/
-
-    background: url("/Images/Business/p4.png") no-repeat; 
+    color: #FFFFFF;
+    background: url("/Images/Business/p6.png") no-repeat; 
     background-position: center;
     background-size: cover;
-
-    color: white;
-
-`;
-
-const ColorBold = styled(Bold)`
-    ${props => {
-            if (props.color) {
-                
-                return css `color: #${props.color}`;
-            }
-    }}
-`;
-
-const Filter = styled.div`
-   position: absolute;
-    background-color: #242424;
-
-    filter:alpha(opacity=90);
-    -moz-opacity:0.9;
-    -khtml-opacity: 0.9;
-    opacity: 0.9;
     height: 100%;
-    width: 100%;
 `;
-
 
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    text-align: center;
-    padding-top: 6.5rem;
-    height: 40%;
-    z-index: 4;
-
-    @media (max-width: 480px) {
-        padding-top: 14.5vh;
-    }
+    padding-right: 10%;
 `;
 
-const MainTextWrapper = styled.div`
-    z-index: 4;
+const MainTextContainer = styled.div`
+    margin-bottom: 2em;
 `;
 
 const MainText = styled.p`
-    font-style: normal;
-    font-size: 3.75rem;
-    line-height: 5rem;
 
-    font-weight: 900;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.75rem;
+    margin-left: 1.4rem;
+    line-height: 5rem;
+    font-weight: bold;
+
+${'' /* 
+    &:first-child {
+    line-height: 3rem;
+    } */}
 
 `;
 
-const SubTextWrapper = styled.div`
+/*
+const Hilight = styled.img`
+   margin-right: 7em;
+    height: 1.386em;
 
-    margin-top: 14px;
-    z-index: 4;
+
+    @media (max-width: 480px) {
+        width: 22rem;
+        margin-right: 4em;
+        height: 11px;
+    }
+`;
+
+*/
+
+const SubTextContainer = styled.div`
+   margin-bottom: 1px;
 
 `;
 
 const SubText = styled.p`
     vertical-align:middle;
-    line-height: 2.7rem;
-
-    font-size: 2.188rem;
-`;
-
-
-const ImageWrapper = styled.div`
-    height: 60%;
-    position: relative;
-
-`;
-
-const Phone = styled.img`
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
-    height: 29.813rem;
-    width: auto;    
-
-    @media (max-width: 480px) {
-        height: 400px;
-    }
-    
-
-    ${'' /* @media (min-width: 1600px) {
-        height: 630px;
-
-    } */}
-
-`;
-
-const ScreenContainer = styled.div`
-    position: absolute;
-    width: 9.688rem;
-    height: 21.25rem;
-    bottom: 5.625rem;
-    left: 50%;
-    transform: translateX(-50%);
-
-    overflow: hidden;
-
-    @media (max-width: 480px) {
-        width: 129px;
-        height: 290px;
-        bottom: 73px;
-    }
-
-    ${'' /* @media (min-width: 1600px) {
-        width: 200px;
-        height: 450px;
-        bottom: 123px;
-    } */}
-
-`;
-
-
-const Screen = styled.img`
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    height: 100%;
-    width: auto;  
-    ${props => {
-            if (props.active) {
-                return css `
-                -webkit-animation:  ${slideIn} 0.45s forwards linear alternate;
-                -moz-animation:    ${slideIn} 0.45s forwards linear alternate;
-                -o-animation:       ${slideIn} 0.45s forwards linear alternate;
-                animation:         ${slideIn}  0.45s forwards linear alternate;
-                `;
-            }
-    }}
-
+    font-style: normal;
+    font-size: 1.875rem;
+    margin-left: 1.4rem;
+    line-height: 2.813rem;
 `;
 
 
 
-const slideIn = keyframes`
-    from {
-      margin-left: 110%; 
-    }
-  
-    to {
-      margin-left: 0%;
-    }
-`;
-
-
-
-
-
-
-const Section4 = () => {
-
-    const [slide, setSlide] = useState(1);
-    const [slidezIndex, setSlidezIndex] = useState([3,2,1]);
-    const Category = [ "돈까스","분식", "한식"];
-    const TextColor = ["F49E21","C5171E","E71E27"];
-        useInterval(() => {
-            setSlidezIndex(slidezIndex.map(x => (x===1) ? 3 : x-1));
-
-            if (slide === 1) {
-                setSlide(3);
-            }
-            else {
-                setSlide(slide-1);
-            }
-          }, 1200);
-        
+const Section6 = () => {
 
     return (
-        <Page4>
-        <Filter/>
-        <TextContainer>
-        <Fade bottom cascade distance={'30%'}> 
 
-            <MainTextWrapper>
-                <MainText>배달앱 카테고리<br/>어디든지 있어요</MainText>
-            </MainTextWrapper>
-            <SubTextWrapper>
-                <SubText><ColorBold color={TextColor[slide-1]}>{Category[slide-1]}</ColorBold>에도 딜리버리쿡</SubText>
-            </SubTextWrapper>
+        <Page6>
+
+        <TextContainer>
+            <Fade bottom cascade distance={'30%'}> 
+
+            <MainTextContainer>
+                <MainText>적게 움직이고<br/>쉽게 만드세요</MainText>
+            </MainTextContainer>
             </Fade>
 
+            <Fade bottom distance={'30%'} delay={300}> 
+
+            <SubTextContainer>
+                    <SubText>
+                    주방과 주방기구를 <Bold>최적으로 디자인</Bold>하여,
+                    <br/>여러 브랜드를 <Bold>효율적으로 조리</Bold>하고
+                    <br/><Bold>운영</Bold>할 수 있도록 했습니다.</SubText>
+            </SubTextContainer>
+            </Fade>
         </TextContainer>
-        <ImageWrapper>
-            <Phone src="/Images/Business/p4_phone.png" className="phone" alt="phone"></Phone> 
-            <ScreenContainer>
-                <Screen src="/Images/Business/p4_screen1.png" active= {slide===1 && 'active'} style={{zIndex:slidezIndex[0]}} alt="screen"></Screen> 
-                <Screen src="/Images/Business/p4_screen2.png" active= {slide===2 && 'active'} style={{zIndex:slidezIndex[1]}} alt="screen"></Screen> 
-                <Screen src="/Images/Business/p4_screen3.png" active= {slide===3 && 'active'} style={{zIndex:slidezIndex[2]}}  alt="screen"></Screen> 
-            </ScreenContainer>
-        </ImageWrapper>
-        
-    </Page4>
+    </Page6>
 
     );
 };
 
-export default Section4;
+
+export default Section6;
     
 
+
+/*
+
+
+  <MainText><Bold>최적화된 주방</Bold>으로</MainText>
+                <Hilight src="/Images/Business/p3_redline.svg" alt="highlight"></Hilight>
+
+                <MainText><Bold>적게</Bold> 움직이고, <Bold>쉽게</Bold> 만드세요</MainText>
+
+                */

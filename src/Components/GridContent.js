@@ -14,13 +14,17 @@ const GridItem = styled(Grid)`
     height: 29.563rem;
     cursor: pointer;
 
-    border: 1px solid #050505;
+   @media(max-width: 480px) {
+	height: 14.563rem;
+    padding: 0.5rem 9.5rem;
+  }
 
    
 
     
     &:hover {
         background: rgba(0, 0, 0, 0.05);
+        border: 2px solid #fff;
     }
     $:active {
         background: rgba(0, 0, 0, 0.05);
@@ -28,7 +32,12 @@ const GridItem = styled(Grid)`
 `;
 const G = styled.div`
 
-    border: 1px solid #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 `;
 
 const ThumbNail = styled.div`
@@ -43,7 +52,7 @@ const ThumbNail = styled.div`
 `;
 
 const Title = styled.p`
-    font-size: 1.375rem;
+    font-size: 2rem;
     font-weight: bold;
     margin: 1rem 0;
 
@@ -54,7 +63,6 @@ const SubTitle = styled.p`
     font-size: 1rem;
     color: #727171;
     margin-top: 0.25rem;
-    text-align: left;
 `;
 const Content = styled.div`
     display: flex;
@@ -62,20 +70,20 @@ const Content = styled.div`
     justify-content: center;
     margin-top: 0.5rem;
     width: 100%;
-    text-align: left;
 `;
 
-const Post = ({index, title, subtitle, post, onPostClick}) => {
-    const image_url = `/Images/Brand/News/${index}.png`;
-    const image_alt = `deliverycook_${index}`;
+const Post = ({title, img_url ,onGridClick}) => {
+    const image_url = `/Images/Brand/News/${img_url}.png`;
+    const image_alt = `deliverycook_1`;
     return (
-        <GridItem item lg={4} md={4} sm={6} xs={12} onClick={()=>onPostClick(post)}>
+        <GridItem item lg={4} md={4} sm={4} xs={12} onClick={()=>onGridClick()}>
+	<G>
         
             <ThumbNail src={image_url} alt={image_alt}/>
             <Content>
                 <Title>{title}</Title>
-                <SubTitle>{subtitle}</SubTitle>
             </Content>
+	</G>
         </GridItem>
     )
 };

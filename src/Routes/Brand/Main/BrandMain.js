@@ -8,6 +8,7 @@ import Section2 from './Section2';
 import Section3 from './Section3';
 import Section4 from './Section4';
 import Section5 from './Section5';
+import SectionAddition from './SectionAddition';
 import Footer from '../../../Components/Footer';
 
 import 'fullpage.js/vendors/scrolloverflow';
@@ -63,6 +64,7 @@ const FullpageWrapper = () => {
               <div className="section"><Section1/></div>
               <div className="section"><Section2/></div>
               <div className="section"><Section3/></div>
+              <div className="section"><SectionAddition/></div>
               <div className="section"><Section4/></div>
               <div className="section"><Section5/><Footer/></div>
 
