@@ -15,7 +15,7 @@ const GridItem = styled(Grid)`
     cursor: pointer;
 
    @media(max-width: 480px) {
-    height: 13.563rem;
+    height: 15.563rem;
     padding: 0.5rem 3.5rem;
   }
 

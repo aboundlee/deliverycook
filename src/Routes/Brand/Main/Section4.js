@@ -2,11 +2,7 @@ import React, {useRef, useState, useEffect} from 'react';
 import styled, {css} from "styled-components";
 
 import Fade from 'react-reveal/Fade';
-// import '../../../Styles/LineAnimation.css';
-//import '../../../Animations/LineAnimation.js';
 
- 
-//import $ from 'jquery';
 
 
 
@@ -296,13 +292,14 @@ const Section4 = () => {
 
 
   const [pathLength, setPathLength] = useState({'first': 0, 'second':0, 'third':0, 'fourth':0});
-  const [totalPathLength, setTotalPathLength] = useState({'first': 0, 'second':0, 'third':0, 'fourth':0});
+  //const [totalPathLength, setTotalPathLength] = useState({'first': 0, 'second':0, 'third':0, 'fourth':0});
+  let totalPathLength;
 
 
-  const [pathHeight, setPathHeight] = useState([0,0,0,0]);
+  //const [pathHeight, setPathHeight] = useState([0,0,0,0]);
+  let pathHeight;
   const [dashArray, setDashArray] = useState({'first': "none", 'second':"none", 'third':"none", 'fourth':"none"});
     
-  const [offsetY, setOffsetY] = useState(0);
 
 
     useEffect(()=> {
@@ -310,7 +307,8 @@ const Section4 = () => {
         if (pathSelector1.current){
 
         const path = [pathSelector1.current, pathSelector2.current,pathSelector3.current,pathSelector4.current] ;
-        setTotalPathLength({'first': path[0].getTotalLength(), 'second':path[1].getTotalLength(), 'third':path[2].getTotalLength(), 'fourth':path[3].getTotalLength()});
+        //setTotalPathLength({'first': path[0].getTotalLength(), 'second':path[1].getTotalLength(), 'third':path[2].getTotalLength(), 'fourth':path[3].getTotalLength()});
+        totalPathLength={'first': path[0].getTotalLength(), 'second':path[1].getTotalLength(), 'third':path[2].getTotalLength(), 'fourth':path[3].getTotalLength()};
         setDashArray(totalPathLength);
         setPathLength(totalPathLength);
 
@@ -318,41 +316,27 @@ const Section4 = () => {
         path[1].getBoundingClientRect();
         path[2].getBoundingClientRect();
         path[3].getBoundingClientRect();
-        setPathHeight([path[0].getBoundingClientRect().height, 
+        pathHeight = [path[0].getBoundingClientRect().height, 
                       path[1].getBoundingClientRect().height, 
                       path[2].getBoundingClientRect().height, 
-                      path[3].getBoundingClientRect().height])
-        };
+                      path[3].getBoundingClientRect().height];
+	window.addEventListener('scroll', listenToScroll);
+
+        }
+
+	return (() =>  window.removeEventListener('scroll', listenToScroll));
 
     },[]);
-
-
-    function getComputedTranslateY(obj)
-    {
-
-        // CSS에서 transform( x, y)의 y값 추출하는 함수 
-        // input : string css
-        // output : y
-        if(!window.getComputedStyle) return;
-        let style = getComputedStyle(obj);
-        let transform = style.transform || style.webkitTransform || style.mozTransform;
-        let mat = transform.match(/^matrix3d\((.+)\)$/);
-        if(mat) return parseFloat(mat[1].split(', ')[13]);
-        mat = transform.match(/^matrix\((.+)\)$/);
-        return mat ? parseFloat(mat[1].split(', ')[5]) : 0;
-    }
     
 
-  
-    function listenToScroll (yOffset) {
+    const listenToScroll = () => {
          // Scroll에 따라, svg선을 그려주는 함수.
         // input : 스크롤 값
     
-        //let totalScroll = document.documentElement.scrollHeight;
+        let totalScroll = document.documentElement.scrollHeight;
         let screenSize = document.documentElement.clientHeight;
         
-    
-    //    let yOffset = window.pageYOffset;
+        let yOffset = window.pageYOffset;
         let divOffset = screenSize*3 + 200; // Svg 의 margin-top 반영
     
         let pathEndSCroll1 = divOffset + pathHeight[0]; // 현재 div 사이즈가 600vh 이므로
@@ -366,15 +350,15 @@ const Section4 = () => {
         let scrollPercentage4 = (yOffset - pathEndSCroll3) / (pathHeight[3]);  // 분모 : 스크롤하는 총 길이(path의 height), 분자 : 현재 스크롤 - 이전 path 애니매이션의 끝
     
 
-        // console.log(dashArray);
 
-        // console.log(`yOffset : ${yOffset}`);
-        // console.log(`pathEndSCroll1 : ${pathEndSCroll1}`);
-        // console.log(screenSize);
-        // console.log(`percent : ${scrollPercentage1}`);
-        // console.log(`pathEndSCroll2 : ${pathEndSCroll2}`);
-    
-        // console.log(`pathEndSCroll3 : ${pathEndSCroll3}`);
+	//console.log(dashArray);
+         //console.log(`yOffset : ${yOffset}`);
+         //console.log(`pathEndSCroll1 : ${pathEndSCroll1}`);
+         //console.log(screenSize);
+         //console.log(`percent : ${scrollPercentage1}`);
+         //console.log(`pathEndSCroll2 : ${pathEndSCroll2}`);
+   
+         //console.log(`pathEndSCroll3 : ${pathEndSCroll3}`);
     
     
         var drawLength1 = totalPathLength.first * scrollPercentage1;
@@ -441,20 +425,7 @@ const Section4 = () => {
 
     return (
 
-        <Page onWheel = {(e) => {
-
-
-
-          let elem = document.querySelector('.fp-scroller');
-          //let y = getComputedTranslateY(elem);
-          let screen = document.documentElement.clientHeight;
-
-           // setOffsetY(-y+3*screen);
-
-        //    listenToScroll(offsetY);
-
-            }
-        }>
+        <Page>
         <TextContainer>
         <Fade bottom cascade distance={'30%'}> 
 

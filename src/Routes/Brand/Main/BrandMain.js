@@ -22,11 +22,14 @@ import $ from 'jquery';
 
 
 
-const Section = styled.div`
+const Section= styled.div`
  height: 100%;
  position: relative;
 `;
 
+const SectionContainer2 = styled.div`
+ position: relative;
+`;
 
 
 const LongSection = styled.div`
@@ -41,7 +44,7 @@ const FullpageWrapper = () => {
      return (<>
          <Section className="section"><Section1/></Section>
          <Section className="section"><Section2/></Section>
-              <Section className="section"><SectionAddition/></Section>
+              <SectionContainer2 className="section"><SectionAddition/></SectionContainer2>
          <LongSection className="section"><Section4/></LongSection>
          <Section className="section"><Section5/><Footer/></Section>
          </>

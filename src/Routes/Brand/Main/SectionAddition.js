@@ -17,6 +17,7 @@ background-color: #fff;
     text-align: center;
     color: #242424;
     height: 100%;
+    min-height: 820px;
 
 `;
 
@@ -80,10 +81,7 @@ const Highlight = styled.img`
 `;
 
 const GridContainer = styled(Grid)`
-    margin-top: 3rem;
-   @media(max-width: 480px) {
-    margin-top: 0rem;
-  }
+    margin: 3rem 0;
 `;
 
 const Section2 = () => {
@@ -104,14 +102,9 @@ const Section2 = () => {
             <TextContainer>
 
                 <MainTextContainer>
-                    <MainText>신뢰있는 브랜드의 <Bold>3가지 이유</Bold></MainText>
+                    <MainText>딜리버리쿡을 <br/>믿고 먹을 수 있는 <Bold>3가지 이유</Bold></MainText>
                 </MainTextContainer>
 
-                <SubTextContainer>
-                    <SubText><Bold>3 COOK</Bold>으로 <Bold>믿을 수 있게</Bold> 요리하다</SubText>
-                    <Highlight src="/Images/Brand/p2_redline.svg" alt="highlight"></Highlight>
-
-                </SubTextContainer>
 
             </TextContainer>
         </Fade>
