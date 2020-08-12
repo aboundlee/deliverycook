@@ -12,10 +12,10 @@ import GridContent from '../../../Components/GridContent';
 
 const Page = styled.section`
 width: 100%;
-background-color: #242424;
+background-color: #fff;
     
     text-align: center;
-    color: #FFFFFF;
+    color: #242424;
     height: 100%;
 
 `;
@@ -32,6 +32,7 @@ const TextContainer = styled.div`
     height: 30%;
     @media (max-width: 480px) {
     padding-top: 14.5vh;
+    margin-bottom: 12px;
     }
 
 `;
@@ -44,15 +45,22 @@ const MainTextContainer = styled.div`
 
 const MainText = styled.p`
     font-style: normal;
-    font-weight: 900;
+    font-weight: normal;
     font-size: 3.125rem;
     line-height: 5rem;
+    @media (max-width: 480px) {
+    line-height: 4rem;
+    }
 `;
 
 const SubText = styled.p`
     font-style: normal;
     font-weight: normal;
     font-size: 1.875rem;
+    @media (max-width: 480px) {
+      line-height: 1.25rem;
+    }
+
 `;
 
 const SubTextContainer = styled.div`
@@ -62,10 +70,10 @@ margin-top: 14px;
 
 const Highlight = styled.img`
     width: 8.688rem;
-    margin-right: 9rem;
+    margin-right: 19rem;
     @media (max-width: 480px) {
       width: 8rem;
-      margin-right: 10rem;
+      margin-right: 19.5rem;
     }
 
 
@@ -96,11 +104,11 @@ const Section2 = () => {
             <TextContainer>
 
                 <MainTextContainer>
-                    <MainText>믿음을 만드는 3가지 이유</MainText>
+                    <MainText>신뢰있는 브랜드의 <Bold>3가지 이유</Bold></MainText>
                 </MainTextContainer>
 
                 <SubTextContainer>
-                    <SubText><Bold>3 COOK</Bold>으로 요리하다</SubText>
+                    <SubText><Bold>3 COOK</Bold>으로 <Bold>믿을 수 있게</Bold> 요리하다</SubText>
                     <Highlight src="/Images/Brand/p2_redline.svg" alt="highlight"></Highlight>
 
                 </SubTextContainer>

@@ -15,8 +15,8 @@ const GridItem = styled(Grid)`
     cursor: pointer;
 
    @media(max-width: 480px) {
-	height: 14.563rem;
-    padding: 0.5rem 9.5rem;
+    height: 13.563rem;
+    padding: 0.5rem 3.5rem;
   }
 
    
@@ -38,6 +38,9 @@ const G = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
+   @media(max-width: 480px) {
+    flex-direction: row;
+   }
 `;
 
 const ThumbNail = styled.div`
@@ -48,6 +51,11 @@ const ThumbNail = styled.div`
             background: url(${props.src}) no-repeat;
     `} 
     background-size: cover;
+
+   @media(max-width: 480px) {
+    height: 100%;
+  }
+
 
 `;
 

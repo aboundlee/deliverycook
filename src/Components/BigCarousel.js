@@ -16,6 +16,10 @@ const MenuImg = styled.img`
     z-index: 1;
     width: 60%;
     max-width: 400px;
+    @media (max-width: 480px) {
+    width: 50%;
+
+   }
 `;
 const LogoImg = styled.img`
     margin-top: 20px;
@@ -55,8 +59,8 @@ const MenuCarosuel = () => {
         <Carousel
             additionalTransfrom={0}
             autoPlay
-            autoPlaySpeed={1000}
-            transitionDuration={1500}
+            autoPlaySpeed={500}
+            transitionDuration={1000}
             focusOnSelect={false}
             infinite
 

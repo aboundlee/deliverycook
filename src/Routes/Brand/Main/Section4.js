@@ -446,12 +446,12 @@ const Section4 = () => {
 
 
           let elem = document.querySelector('.fp-scroller');
-          let y = getComputedTranslateY(elem);
+          //let y = getComputedTranslateY(elem);
           let screen = document.documentElement.clientHeight;
 
-            setOffsetY(-y+3*screen);
+           // setOffsetY(-y+3*screen);
 
-            listenToScroll(offsetY);
+        //    listenToScroll(offsetY);
 
             }
         }>

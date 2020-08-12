@@ -41,7 +41,7 @@ const MainTextContainer = styled.div`
 
 const MainText = styled.p`
     font-style: normal;
-    font-weight: 900;
+    font-weight: normal;
     font-size: 3.125rem;
     line-height: 5rem;
 `;
@@ -73,7 +73,7 @@ const Hilight = styled.img`
 `;
 
 const CarosuelContainer = styled.div`
-    height: 60%;
+
 `;
 function useAsync(asyncFn, onSuccess) {
   useEffect(() => {
@@ -102,7 +102,7 @@ const Section2 = () => {
             <TextContainer>
 
                 <MainTextContainer>
-                    <MainText>딜리버리쿡의 브랜드는 <br/>무엇이 특별할까요?</MainText>
+                    <MainText>딜리버리쿡의 브랜드는<br/><Bold>무엇이 특별할까요?</Bold></MainText>
                 </MainTextContainer>
 
 
