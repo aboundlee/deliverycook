@@ -1,41 +1,45 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { Suspense }  from "react";
 import { BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom';
 //import { connect } from 'react-redux';
 //import { actionCreators } from './Store';
 
-import BrandMain from "../Routes/Brand/Main/BrandMain";
-import BrandAbout from "../Routes/Brand/BrandAbout";
-import BrandStore from "../Routes/Brand/BrandStore";
-import BrandNews from "../Routes/Brand/BrandNews";
+const BrandMain = React.lazy(() => import("../Routes/Brand/Main/BrandMain"));
+const BrandAbout = React.lazy(() =>  import("../Routes/Brand/BrandAbout"));
+const BrandStore = React.lazy(() => import("../Routes/Brand/BrandStore"));
+const BrandNews = React.lazy(() => import("../Routes/Brand/BrandNews"));
 
-import BusinessMain from "../Routes/Business/Main/BusinessMain";
-import BusinessSuccess from "../Routes/Business/Success/BusinessSuccess";
-import BusinessInfo from "../Routes/Business/BusinessInfo";
-import BusinessConsult from "../Routes/Business/BusinessConsult";
+const BusinessMain = React.lazy(() => import("../Routes/Business/Main/BusinessMain"));
+const BusinessSuccess = React.lazy(() =>  import("../Routes/Business/Success/BusinessSuccess"));
+const BusinessInfo = React.lazy(() =>  import("../Routes/Business/BusinessInfo"));
+const BusinessConsult = React.lazy(() => import("../Routes/Business/BusinessConsult"));
 
+//import Loader from "./Loader";
 
 
 const AppRouter = () => {
     return (
-        <> 
+      <Suspense fallback={<div>loading ...</div>}>
+
+
             <Switch>
                  
-        <Route exact path="/" component={withRouter(BrandMain)} />
+        <Route exact path="/" component={BrandMain} />
 
         {/* <Route exact path="/brand" component={withRouter(BrandMain)} /> */}
 
-        <Route exact path="/about" component={withRouter(BrandAbout)} />
-        <Route exact path="/store" component={withRouter(BrandStore)} />
-        <Route exact path="/news" component={withRouter(BrandNews)} />
+        <Route path="/about" component={BrandAbout} />
+        <Route path="/store" component={BrandStore} />
+        <Route path="/news" component={BrandNews} />
         
-        <Route exact path="/business" component={withRouter(BusinessMain)} />
-        <Route exact path="/success" component={withRouter(BusinessSuccess)} />
-        <Route exact path="/info" component={withRouter(BusinessInfo)} />
-        <Route exact path="/consult" component={withRouter(BusinessConsult)} />
+        <Route path="/business" component={BusinessMain} />
+        <Route path="/success" component={BusinessSuccess} />
+        <Route path="/info" component={BusinessInfo} />
+        <Route path="/consult" component={BusinessConsult} />
                  
             </Switch>
-        </>
+      </Suspense>
+
     );
 };
 

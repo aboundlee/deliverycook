@@ -109,7 +109,7 @@ const Section3 = () => {
                     <SubText>딜리버리쿡의 <Bold>특별함</Bold></SubText>
                 </SubTextContainer>
                 <MainTextContainer>
-                        <MainText>배달음식을<br/><Bold>믿고 먹을 수</Bold> 있도록 하다.</MainText>
+                        <MainText><Bold>믿고 먹을 수 있는</Bold><br/><Bold>모든 음식</Bold>이 다 있다.</MainText>
                         <Hilight src="/Images/Brand/p5_redline.svg" alt="highlight"></Hilight>
 
                 </MainTextContainer>

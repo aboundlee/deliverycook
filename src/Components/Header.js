@@ -26,7 +26,7 @@ const NavBar = styled.div`
     ${props => {
             if (props.iswhiteheader) {
                 return css `
-                    height: 100px;
+                    height: 109px;
                     background: #fff;
                 `;
             }
@@ -289,7 +289,7 @@ const MobileHeaderLink = styled(Link)`
 
 const ToBusiness = styled.img`
     vertical-align: middle;
-    width: 5.875rem;
+    width: 6.875rem;
     @media screen and (max-width:768px) {
         display: block;
         width: 60px;
@@ -311,7 +311,7 @@ const Header = ({changePageTo}) => {
     // const businessHeaders = ['/','/business','/success','/info','/consult'] ;
     const brandHeaders = ['/','/about','/store','/news'];
     const businessHeaders = ['/business','/success','/info','/consult'];
-    const whiteHeaders = ['/store','/news'];
+    const whiteHeaders = ['/about','/store','/news'];
     let headerLocation = useLocation().pathname;
  
     if (businessHeaders.includes(headerLocation)) {
