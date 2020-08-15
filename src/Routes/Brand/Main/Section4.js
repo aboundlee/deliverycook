@@ -351,11 +351,11 @@ const Section4 = () => {
     
 
 
-	//console.log(dashArray);
-         //console.log(`yOffset : ${yOffset}`);
-         //console.log(`pathEndSCroll1 : ${pathEndSCroll1}`);
-         //console.log(screenSize);
-         //console.log(`percent : ${scrollPercentage1}`);
+	console.log(dashArray);
+        console.log(`yOffset : ${yOffset}`);
+        console.log(`pathEndSCroll1 : ${pathEndSCroll1}`);
+         console.log(screenSize);
+         console.log(`percent : ${scrollPercentage1}`);
          //console.log(`pathEndSCroll2 : ${pathEndSCroll2}`);
    
          //console.log(`pathEndSCroll3 : ${pathEndSCroll3}`);

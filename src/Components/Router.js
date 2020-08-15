@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Suspense }  from "react";
 import { BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom';
+import Loader from "./Loader";
 //import { connect } from 'react-redux';
 //import { actionCreators } from './Store';
 
@@ -14,12 +15,11 @@ const BusinessSuccess = React.lazy(() =>  import("../Routes/Business/Success/Bus
 const BusinessInfo = React.lazy(() =>  import("../Routes/Business/BusinessInfo"));
 const BusinessConsult = React.lazy(() => import("../Routes/Business/BusinessConsult"));
 
-//import Loader from "./Loader";
 
 
 const AppRouter = () => {
     return (
-      <Suspense fallback={<div>loading ...</div>}>
+      <Suspense fallback={<Loader/>}>
 
 
             <Switch>

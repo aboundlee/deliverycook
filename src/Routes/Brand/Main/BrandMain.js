@@ -18,8 +18,16 @@ import ReactFullpage from "@fullpage/react-fullpage";
 //import dotenv from 'dotenv';
 //dotenv.config();
 
-import $ from 'jquery';
 
+/*
+const Section1 = React.lazy(() => import('./Section1'));
+const Section2= React.lazy(() => import('./Section2'));
+const Section3 = React.lazy(() => import('./Section3'));
+const Section4 = React.lazy(() => import('./Section4'));
+const Section5 = React.lazy(() => import('./Section5'));
+const Footer= React.lazy(() => import('../../../Components/Footer'));
+const SectionAddition = React.lazy(() => import('./SectionAddition'));
+*/
 
 
 const Section= styled.div`
