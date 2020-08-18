@@ -14,7 +14,7 @@ const Page = styled.section`
 
 const Navigator = styled.div`
     position: fixed;
-    right: 2rem;
+    right: 1rem;
     top: 50%;
     transform: translate(0, -50%);
     width: 5rem;
@@ -22,14 +22,15 @@ const Navigator = styled.div`
     background-color: #fff;
     border: 1px solid #1D1D1D;
     z-index: 100;
-    @media (max-width: 480px) {
-        right: 1rem;
-    }
+    cursor: pointer;
+
 `;
 const BrandLinks = styled.div`
    width: 100%;
    hight: 15rem;
    overflow: scroll;
+   cursor: pointer;
+
 `;
 
 const BrandLinkWrapper = styled.div`
