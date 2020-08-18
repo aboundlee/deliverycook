@@ -32,6 +32,7 @@ const NavBar = styled.div`
             }
     }}
     @media screen and (max-width:768px) {
+       height: 80px;
         ${props => {
             if (props.active) {
                 return css `
@@ -309,9 +310,9 @@ const Header = ({changePageTo}) => {
     let isWhiteHeader;
     // const brandHeaders = ['/','/about','/store','/news'];
     // const businessHeaders = ['/','/business','/success','/info','/consult'] ;
-    const brandHeaders = ['/','/about','/store','/news'];
+    const brandHeaders = ['/','/about','/about/1','/about/2','/about/3','/store','/news'];
     const businessHeaders = ['/business','/success','/info','/consult'];
-    const whiteHeaders = ['/about','/store','/news'];
+    const whiteHeaders = ['/about','/about/1','/about/2','/about/3','/store','/news'];
     let headerLocation = useLocation().pathname;
  
     if (businessHeaders.includes(headerLocation)) {
@@ -331,11 +332,11 @@ const Header = ({changePageTo}) => {
 
     if (isBrandPage) {
         menus = ["브랜드소개", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
-        links = ["about", "store", "news", "/business"];
+        links = ["/about/1", "/store", "/news", "/business"];
         pageChanger = "businessPage";
     } else {
         menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
-        links = ["success", "info", "consult", "/"];
+        links = ["/success", "/info", "/consult", "/"];
         pageChanger = "brandPage";
     }
     window.scrollTo(0, 0);

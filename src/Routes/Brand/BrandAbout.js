@@ -1,25 +1,125 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 //import Fade from 'react-reveal/Fade';
-
+import BrandDetail from '../../Components/BrandDetail';
+import BrandMenu from '../../Components/BrandMenu';
+import { Link, withRouter, useLocation } from "react-router-dom";
 
 const Page = styled.section`
     width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #FFFFFF;
-    background-color: #242424;
-    height: 100vh;
+    height: 100%;
 `;
 
 
-export default () => {
+const Navigator = styled.div`
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 5rem;
+    height: 15rem;
+    background-color: #fff;
+    border: 1px solid #1D1D1D;
+    z-index: 100;
+    @media (max-width: 480px) {
+        right: 1rem;
+    }
+`;
+const BrandLinks = styled.div`
+   width: 100%;
+   hight: 15rem;
+   overflow: scroll;
+`;
+
+const BrandLinkWrapper = styled.div`
+   width: 100%;
+   hight: auto;
+   padding: 0.5rem;
+   border-bottom: 1px solid #1D1D1D;
+
+    cursor: pointer;
+   &:hover {
+       background-color: #1D1D1D;
+   }
+   ${props => {
+       if (props.clicked === props.brand_num) {
+        return (css`background-color: #1D1D1D;`);
+       }
+    }} 
+`;
+
+
+
+const BrandLink = styled(Link)`
+   width: 100%;
+   height: 100%;
+`;
+
+
+const BrandLogo = styled.img`
+    width: 100%;
+    height: 100%;
+`;
+
+const Controller = styled.div`
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-contents: center;
+`;
+const Down = styled.img`
+
+    width: 4.8rem;
+    height: 1.3rem;
+`;
+
+export default ({match}) => {
+    let brand = match.params.brand;
+
+    console.log(brand);
+    let next = String(parseInt(brand)+1);
+
+    if (parseInt(brand) >= 3){
+        next = '1';
+    }
+
     return (
-        <Page>페이지 준비중입니다.</Page>
+        <Page>
+            <BrandDetail brand={brand}/>
+            <BrandMenu brand={brand}/>
+
+            <Navigator>
+                <BrandLinks>
+                    <BrandLinkWrapper clicked={brand} brand_num={'1'}>
+                        <BrandLink to ={"/about/1"}>
+                            <BrandLogo src="/Images/Brand/About/Brand1/Navigator.png" />
+                            {/* <ClickedLogo src="/Images/Brand/About/Brand1/Navigator.png" /> */}
+                        </BrandLink>    
+                    </BrandLinkWrapper>
+                    
+                    <BrandLinkWrapper clicked={brand} brand_num={'2'}>
+                    <BrandLink to ={"/about/2"}>
+                        <BrandLogo src="/Images/Brand/About/Brand2/Navigator.png" />
+                            {/* <ClickedLogo src="/Images/Brand/About/Brand2/Navigator.png" /> */}
+                        </BrandLink>    
+                    </BrandLinkWrapper>
+
+                    <BrandLinkWrapper clicked={brand} brand_num={'3'}>
+                    <BrandLink to ={"/about/3"}>
+                        <BrandLogo src="/Images/Brand/About/Brand3/Navigator.png" />
+                            {/* <ClickedLogo src="/Images/Brand/About/Brand3/Navigator.png" /> */}
+                            </BrandLink>    
+                    </BrandLinkWrapper>
+                </BrandLinks>
+                <Controller>
+                    <Link to ={`/about/${next}`}>
+                    <Down src="/Images/Brand/About/down.png"/>
+                    </Link>
+                </Controller>
+            </Navigator>
+        </Page>
     );
   };
   
