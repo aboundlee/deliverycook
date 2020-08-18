@@ -12,13 +12,14 @@ import GridContent from '../../../Components/GridContent';
 
 
 const Page = styled.section`
-width: 100%;
+    width: 100%;
+    min-height: 820px;
+    height: 100%;
+
 background-color: rgba(229, 0, 18, 0.9);
     
     text-align: center;
     color: #fff;
-    height: 100%;
-    min-height: 820px;
 
 `;
 

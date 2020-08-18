@@ -28,9 +28,11 @@ const Navigator = styled.div`
 const BrandLinks = styled.div`
    width: 100%;
    hight: 15rem;
-   overflow: scroll;
-   cursor: pointer;
-
+   overflow-y: scroll;
+   -ms-overflow-style: none; // IE에서 스크롤바 감춤
+  &::-webkit-scrollbar { 
+    display: none !important; // 윈도우 크롬 등
+  }
 `;
 
 const BrandLinkWrapper = styled.div`

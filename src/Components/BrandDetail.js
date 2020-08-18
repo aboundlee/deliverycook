@@ -45,6 +45,8 @@ const Filter = styled.div`
     position: absolute;
     background-color:  rgba(29, 29, 29, 0.7);
     z-index: 1;
+    left: 0;
+    top: 0;
 `;
 
 const Logo = styled.img`

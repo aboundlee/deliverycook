@@ -18,7 +18,6 @@ const Page = styled.section`
 
 
 const BookContainer = styled.div`
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;

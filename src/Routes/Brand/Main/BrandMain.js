@@ -37,6 +37,9 @@ const Section= styled.div`
 
 const SectionContainer2 = styled.div`
  position: relative;
+ width: 100%;
+    min-height: 820px;
+    height: 100%;
 `;
 
 
