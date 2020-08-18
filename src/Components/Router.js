@@ -29,7 +29,7 @@ const AppRouter = () => {
         {/* <Route exact path="/brand" component={withRouter(BrandMain)} /> */}
         <Route path="/about/:brand" component={BrandAbout} />
 
-        <Route path="/about" component={BrandAbout} />
+        {/* <Route path="/about" component={BrandAbout} /> */}
         <Route path="/store" component={BrandStore} />
         <Route path="/news" component={BrandNews} />
         

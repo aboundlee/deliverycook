@@ -17,18 +17,18 @@ const GridItem = styled(Grid)`
     border-top: 1px solid #050505;
 
 
-
-    ${props => props.border && 
-        css`
-            border-left: 1px solid #050505;
-    `} 
-    
     &:hover {
         background: rgba(0, 0, 0, 0.05);
     }
     $:active {
         background: rgba(0, 0, 0, 0.05);
     }
+
+    ${props => props.border && 
+        css`
+            border-left: 1px solid #050505;
+    `} 
+    
 
     @media (max-width:768px) {
         height: 15rem;

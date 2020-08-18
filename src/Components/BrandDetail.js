@@ -28,7 +28,15 @@ const LogoSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/Images/Brand/About/Brand1/background.png');
+
+    ${props => props.bgImage && 
+        css`
+        background-image: url('/Images/Brand/About/Brand${props.bgImage}/background.png');
+    `} 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
 `;
 
 const Filter = styled.div`
@@ -124,7 +132,7 @@ export default ({brand}) => {
     return (
         <Wrapper>
         
-            <LogoSection>
+            <LogoSection bgImage={brand}>
                 <Filter/>
                 <Logo src={`/Images/Brand/About/Brand${brand}/brandLogo.png`}/>
             </LogoSection>
