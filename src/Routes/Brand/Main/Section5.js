@@ -14,7 +14,7 @@ const Page = styled.section`
     justify-content: center;
 
     color: #242424;
-    background: url("/Images/Brand/p5.jpg") no-repeat; 
+    background: url("/Images/Brand/p5.png") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -23,6 +23,7 @@ const Page = styled.section`
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin-bottom: 10rem;
 `;
 
 const MainTextContainer = styled.div`
@@ -33,7 +34,7 @@ const MainTextContainer = styled.div`
 const MainText = styled.p`
     font-style: normal;
     font-weight: normal;
-    font-size: 3.75rem;
+    font-size: 3.5rem;
     line-height: 5rem;
 
     display: inline;

@@ -11,7 +11,7 @@ import styled from "styled-components";
 
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 import Routes from "./Router";
 import Header from "./Header";
 import PopUpModal from "./ImageModal";
@@ -19,6 +19,14 @@ import CircleModal from "./CircleModal";
 //server-side rendering for react-reveal
 import config from 'react-reveal/globals';
 config({ ssrFadeout: true });
+// import createBrowserHistory from 'history/createBrowserHistory';
+
+
+// const history = createBrowserHistory({
+//     basename: '/'
+// });
+
+
 
 //import Footer from './Footer'
 
@@ -75,7 +83,7 @@ const App = () => {
 
             </Helmet>
          
-      <Router>
+      <Router basename="/">
 
         <Header/>
 	{ loading 
