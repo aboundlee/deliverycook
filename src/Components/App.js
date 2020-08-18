@@ -64,19 +64,19 @@ const App = () => {
          <GlobalStyles />
             <Helmet>
                 <meta charSet="utf-8" />
-		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+		        <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>딜리버리쿡</title>
-		<meta property="og:url" content="https://deliverycook.kr/" />
-		<meta property="og:site_name" content="딜리버리쿡" key="ogsitename" />
+                <meta property="og:url" content="https://deliverycook.kr/" />
+                <meta property="og:site_name" content="딜리버리쿡" key="ogsitename" />
 
-		<meta property="og:title" content="딜리버리쿡" key="ogtitle" />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
-		<meta property="og:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
+                <meta property="og:title" content="딜리버리쿡" key="ogtitle" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
+                <meta property="og:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
 
                 <meta name="description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요." data-react-helmet="true"/>
-		<meta name="keywords" content="web, web development, web design, web plan, community"/> 
-		<meta name="naver-site-verification" content="005e934209b78a32053989a501ca8bb2e006feab" />
+                <meta name="keywords" content="web, web development, web design, web plan, community"/> 
+                <meta name="naver-site-verification" content="005e934209b78a32053989a501ca8bb2e006feab" />
 
 
 
