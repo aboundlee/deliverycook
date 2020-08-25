@@ -171,7 +171,7 @@ const Paper= styled.div`
 
 const Content = styled.div`
     font-size: 1rem;
-    margin-top: 0.25rem;
+    margin-top: 1rem;
     line-height: 1.3rem;
 `;
 
@@ -208,36 +208,46 @@ const Section2 = () => {
 
             <GridContainer container>
 		<GridItem item lg={4} md={4} sm={4} xs={12} onClick={()=>onGridClick()}>
+
 		<G>
-		
+
 		    <ThumbNail src="/Images/Brand/News/1.png" alt="deliverycook_1"/>
-		    <Paper>
-			<TitleCook>1 COOK</TitleCook>
-			<Title><Bold>좋은 재료</Bold></Title>
-			<Content>동물복지 삼겹살, </Content>
-		    </Paper>
+            <Paper>
+                <Fade bottom cascade distance={'30%'}> 
+                    <TitleCook>1 COOK</TitleCook>
+                    <Title>깐깐한<Bold> 재료</Bold></Title>
+                    <Content>동물복지, 최저 항생제 삼겹살<br/>국내산 수제 돈까스, 순수 닭다리살 사용</Content>
+                </Fade>
+            </Paper>
+
 		</G>
+
 		</GridItem>
 		<GridItem item lg={4} md={4} sm={4} xs={12} onClick={()=>onGridClick()}>
 		<G>
 		
 		    <ThumbNail src="/Images/Brand/News/2.png" alt="deliverycook_2"/>
-		    <Paper>
-			<TitleCook>2 COOK</TitleCook>
-			<Title><Bold>좋은 환경</Bold></Title>
-			<Content>매달 주방, 냉장고 사진 공개. 당신의 요리 탄생지 편지</Content>
-		    </Paper>
+                <Paper>   
+                    <Fade bottom cascade distance={'30%'} delay={300}> 
+                        <TitleCook>2 COOK</TitleCook>
+                        <Title>청결한<Bold> 환경</Bold></Title>
+                        <Content>시스템 주방으로 <br/>더 깨끗하게 더 편리하게</Content>
+                    </Fade>
+                </Paper>
+
 		</G>
 		</GridItem>
 		<GridItem item lg={4} md={4} sm={4} xs={12} onClick={()=>onGridClick()}>
 		<G>
 		
 		    <ThumbNail src="/Images/Brand/News/3.png" alt="deliverycook_3"/>
-		    <Paper>
-			<TitleCook>3 COOK</TitleCook>
-			<Title><Bold>좋은 사람</Bold></Title>
-			<Content>초심 현판, 초심을 잃지 않는 요리사. GOOK COOK 교육으로 실력과 마인드가 검증된 요리사만.</Content>
-		    </Paper>
+            <Paper>
+                <Fade bottom cascade distance={'30%'} delay={500}> 
+                    <TitleCook>3 COOK</TitleCook>
+                    <Title>좋은<Bold> 사람</Bold></Title>
+                    <Content>GOOK COOK 전문 교육 필수! <br/>실력과 마인드가 검증된 요리사만</Content>
+                </Fade>
+            </Paper>
 		</G>
 		</GridItem>
             </GridContainer>

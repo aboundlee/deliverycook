@@ -120,6 +120,15 @@ const Text = styled.p`
 const Indicator = styled.img`
 
 `;
+
+const Accent = styled.img`
+    margin: 2rem 0;
+    width: 2.5rem;
+    @media (max-width: 480px) {
+        margin: 1.5rem 0;
+    }
+`;
+
 export default ({brand}) => {
 
     let bgColor = 1; 
@@ -136,12 +145,13 @@ export default ({brand}) => {
         
             <LogoSection bgImage={brand}>
                 <Filter/>
-                <Logo src={`/Images/Brand/About/Brand${brand}/brandLogo.png`}/>
+                <Logo src={`/Images/Brand/About/Brand${brand}/brandLogo.png`} alt="logo"/>
             </LogoSection>
             
             { brand === '1' && (
             <DetailSection bgColor={bgColor}>
-                    
+                <Accent src={`/Images/Brand/About/accent1.png`} alt="accent1"/>
+
                 <Title>
                     공존하는 <Bold>친환경 축산</Bold>
                 </Title>
@@ -151,12 +161,15 @@ export default ({brand}) => {
                     <br/>고통스럽게 키우지 
                     <br/>않아야 한다고 믿어요.
                 </SubTitle>
+                <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
+
             </DetailSection>
             )}
 
             { brand === '2' && (
             <DetailSection bgColor={bgColor}>
-                    
+                <Accent src={`/Images/Brand/About/accent1.png`} alt="accent1"/>
+
                 <Title>
                     <Bold>1등급 국내산 수제 돈까스</Bold>
                 </Title>
@@ -166,12 +179,14 @@ export default ({brand}) => {
                     <br/>파스타 샐러드와 
                     <br/>만나 맛나다!
                 </SubTitle>
+                <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
             </DetailSection>
             )}
 
             { brand === '3' && (
             <DetailSection bgColor={bgColor}>
-                    
+                <Accent src={`/Images/Brand/About/accent1.png`} alt="accent1"/>
+
                 <Title>
                     떡볶이, <Bold>새로 태어나다</Bold>
                 </Title>
@@ -181,6 +196,7 @@ export default ({brand}) => {
                     <br/>떡볶이,
                     <br/>새로 태어나다.
                 </SubTitle>
+                <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
             </DetailSection>
             )}
 

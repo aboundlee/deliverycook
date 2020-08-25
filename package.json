@@ -94,5 +94,6 @@
     ],
     "puppeteerExecutablePath": "/usr/bin/google-chrome-stable"
   },
-  "homepage": "./"
+  "homepage": "https://deliverycook.kr/"
+
 }

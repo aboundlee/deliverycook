@@ -13,7 +13,7 @@ const Page = styled.section`
     align-items: center;
     justify-content: center;
 
-    color: #FFFFFF;
+    color: #fff;
     height: 100%;
 `;
 const Background = styled.div`
@@ -30,6 +30,8 @@ const Background = styled.div`
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 4rem;
+
 `;
 
 const MainTextContainer = styled.div`
@@ -39,7 +41,7 @@ const MainTextContainer = styled.div`
 
 const MainText = styled.p`
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 3.75rem;
     line-height: 5rem;
 
@@ -53,8 +55,8 @@ const MainText = styled.p`
 
 
 const SubTextContainer = styled.div`
-    margin-top: 21px;
 
+    margin-top: 2.5rem;
 `;
 
 
@@ -67,9 +69,10 @@ const SubText = styled.p`
 `;
 
 
-const Highlight = styled.img`
+const Logo = styled.img`
     vertical-align:middle;
     margin-top: 1px;
+    width: 9rem;
     @media (max-width: 480px) {
     width: 8rem;
     }
@@ -89,11 +92,11 @@ const Section1 = () => {
             <MainTextContainer>
                 <MainText>대한민국 </MainText>
                 <MainText><Bold>배달음식</Bold>의 </MainText>
-                <MainText>대표브랜드,</MainText>
+                <MainText>대표브랜드</MainText>
             </MainTextContainer>
             <SubTextContainer>
-                <SubText>딜리버리쿡</SubText>
-                <Highlight src="/Images/Brand/highlight.svg" alt="highlight"></Highlight>
+
+                <Logo src="/Images/Logo_KR.png" alt="딜리버리쿡"/>
             </SubTextContainer>
         
         </TextContainer>

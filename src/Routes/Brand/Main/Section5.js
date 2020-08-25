@@ -23,7 +23,7 @@ const Page = styled.section`
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
 `;
 
 const MainTextContainer = styled.div`
@@ -61,9 +61,14 @@ const SubText = styled.p`
 `;
 
 
-const Hilight = styled.img`
+const Logo = styled.img`
     vertical-align:middle;
     margin-top: 1px;
+    width: 9rem;
+    @media (max-width: 480px) {
+    width: 8rem;
+    }
+
 `;
 
 const Bold = styled.span`
@@ -81,8 +86,7 @@ const Section5 = () => {
                 <MainText>드세요</MainText>
             </MainTextContainer>
             <SubTextContainer>
-                <SubText>딜리버리쿡</SubText>
-                <Hilight src="/Images/Brand/highlight.svg" alt="highlight"></Hilight>
+                <Logo src="/Images/Logo_KR.png" alt="딜리버리쿡"/>
             </SubTextContainer>
         
         </TextContainer>

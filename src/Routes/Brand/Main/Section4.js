@@ -350,8 +350,6 @@ const Section4 = () => {
         let scrollPercentage4 = (yOffset - pathEndSCroll3) / (pathHeight[3]);  // 분모 : 스크롤하는 총 길이(path의 height), 분자 : 현재 스크롤 - 이전 path 애니매이션의 끝
     
 
-
-	console.log(dashArray);
         // console.log(`yOffset : ${yOffset}`);
         // console.log(`pathEndSCroll1 : ${pathEndSCroll1}`);
         //  console.log(screenSize);
@@ -437,7 +435,10 @@ const Section4 = () => {
             </MainTextContainer>
         </Fade>
 
+
             <Text1 top={"41.188rem"}>재료</Text1>
+
+ 
             <Text2 top={"138.625rem"} toLeft={"-1.3rem"}>환경</Text2>
             <Text3 top={"229.438rem"}>사람</Text3>
             <SubText1 top={"85.625rem"} toRight={"-9.4rem"} textAlign={"left"}><Bold>깐깐한 재료</Bold>가<br/>좋은 요리의 시작이다.</SubText1>
