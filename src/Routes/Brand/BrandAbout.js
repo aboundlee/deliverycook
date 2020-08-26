@@ -81,7 +81,7 @@ const Down = styled.img`
 export default ({match}) => {
     let brand = match.params.brand;
 
-    console.log(brand);
+
     let next = String(parseInt(brand)+1);
 
     if (parseInt(brand) >= 3){

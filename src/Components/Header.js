@@ -81,11 +81,7 @@ const MenuBox = styled.div`
                     height: 100%;
                     display: block;
                     position: absolute;
-                    top: 0;
-                    ul li {
-                        margin-top: 5%; 
-                    }
-                
+                    top: 0;                
                 `;
             }
         }}
@@ -102,9 +98,21 @@ const Menu = styled.ul`
     padding: 0;
     font-weight: 500;
     @media screen and (max-width:768px) {
+        display: none;
+    }
+`;
+
+const MobileMenu = styled.ul`
+    display: none;
+    @media screen and (max-width:768px) {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
         flex-direction: column;
-	align-items: center;
-	justify-content: center;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
         right: 0;
@@ -114,39 +122,72 @@ const Menu = styled.ul`
 
         /*same background color of navbar*/
         background-position: center top;
-    }
+    } 
 `;
-const MenuItem = styled.li`
-   width: auto;
-    height: 65px;
-    padding: 0;
-    padding-right: 3rem;
-    @media screen and (max-width:768px) {
-        width: 100%;
-        text-align: center;
-        padding: 0;
+
+const MainMenuItem = styled.li`
 
 
-        &:last-child a {
+    height: 5rem;
+        text-align: left;
+        padding: 0;      
+    width: 40%;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+${'' /* 
+        a {
             text-align: center;
 
             display: block;
             margin: 0 auto;
             padding: 0;
 
+            height: 5rem;
 
             color: #E50012; 
 	    margin-top: 20px;
-	    height: 130px;
-       	    line-height: 130px;
+
+       	    line-height: 5rem;
 
             width: 80%;
 	    background: url("/Images/mobile_HeaderLink.png") no-repeat; 
 	    background-position: center;
 	    background-size: contain;
 
-        }
-      
+        } */}
+`;
+const SubMenuItems = styled.div`
+    width: 50%;
+    text-align: left;
+
+`;
+
+const MenuPart = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: center;
+    padding: 2rem 0;
+
+    &:first-child {
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+    }
+`;
+
+const MenuItem = styled.li`
+   width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+    font-size: 1.25rem;
+
+    @media screen and (max-width:768px) {
+
+        height: 5rem;
+        font-size: 2rem;
+
+        padding: 0;      
     }
 
 `;
@@ -155,7 +196,6 @@ const HeaderLink = styled(Link)`
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    font-size: 1.25rem;
     cursor: pointer;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
@@ -174,13 +214,12 @@ const HeaderLink = styled(Link)`
     }
 
     @media screen and (max-width:768px) {
-        text-align: center;
+
         width: 100%;
-        font-weight: bold;
+
         color: #fff;
     	text-shadow: none; 
-        font-size: 3rem;
-        padding: 20px;
+
         &:hover {
             color: #fff;
         }
@@ -189,7 +228,7 @@ const HeaderLink = styled(Link)`
     }
 `;
 
-const MobileMenu = styled.span`
+const MobileMenuUI = styled.span`
     display: none;
 
     @media screen and (max-width:768px) {
@@ -200,7 +239,7 @@ const MobileMenu = styled.span`
     height: 25px;
     margin-top: 20px;
     position: absolute;
-    left: 30px;
+    right: 30px;
     top: 0;
     bottom: 0;
 
@@ -257,7 +296,7 @@ const MobileMenu = styled.span`
   
 `;
 
-const MobileMenuItem = styled.i`
+const MenuUI = styled.i`
     background-color: #fff;
     border-radius: 2px;
     content: '';
@@ -298,21 +337,27 @@ const ToBusiness = styled.img`
     }
 `;
 
-
 const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
+    const brandMenus = ["브랜드소개", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
+    const brandLinks = ["/about/1", "/store", "/news", "/business"];
+    const brandHeaders = ['/','/about','/about/1','/about/2','/about/3','/store','/news'];
+
+    const businessMenus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
+    const businessLinks = ["/success", "/info", "/consult", "/"];
+    const businessHeaders = ['/business','/success','/info','/consult'];
+
+
+    const whiteHeaders = ['/about','/about/1','/about/2','/about/3','/store','/news'];
+
     let pageChanger = true;
     const [trigger, setTrigger] = useState();
     const [showMenu, setShowMenu] = useState(false);
 
     let isBrandPage; 
     let isWhiteHeader;
-    // const brandHeaders = ['/','/about','/store','/news'];
-    // const businessHeaders = ['/','/business','/success','/info','/consult'] ;
-    const brandHeaders = ['/','/about','/about/1','/about/2','/about/3','/store','/news'];
-    const businessHeaders = ['/business','/success','/info','/consult'];
-    const whiteHeaders = ['/about','/about/1','/about/2','/about/3','/store','/news'];
+
     let headerLocation = useLocation().pathname;
  
     if (businessHeaders.includes(headerLocation)) {
@@ -331,12 +376,12 @@ const Header = ({changePageTo}) => {
 
 
     if (isBrandPage) {
-        menus = ["브랜드소개", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
-        links = ["/about/1", "/store", "/news", "/business"];
+        menus = brandMenus;
+        links = brandLinks;
         pageChanger = "businessPage";
     } else {
-        menus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
-        links = ["/success", "/info", "/consult", "/"];
+        menus = businessMenus;
+        links = businessLinks;
         pageChanger = "brandPage";
     }
     window.scrollTo(0, 0);
@@ -361,6 +406,8 @@ const Header = ({changePageTo}) => {
             <Link to="/" onClick={clearMenu}>
                 <Logo src="/Images/Logo_KR.png"  alt="Logo"/> 
             </Link>
+
+
             <MenuBox active={showMenu}>
                     <Menu className="navlinks">
                         <MenuItem>
@@ -379,14 +426,54 @@ const Header = ({changePageTo}) => {
                             }
                         </MenuItem>
                     </Menu>
+
+                    <MobileMenu className="navlinks">
+                        <MenuPart>
+                            <MainMenuItem>
+                                <HeaderLink to={'/'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
+                            </MainMenuItem>
+                            <SubMenuItems>
+                                <MenuItem>
+                                    <HeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드소개</HeaderLink>
+                                </MenuItem>
+                                <MenuItem>
+                                    <HeaderLink to={'/store'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>
+                                </MenuItem>
+                                <MenuItem>
+                                    <HeaderLink to={'/news'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>딜쿡소식</HeaderLink>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuPart>
+                        <MenuPart>
+                            <MainMenuItem>
+                                <HeaderLink to={'/business'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
+                            </MainMenuItem>
+                            <SubMenuItems>
+
+                                <MenuItem>
+                                    <HeaderLink to={'/success'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>성공가이드북</HeaderLink>
+                                </MenuItem>
+                                <MenuItem>
+                                    <HeaderLink to={'/info'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업안내</HeaderLink>
+                                </MenuItem>
+                                <MenuItem>
+                                    <HeaderLink to={'/consult'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>문의하기</HeaderLink>
+                                </MenuItem>
+                            </SubMenuItems>
+
+                        </MenuPart>
+
+                    </MobileMenu>
             </MenuBox>
-           <MobileMenu active={showMenu} onClick={clickMenu}>
-                <MobileMenuItem></MobileMenuItem>
-                <MobileMenuItem></MobileMenuItem>
-                <MobileMenuItem></MobileMenuItem>
-            </MobileMenu>
+
+
+           <MobileMenuUI active={showMenu} onClick={clickMenu}>
+                <MenuUI/>
+                <MenuUI/>
+                <MenuUI/>
+            </MobileMenuUI>
             
-            <MobileHeaderLink onClick={onClick} to={links[3]}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></MobileHeaderLink>
+            {/* <MobileHeaderLink onClick={onClick} to={links[3]}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></MobileHeaderLink> */}
         </NavContainer>
     </NavBar>
   );

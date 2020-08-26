@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import styled from "styled-components";
 
 //import Fade from 'react-reveal/Fade';
 import Menu from "./Menu";
-import { Menus } from "../Data/Menus";
+import { Menus1, Menus2, Menus3 } from "../Data/Menus";
 import Grid from '@material-ui/core/Grid';
 
 const Wrapper = styled.div`
@@ -16,6 +16,9 @@ const Wrapper = styled.div`
     color: #242424;
     background-color: #FFFFFF;
 
+    @media (max-width:768px) {
+        padding: 0 0.5rem;
+    }
 `;
 
 const TitleWrapper = styled.div`
@@ -68,7 +71,23 @@ const GridMenus = styled(Grid)`
 `;
 
 
-export default () => {
+export default ({brand}) => {
+    console.log(brand);
+    let Menus;
+    let brandName = "";
+
+        if (brand === '1') {
+            Menus = Menus1;
+            brandName = "삼겹살쿡";
+        } else if (brand === '2') {
+            Menus = Menus2;
+            brandName = "돈까스쿡";
+
+        } else if (brand === '3') {
+            Menus = Menus3;
+            brandName = "떡볶이쿡";
+        }
+
 
     return (
         <Wrapper>
@@ -77,13 +96,18 @@ export default () => {
                     <Text>메뉴소개</Text>
                     <HighLight src="/Images/Brand/store_highlight.svg" alt="highlight"/>
                 </Title>
-                <SubTitle><SubText>삼겹살쿡 메뉴 </SubText></SubTitle>
+                <SubTitle><SubText>{brandName} 메뉴</SubText></SubTitle>
             </TitleWrapper>
-            <GridMenus container>
-                { Menus  && Menus.map((menu, index) => (
-                    <Menu index={menu.index} name={menu.name} subtitle={menu.subtitle} detail={menu.detail} key={index}/>
-                            ))}
-            </GridMenus>
+
+
+                <GridMenus container>
+                    { Menus  && Menus.map((menu, index) => (
+                        <Menu brand={brand} index={menu.index} name={menu.name} subtitle={menu.subtitle} detail={menu.detail} key={index}/>
+                                ))}
+                </GridMenus> 
+
+
+
         </Wrapper>
     );
   };

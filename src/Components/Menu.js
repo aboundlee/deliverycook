@@ -16,6 +16,9 @@ const GridItem = styled(Grid)`
 
     border-top: 1px solid #050505;
 
+    @media (max-width:768px) {
+        border-left: 0px;
+    }
 
     &:hover {
         background: rgba(0, 0, 0, 0.05);
@@ -30,10 +33,6 @@ const GridItem = styled(Grid)`
     `} 
     
 
-    @media (max-width:768px) {
-        height: 15rem;
-        border-left: 0px;
-    }
 `;
 const G = styled.div`
 
@@ -52,12 +51,6 @@ const ThumbNail = styled.div`
     `} 
     background-size: cover;
 
-    @media (max-width:768px) {
-
-        width: 10.375rem;
-        height: 10.375rem;
-    }
-
 
 `;
 
@@ -66,6 +59,10 @@ const Content = styled.div`
     flex-direction: column;
     margin-left: 1rem;
     text-align: left;
+    width: 50%;
+    @media (max-width:768px) {
+        padding-right: 3.5rem;
+    }
 `;
 
 
@@ -73,9 +70,6 @@ const Title = styled.p`
     font-size: 2.5rem;
     font-weight: bold;    
 
-    @media (max-width:768px) {
-        font-size: 2rem;
-    }
 `;
 
 const SubTitle = styled.p`
@@ -97,13 +91,12 @@ const Detail = styled.p`
     text-align: left;
 
     @media (max-width:768px) {
-        font-size: 1rem;
         margin-top: 1rem;
     }
 `;
 
-const Post = ({index, name, subtitle, detail}) => {
-    const image_url = `/Images/Brand/About/Brand1/${index}.png`;
+const Menu = ({brand, index, name, subtitle, detail}) => {
+    const image_url = `/Images/Brand/About/Brand${brand}/${index}.png`;
     const image_alt = `deliverycook_${index}`;
     let border = false;
     let splited_name = name.split(" ");
@@ -132,7 +125,7 @@ const Post = ({index, name, subtitle, detail}) => {
     )
 };
 
-export default Post;
+export default Menu;
 
 
 
