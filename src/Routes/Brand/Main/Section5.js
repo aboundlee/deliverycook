@@ -14,7 +14,7 @@ const Page = styled.section`
     justify-content: center;
 
     color: #242424;
-    background: url("/Images/Brand/p5.png") no-repeat; 
+    background: url("/Images/Brand/p5.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100%;
