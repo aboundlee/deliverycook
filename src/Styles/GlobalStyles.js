@@ -73,6 +73,13 @@ html {
        font-size: 14px;
     }
 
+    @media (min-width: 960px) and (max-width:1600px) {
+       font-size: 16px;
+    }
+    @media (min-width: 1600px)  {
+       font-size: 18px;
+    }
+
 
 
 }
