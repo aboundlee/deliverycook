@@ -12,7 +12,7 @@ const Page7 = styled(Page)`
     align-items: center;
 
     color: #242424;
-    background: url("/Images/Business/p7.png") no-repeat; 
+    background: url("/Images/Business/p7.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100vh;

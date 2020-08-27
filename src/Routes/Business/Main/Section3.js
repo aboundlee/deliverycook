@@ -13,7 +13,7 @@ const Page5 = styled(Page)`
     position:relative;
     height: 100%;
 
-    background: url("/Images/Business/p4.png") no-repeat; 
+    background: url("/Images/Business/p4.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
 

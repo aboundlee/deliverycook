@@ -39,7 +39,9 @@ const MainText = styled.p`
 
     @media (max-width: 480px) { 
         font-size: 2rem;
-
+    }
+    @media (min-width: 1600px) { 
+        font-size: 2.5rem;
     }
 
 `;

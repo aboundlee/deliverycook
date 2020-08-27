@@ -15,7 +15,7 @@ const Page6 = styled(Page)`
     align-items: center;
 
     color: #FFFFFF;
-    background: url("/Images/Business/p6.png") no-repeat; 
+    background: url("/Images/Business/p6.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100%;
