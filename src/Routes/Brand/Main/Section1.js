@@ -17,7 +17,7 @@ const Page = styled.section`
     height: 100%;
 `;
 const Background = styled.div`
-    background: url("/Images/Brand/p1.png") no-repeat; 
+    background: url("/Images/Brand/p1.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100%;

@@ -72,7 +72,7 @@ const GridMenus = styled(Grid)`
 
 
 export default ({brand}) => {
-    console.log(brand);
+
     let Menus;
     let brandName = "";
 

@@ -11,7 +11,7 @@ const Page = styled.section`
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    background: url("/Images/Business/bps1.png") no-repeat; 
+    background: url("/Images/Business/bps1.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
     height: 100%;
