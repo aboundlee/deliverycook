@@ -32,7 +32,7 @@ const Title = styled.div`
     align-items: center;
 `;
 
-const Text = styled.p`
+const Text = styled.h1`
     font-size: 2.75rem;
     font-weight: bold;
     line-height: 4rem;
@@ -50,7 +50,7 @@ const SubTitle = styled.div`
 `;
 
 
-const SubText = styled.p`
+const SubText = styled.h2`
     font-size: 1.5rem;
 
     display: inline;

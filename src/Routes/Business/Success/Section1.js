@@ -93,7 +93,7 @@ const MainTextContainer = styled.div`
 `;
 
 
-const MainText = styled.p`
+const MainText = styled.h1`
  
     font-style: normal;
     font-weight: normal;

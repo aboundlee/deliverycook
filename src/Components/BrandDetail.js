@@ -75,14 +75,14 @@ const DetailSection = styled.div`
 
 `;
 
-const Title = styled.p`
+const Title = styled.h1`
 
     font-weight: 500;
     font-size: 3rem;
     line-height: 5rem;
 `;
 
-const SubTitle = styled.p`
+const SubTitle = styled.h2`
     font-weight: 300;
     font-size: 2rem;
     line-height: 3.5rem;

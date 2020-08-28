@@ -78,8 +78,16 @@ const App = () => {
                 <meta name="keywords" content="web, web development, web design, web plan, community"/> 
                 <meta name="naver-site-verification" content="005e934209b78a32053989a501ca8bb2e006feab" />
 
+                <meta property="twitter:card" content="summary"/>
+                <meta property="twitter:url" content="https://deliverycook.kr/" />
+                <meta property="twitter:title" content="딜리버리쿡" />
+                <meta property="twitter:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
+                <meta property="twitter:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/xml; charset=utf-8" />
 
+		<link rel="canonical" href="https://deliverycook.kr/" />
 
             </Helmet>
          

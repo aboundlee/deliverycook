@@ -56,7 +56,7 @@ const InfoContainer = styled.div`
     }
 
 `;
-const Title = styled.div`
+const Title = styled.h1`
     display: flex;
     flex-direction: column;
     margin-top: 2.5rem;

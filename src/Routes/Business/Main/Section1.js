@@ -53,7 +53,7 @@ const TextContainer = styled.div`
     }
 `;
 
-const MainText = styled.p`
+const MainText = styled.h2`
     font-style: normal;
     font-size: 3.75rem;
     line-height: 5rem;
