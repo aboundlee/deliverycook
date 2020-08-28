@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 
 
 const Thumbnail = styled.div`
-   background: url("/Images/thumbnail.png") no-repeat; 
+   background: url("/Images/thumbnail.jp2") no-repeat; 
     width: 100%;
     height: 100%;
     display: none;
