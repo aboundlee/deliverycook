@@ -50,8 +50,8 @@ const App = () => {
 
 
   useEffect(() => {
-    	setLoading(false);
     setTimeout(function(){
+    	setLoading(false);
         setModalVisible(true);
     }, 1000);
   },[]);
