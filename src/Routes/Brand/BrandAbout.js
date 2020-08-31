@@ -95,26 +95,26 @@ export default ({match}) => {
 
             <Navigator>
                 <BrandLinks>
-                    <BrandLinkWrapper clicked={brand} brand_num={'1'}>
                         <BrandLink to ={"/about/1"}>
+                    <BrandLinkWrapper clicked={brand} brand_num={'1'}>
                             <BrandLogo src="/Images/Brand/About/Brand1/Navigator.png" />
                             {/* <ClickedLogo src="/Images/Brand/About/Brand1/Navigator.png" /> */}
-                        </BrandLink>    
                     </BrandLinkWrapper>
+                        </BrandLink>    
                     
-                    <BrandLinkWrapper clicked={brand} brand_num={'2'}>
                     <BrandLink to ={"/about/2"}>
+                    <BrandLinkWrapper clicked={brand} brand_num={'2'}>
                         <BrandLogo src="/Images/Brand/About/Brand2/Navigator.png" />
                             {/* <ClickedLogo src="/Images/Brand/About/Brand2/Navigator.png" /> */}
-                        </BrandLink>    
                     </BrandLinkWrapper>
+                        </BrandLink>    
 
-                    <BrandLinkWrapper clicked={brand} brand_num={'3'}>
                     <BrandLink to ={"/about/3"}>
+                    <BrandLinkWrapper clicked={brand} brand_num={'3'}>
                         <BrandLogo src="/Images/Brand/About/Brand3/Navigator.png" />
                             {/* <ClickedLogo src="/Images/Brand/About/Brand3/Navigator.png" /> */}
-                            </BrandLink>    
                     </BrandLinkWrapper>
+                    </BrandLink>    
                 </BrandLinks>
                 <Controller>
                     <Link to ={`/about/${next}`}>

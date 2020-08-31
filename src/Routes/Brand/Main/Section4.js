@@ -9,7 +9,7 @@ import Fade from 'react-reveal/Fade';
 const Page = styled.section`
     width: 100%;
     background-color: #242424;
-    height: 281.25rem;
+    height: 295.25rem;
     display: flex;
     text-align: center;
 
@@ -71,8 +71,8 @@ const ImageContainer = styled.div`
     transform: translate(-50%);
     margin-left: ${(props) => props.toLeft || "0px"};
     margin-right: ${(props) => props.toRight || "0px"};
-    width: ${(props) => props.width || "0px"};
-    height: ${(props) => props.height || "0px"};
+
+
 
     ${props => props.top   && 
         css`top: ${props.top};`} 
@@ -92,9 +92,11 @@ const ImageContainer = styled.div`
 `;
 
 const ImageContainer1 = styled(ImageContainer)`
+    width: 20.625rem;
+    height: 23.75rem;
     @media (max-width: 480px) {
-        width: 20rem;
-        height: 22rem;
+        width: 12rem;
+        height: 14rem;
         margin-left: -10rem;
         top:18.188rem;
 
@@ -102,23 +104,70 @@ const ImageContainer1 = styled(ImageContainer)`
 `;
 
 const ImageContainer2  = styled(ImageContainer)`
+    width: 32.375rem;
+    height: 27.75rem;
     @media (max-width: 480px) {
-        width: 20.8125rem;
-        height: 22.844rem;
-        top: 55.438rem;
+        width: 14.8125rem;
+        height: 16.844rem;
+        top: 57.438rem;
         margin-left: -11rem;
 
     }
 `;
 
 const ImageContainer3 = styled(ImageContainer)`
+    width: 29.25rem;
+    height: 25.25rem;
     @media (max-width: 480px) {
-        width: 20.4375rem;
-        height: 22.4375rem;
+        width: 14.4375rem;
+        height: 18.4375rem;
+	top: 70.625rem;
+        margin-left: 10rem;
+
     }
 `;
 
 const ImageContainer4 = styled(ImageContainer)`
+    width: 25.75rem;
+    height: 40.875rem;
+    @media (max-width: 480px) {
+        width: 14.4375rem;
+        height: 18.4375rem;
+        margin-left: -12rem;
+	top: 94.75rem;
+    }
+`;
+
+const ImageContainer5 = styled(ImageContainer)`
+    width: 11.125rem;
+    height: 10.375rem;
+    @media (max-width: 480px) {
+        width: 8.4375rem;
+        height: 12.4375rem;
+        margin-left: 12rem;
+	top: 123rem;
+
+    }
+`;
+
+
+const ImageContainer6 = styled(ImageContainer)`
+    width: 22.25rem;
+    height: 18.688rem;
+    @media (max-width: 480px) {
+        width: 10.4375rem;
+        height: 12.4375rem;
+        margin-left: 15rem;
+	top: 113rem;
+
+    }
+`;
+
+
+
+const ImageContainer7 = styled(ImageContainer)`
+    width: 34.527rem;
+    height: 35.563rem;
     @media (max-width: 480px) {
         width: 24.875rem;
         height: 28.3125rem;
@@ -128,7 +177,21 @@ const ImageContainer4 = styled(ImageContainer)`
 `;
 
 
-const ImageContainer5 = styled(ImageContainer)`
+const ImageContainer8 = styled(ImageContainer)`
+    width: 26.188rem;
+    height: 27.875rem;
+    @media (max-width: 480px) {
+        width: 24.875rem;
+        height: 28.3125rem;
+        margin-left: 11rem;
+
+    }
+`;
+
+
+const ImageContainer9 = styled(ImageContainer)`
+    width: 56rem;
+    height: 30.125rem;
     @media (max-width: 480px) {
         width: 42.58rem;
         height: 22.91rem;
@@ -160,7 +223,7 @@ const Line = styled.svg`
     overflow: visible;
     left: 50%;
     transform: translate(-50%);
-    margin-left: 1.438rem;
+    margin-left: -10.438rem;
     margin-top: 9.375rem;
 
     fill: none;
@@ -168,7 +231,8 @@ const Line = styled.svg`
         width: 375px;
 
         height: 144.563rem;
-        margin-top: 0px;
+        margin-top: -8rem;
+	margin-left: -5.438rem;
     }
 `;
 
@@ -185,8 +249,8 @@ const Text = styled.p`
     margin-left: ${(props) => props.toLeft || "0px"};
     
     @media screen and (max-width:480px) {
-font-size: 3rem;
-line-height: 3rem;
+	font-size: 2.5rem;
+	line-height: 3rem;
 }
     
     
@@ -195,16 +259,15 @@ line-height: 3rem;
 const Text1 = styled(Text)`
     @media screen and (max-width:480px) {
 
-    top: 42rem;
+    top: 34rem;
     }
 `
 
 
 const Text2 = styled(Text)`
     @media screen and (max-width:480px) {
-
-    top: 106rem;
-    margin-left: -3px;
+    top: 105rem;
+	margin-left: 0rem;
     }
 `
 
@@ -212,7 +275,7 @@ const Text2 = styled(Text)`
 const Text3 = styled(Text)`
     @media screen and (max-width:480px) {
 
-    top: 166rem;
+    top: 160rem;
     }
 `
 const SubText = styled.p`
@@ -222,7 +285,7 @@ const SubText = styled.p`
 
   
     z-index: 3;
-    line-height: 5rem;
+    line-height: 3.75rem;
     top: ${(props) => props.top || "0px"};
     margin-left: ${(props) => props.toLeft || "0px"};
 
@@ -250,8 +313,8 @@ const SubText = styled.p`
     @media screen and (max-width:480px) {
 
 
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
     }
 `;
 
@@ -259,46 +322,115 @@ const SubText = styled.p`
 const SubText1 = styled(SubText)`
   @media screen and (max-width:480px) {
 
-    top: 71.625rem;
-    margin-right: -7.4rem;
+    top: 39rem;
+    margin-left: -7rem;
+	text-align: left;
 
 }
 `;
 const SubText2 = styled(SubText)`
   @media screen and (max-width:480px) {
 
-    top: 136.625rem;
-    margin-left: -7rem;
+    top: 110.625rem;
+    margin-left: 4rem;
 }
 `;
 
 const SubText3 = styled(SubText)`
   @media screen and (max-width:480px) {
 
-    top: 171.625rem;
+    top: 165.625rem;
 
 }
 `;
 
 
 
+const Content = styled.p`
+    position: absolute;
+    font-size: 1.875rem;
+    font-weight: normal;
+
+  
+    z-index: 3;
+    line-height: 3.125rem;
+    top: ${(props) => props.top || "0px"};
+    margin-left: ${(props) => props.toLeft || "0px"};
+
+    margin-right: ${(props) => props.toRight || "0px"};
+    text-align: ${(props) => props.textAlign || "center"};
+
+    ${props => props.toLeft && 
+        css`
+            left: 50%;
+            transform: translate(-50%);
+    `} 
+
+    ${props => props.toRight && 
+        css`
+            right: 50%;
+            transform: translate(50%);
+    `} 
+
+    ${props => props.center && 
+        css`
+            right: 50%;
+            transform: translate(50%);
+            width: 100%;
+    `} 
+    @media screen and (max-width:480px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    }
+`;
+const Content1 = styled(Content)`
+  @media screen and (max-width:480px) {
+	margin-right: -6rem;
+	top: 57rem;
+  }
+`;
+
+const Content2 = styled(Content)`
+  @media screen and (max-width:480px) {
+	margin-left: -12rem;
+	top: 72rem;
+	text-align:left;
+  }
+`;
+const Content3 = styled(Content)`
+  @media screen and (max-width:480px) {
+	margin-left: 2rem;
+	top: 84rem;
+  }
+`;
+const Content4 = styled(Content)`
+  @media screen and (max-width:480px) {
+	margin-left: -5rem;
+	top: 128rem;
+  }
+`;
+
+const Content5 = styled(Content)`
+  @media screen and (max-width:480px) {
+	margin-left: -14rem; 
+	top: 177rem;
+  }
+`;
 const Section4 = () => {
 
 
     const pathSelector1 = useRef();
     const pathSelector2 = useRef();
-    const pathSelector3 = useRef();
-    const pathSelector4 = useRef();
 
 
-  const [pathLength, setPathLength] = useState({'first': 0, 'second':0, 'third':0, 'fourth':0});
+  const [pathLength, setPathLength] = useState({'first': 0, 'second':0});
   //const [totalPathLength, setTotalPathLength] = useState({'first': 0, 'second':0, 'third':0, 'fourth':0});
   let totalPathLength;
 
 
   //const [pathHeight, setPathHeight] = useState([0,0,0,0]);
   let pathHeight;
-  const [dashArray, setDashArray] = useState({'first': "none", 'second':"none", 'third':"none", 'fourth':"none"});
+  const [dashArray, setDashArray] = useState({'first': "none", 'second':"none"});
     
 
 
@@ -306,20 +438,16 @@ const Section4 = () => {
 
         if (pathSelector1.current){
 
-        const path = [pathSelector1.current, pathSelector2.current,pathSelector3.current,pathSelector4.current] ;
+        const path = [pathSelector1.current, pathSelector2.current] ;
         //setTotalPathLength({'first': path[0].getTotalLength(), 'second':path[1].getTotalLength(), 'third':path[2].getTotalLength(), 'fourth':path[3].getTotalLength()});
-        totalPathLength={'first': path[0].getTotalLength(), 'second':path[1].getTotalLength(), 'third':path[2].getTotalLength(), 'fourth':path[3].getTotalLength()};
+        totalPathLength={'first': path[0].getTotalLength(), 'second':path[1].getTotalLength()};
         setDashArray(totalPathLength);
         setPathLength(totalPathLength);
 
         path[0].getBoundingClientRect();
         path[1].getBoundingClientRect();
-        path[2].getBoundingClientRect();
-        path[3].getBoundingClientRect();
         pathHeight = [path[0].getBoundingClientRect().height, 
-                      path[1].getBoundingClientRect().height, 
-                      path[2].getBoundingClientRect().height, 
-                      path[3].getBoundingClientRect().height];
+                      path[1].getBoundingClientRect().height];
 	window.addEventListener('scroll', listenToScroll);
 
         }
@@ -337,17 +465,13 @@ const Section4 = () => {
         let screenSize = document.documentElement.clientHeight;
         
         let yOffset = window.pageYOffset;
-        let divOffset = screenSize*4 + 200; // Svg 의 margin-top 반영
+        let divOffset = screenSize*4 + 300; // Svg 의 margin-top 반영
     
         let pathEndSCroll1 = divOffset + pathHeight[0]; // 현재 div 사이즈가 600vh 이므로
         let pathEndSCroll2 = pathEndSCroll1 + pathHeight[1]; // 현재 div 사이즈가 600vh 이므로
-        let pathEndSCroll3 = pathEndSCroll2 + pathHeight[2]; // 현재 div 사이즈가 600vh 이므로
-        let pathEndSCroll4 = pathEndSCroll3 + pathHeight[3]; // 현재 div 사이즈가 600vh 이므로
         
         let scrollPercentage1 = (yOffset - divOffset) / (pathHeight[0]);
         let scrollPercentage2 = (yOffset - pathEndSCroll1) / (pathHeight[1]);
-        let scrollPercentage3 = (yOffset - pathEndSCroll2) / (pathHeight[2]);
-        let scrollPercentage4 = (yOffset - pathEndSCroll3) / (pathHeight[3]);  // 분모 : 스크롤하는 총 길이(path의 height), 분자 : 현재 스크롤 - 이전 path 애니매이션의 끝
     
 
         // console.log(`yOffset : ${yOffset}`);
@@ -356,13 +480,10 @@ const Section4 = () => {
         //  console.log(`percent : ${scrollPercentage1}`);
          //console.log(`pathEndSCroll2 : ${pathEndSCroll2}`);
    
-         //console.log(`pathEndSCroll3 : ${pathEndSCroll3}`);
     
     
         var drawLength1 = totalPathLength.first * scrollPercentage1;
         var drawLength2 = totalPathLength.second * scrollPercentage2;
-        var drawLength3 = totalPathLength.third * scrollPercentage3;
-        var drawLength4 = totalPathLength.fourth * scrollPercentage4;
     
         
         // Draw in reverse
@@ -379,17 +500,6 @@ const Section4 = () => {
             setPathLength(prevState => ({...prevState, 'second':totalPathLength.second})); 
         }
     
-        if ((scrollPercentage3 <= 0.99) && (scrollPercentage3 >= 0)){
-            setPathLength(prevState => ({...prevState, 'third':totalPathLength.third - drawLength3}));
-        } else if (scrollPercentage3 < 0) {
-            setPathLength(prevState => ({...prevState, 'third':totalPathLength.third}));
-        }
-    
-        if ((scrollPercentage4 <= 0.99) && (scrollPercentage4 >= 0)){
-            setPathLength(prevState => ({...prevState, 'fourth':totalPathLength.fourth - drawLength4}));
-        } else if (scrollPercentage4 < 0) {
-            setPathLength(prevState => ({...prevState, 'fourth':totalPathLength.fourth}));
-        }
     
     
         // When complete, remove the dash array, otherwise shape isn't quite sharp
@@ -405,18 +515,6 @@ const Section4 = () => {
         } 
          else {
             setDashArray(prevState => ({...prevState, 'second':totalPathLength.second}));    
-        }
-        if (scrollPercentage3 >= 0.99) {
-            setDashArray(prevState => ({...prevState, 'third':"none"}));
-        } 
-         else {
-            setDashArray(prevState => ({...prevState, 'third':totalPathLength.third}));    
-        }
-        if (scrollPercentage4 >= 0.99) {
-            setDashArray(prevState => ({...prevState, 'fourth':"none"}));
-        } 
-         else {
-            setDashArray(prevState => ({...prevState, 'fourth':totalPathLength.fourth}));    
         }
       };
     
@@ -436,63 +534,98 @@ const Section4 = () => {
         </Fade>
 
 
-            <Text1 top={"41.188rem"}>재료</Text1>
+            <Text1 top={"40.188rem"} toLeft={"-10rem"}>재료</Text1>
+            <SubText1 top={"46.625rem"} toLeft={"-17rem"} textAlign={"right"}><Bold>깐깐한 재료</Bold>가<br/>좋은 요리의 시작이다.</SubText1>
+            <Content1 top={"75.438rem"} toRight={"-20rem"} textAlign={"left"}>
+		<Bold>동물복지, 최저 항생제</Bold> 사용 삼겹살
+		<br/>표고버섯 외 21가지 재료 숙성
+		<br/>직접 개발한 레몬 숙성 백김치와 
+		<br/>비법 소스로 더 맛있게
+            </Content1>
 
- 
-            <Text2 top={"138.625rem"} toLeft={"-1.3rem"}>환경</Text2>
-            <Text3 top={"229.438rem"}>사람</Text3>
-            <SubText1 top={"85.625rem"} toRight={"-9.4rem"} textAlign={"left"}><Bold>깐깐한 재료</Bold>가<br/>좋은 요리의 시작이다.</SubText1>
-            <SubText2 top={"184.438rem"} toLeft={"-11rem"} textAlign={"right"}><Bold>청결한 주방</Bold>에서<br/> 좋은 요리가 탄생한다.</SubText2>
-            <SubText3 top={"235.438rem"} center><Bold>좋은 사람</Bold>이 좋은 요리를 완성한다.</SubText3>
-           <BigHighlight src="/Images/Brand/p4_highlight.svg" alt="highlight" />
+            <Content2 top={"97.438rem"} toLeft={"-27rem"} textAlign={"right"}>
+		국내산 계육 100%
+		<br/>순수 닭다리살만 사용
+            </Content2>
+            <Content3 top={"112.438rem"} toLeft={"-3rem"} textAlign={"right"}>
+		1등급 국내산 돈육사용
+		<br/>매일 깨끗한 기름
+		<br/>100% 수작업
+            </Content3>
+
+            <Text2 top={"146.625rem"} toLeft={"-7.3rem"}>환경</Text2>
+            <SubText2 top={"152.438rem"} toLeft={"-0.3rem"} textAlign={"left"}><Bold>청결한 주방</Bold>에서<br/> 좋은 요리가 탄생한다.</SubText2>
+            <Content4 top={"182.438rem"} toLeft={"-16rem"} textAlign={"right"}>
+		전제품 100% HACCP 인증 기관에서 제조
+		<br/>철저한 위생관리 교육 및 이수
+		<br/>일 1회 이상 조리기구 및 식기류 소독
+		<br/>보건증 의무화
+            </Content4>
+
+            <Text3 top={"235.438rem"}>사람</Text3>
+            <SubText3 top={"241.438rem"} center><Bold>좋은 사람</Bold>이<br/>좋은 요리를 완성한다.</SubText3>
+
+            <Content5 top={"257.438rem"} toLeft={"-25.5rem"} textAlign={"left"}>
+		본사 3COOK 인증 
+		<br/>조리사가 직접조리
+		<br/>GOOD COOK 교육
+            </Content5>
 
         
-            <ImageContainer1 top={"12.188rem"} toLeft={"-18rem"} width={"40rem"} height={"44rem"}>
+            <ImageContainer1 top={"12.188rem"} toLeft={"-22rem"} >
                 <Image  src="/Images/Brand/p4_no1.png" alt="food1"/>
            </ImageContainer1>
 
-           <ImageContainer2 top={"63.438rem"} toLeft={"-20rem"} width={"41.625rem"} height={"45.688rem"}> 
+           <ImageContainer2 top={"65.438rem"} toLeft={"-23rem"} > 
                 <Image  src="/Images/Brand/p4_no2.png" alt="food2"/>
            </ImageContainer2>
 
-            <ImageContainer3 top={"97.625rem"} toLeft={"14rem"} width={"40.875rem"} height={"44.875rem"}>
+            <ImageContainer3 top={"93.625rem"} toLeft={"22rem"} >
                 <Image  src="/Images/Brand/p4_no3.png" alt="food3"/>
            </ImageContainer3>
 
-            <ImageContainer4 top={"133.75rem"} toLeft={"-23rem"} width={"49.75rem"} height={"56.625rem"}>
+            <ImageContainer4 top={"133.75rem"} toLeft={"-23rem"} >
                 <Image  src="/Images/Brand/p4_no4.png" alt="food4"/>
            </ImageContainer4>
 
-            <ImageContainer5 bottomSticked width={"63.875rem"} height={"34.375rem"}> 
-                <Image src="/Images/Brand/p4_no5.png" alt="highlight"/>
+           <ImageContainer5 top={"177rem"} toLeft={"16.5rem"} >
+                <Image  src="/Images/Brand/p4_no5.png" alt="food4"/>
            </ImageContainer5>
+
+           <ImageContainer6 top={"159.75rem"} toLeft={"31rem"} >
+                <Image  src="/Images/Brand/p4_no6.png" alt="food4"/>
+           </ImageContainer6>
+
+           <ImageContainer7 top={"201.75rem"} toLeft={"-23rem"}>
+                <Image  src="/Images/Brand/p4_no7.png" alt="food4"/>
+           </ImageContainer7>
+
+           <ImageContainer8 top={"228.75rem"} toLeft={"27rem"}>
+                <Image  src="/Images/Brand/p4_no8.png" alt="food4"/>
+           </ImageContainer8>
+
+            <ImageContainer9 bottomSticked width={"63.875rem"} height={"34.375rem"}> 
+                <Image src="/Images/Brand/p4_no9.png" alt="highlight"/>
+           </ImageContainer9>
 
 
 
            
 
            <Line id="linesvg"  viewBox="0 0 868.63 2194.59" fill="none" xmlns="http://www.w3.org/2000/svg" id="star-svg">
-<path ref={pathSelector1} id="star-path" d="M525.379 4C594.212 26.5 728.179 106.3 713.379 245.5C694.879 419.5 191.133 286.099 
-149.379 526.5C132.879 621.5 242.379 696 337.379 719" 
-        stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"
-        strokeDasharray={dashArray.first} strokeDashoffset={pathLength.first}
 
-/>
-<path ref={pathSelector2} id="star-path" d="M783.379 805C829.879 824.167 941.979 909.5 910.379 1017.5C870.879 1152.5 676.379 1239.9 525.379 1230C311.879 1216 191.379 1248.5 177.379 1320.5C163.379 1392.5 221.379 1450 297.879 1473.5" 
-        stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"
-        strokeDasharray={dashArray.second} strokeDashoffset={pathLength.second}
+	<path ref={pathSelector1} id="star-path" d="M578.788 4C673.455 27.6667 868.488 110.1 891.288 250.5C919.788 426 393.788 374.5 336.788 616C279.788 857.5 633.188 977.172 820.288 1042.5C999.288 1105 1007 1263.5 870.501 1326C674.753 1415.63 422.03 1345.4 275.001 1477C91.2138 1641.5 190.501 1894 497.001 1944.5C717.501 1980.83 870.501 1990 931.001 2071.5C991.501 2153 906.501 2264.92 813.001 2238.5C744.001 2219 644.212 2063.87 870.501 1969C1096.79 1874.13 1302 2271.71 1003.5 2358C770.001 2425.5 591.001 2467.5 591.001 2783.5"
+		stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"
+		strokeDasharray={dashArray.first} strokeDashoffset={pathLength.first}
+	/>
 
-/>
-<path ref={pathSelector3} id="star-path" d="M488.379 1504C537.212 1521.83 671.879 1583 615.879 1687.5C549.508 1811.35 181.182 1646.14 37.8789 1852C-25.1211 1942.5 2.87874 2114.5 95.8789 2189" 
-        stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"
-        strokeDasharray={dashArray.third} strokeDashoffset={pathLength.third}
+<path ref={pathSelector2} x="-110" id="star-path" d=" M433 3206.8C433 3334.62 380.264 3439.26 234.948 3471.53C53.3029 3511.85 -48.6099 3376.05 33.7714 3251.39C100.737 3150.05 374 3162.05 550.5 3508.06"
+		stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"
+		strokeDasharray={dashArray.second} strokeDashoffset={pathLength.second}
+	/>
 
-/>
-<path ref={pathSelector4} id="star-path" d="M471.879 2237.5C571.046 2249.17 757.279 2303.6 708.879 2428C648.379 2583.5 409.379 2544 409.379 2781" 
-        stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"
-        strokeDasharray={dashArray.fourth} strokeDashoffset={pathLength.fourth}
 
-/>
+
         </Line>
  
 
