@@ -72,8 +72,9 @@ export default () => {
     const handleShow = () => setShow(true);
 
     const onPostClick = (post) => {
-	handleShow();
-	setSelectedPost(post);
+	//handleShow();
+	//setSelectedPost(post);
+	
 
     };
 
