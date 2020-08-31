@@ -236,7 +236,42 @@ const Line = styled.svg`
     }
 `;
 
+const Header = styled.p`
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 900;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    top: ${(props) => props.top || "0px"};
+    margin-left: ${(props) => props.toLeft || "0px"};
+    
+    @media screen and (max-width:480px) {
+	font-size: 1.25rem;
+	line-height: 1rem;
+}
+`;
 
+const Header1 = styled(Header)`
+
+    @media screen and (max-width:480px) {
+    top: 33rem;
+    }
+`;
+
+const Header2 = styled(Header)`
+    @media screen and (max-width:480px) {
+    top: 103rem;
+	margin-left: 0rem;
+    }
+
+`;
+const Header3 = styled(Header)`
+    @media screen and (max-width:480px) {
+    top: 159rem;
+    }
+
+`;
 
 const Text = styled.p`
     position: absolute;
@@ -252,14 +287,12 @@ const Text = styled.p`
 	font-size: 2.5rem;
 	line-height: 3rem;
 }
-    
-    
 `;
 
 const Text1 = styled(Text)`
     @media screen and (max-width:480px) {
 
-    top: 34rem;
+    top: 35rem;
     }
 `
 
@@ -275,7 +308,7 @@ const Text2 = styled(Text)`
 const Text3 = styled(Text)`
     @media screen and (max-width:480px) {
 
-    top: 160rem;
+    top: 161rem;
     }
 `
 const SubText = styled.p`
@@ -322,9 +355,9 @@ const SubText = styled.p`
 const SubText1 = styled(SubText)`
   @media screen and (max-width:480px) {
 
-    top: 39rem;
-    margin-left: -7rem;
-	text-align: left;
+    top: 40rem;
+    margin-left: -6rem;
+    text-align: left;
 
 }
 `;
@@ -339,7 +372,7 @@ const SubText2 = styled(SubText)`
 const SubText3 = styled(SubText)`
   @media screen and (max-width:480px) {
 
-    top: 165.625rem;
+    top: 166.625rem;
 
 }
 `;
@@ -534,6 +567,7 @@ const Section4 = () => {
         </Fade>
 
 
+            <Header1 top={"35.188rem"} toLeft={"-10rem"}>1 COOK</Header1>
             <Text1 top={"40.188rem"} toLeft={"-10rem"}>재료</Text1>
             <SubText1 top={"46.625rem"} toLeft={"-17rem"} textAlign={"right"}><Bold>깐깐한 재료</Bold>가<br/>좋은 요리의 시작이다.</SubText1>
             <Content1 top={"75.438rem"} toRight={"-20rem"} textAlign={"left"}>
@@ -553,6 +587,7 @@ const Section4 = () => {
 		<br/>100% 수작업
             </Content3>
 
+            <Header2 top={"142.188rem"} toLeft={"-7.3rem"}>2 COOK</Header2>
             <Text2 top={"146.625rem"} toLeft={"-7.3rem"}>환경</Text2>
             <SubText2 top={"152.438rem"} toLeft={"-0.3rem"} textAlign={"left"}><Bold>청결한 주방</Bold>에서<br/> 좋은 요리가 탄생한다.</SubText2>
             <Content4 top={"182.438rem"} toLeft={"-16rem"} textAlign={"right"}>
@@ -562,6 +597,7 @@ const Section4 = () => {
 		<br/>보건증 의무화
             </Content4>
 
+            <Header3 top={"231.188rem"}>3 COOK</Header3>
             <Text3 top={"235.438rem"}>사람</Text3>
             <SubText3 top={"241.438rem"} center><Bold>좋은 사람</Bold>이<br/>좋은 요리를 완성한다.</SubText3>
 
