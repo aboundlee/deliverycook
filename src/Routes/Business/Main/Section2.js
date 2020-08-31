@@ -15,7 +15,7 @@ const Page4 = styled(Page)`
 
     /*max-height: 1000px;*/
 
-    background: url("/Images/Business/p4.png") no-repeat; 
+    background: url("/Images/Business/p4.jpg") no-repeat; 
     background-position: center;
     background-size: cover;
 
