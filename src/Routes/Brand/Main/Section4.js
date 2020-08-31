@@ -12,6 +12,9 @@ const Page = styled.section`
     height: 295.25rem;
     display: flex;
     text-align: center;
+    background: url("/Images/Brand/p4_background.jpg") no-repeat; 
+    background-position: center;
+    background-size: cover;
 
     justify-content: center;
 
