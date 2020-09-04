@@ -99,8 +99,9 @@ const Section7 = () => {
         <Fade bottom distance={'30%'}> 
 
             <MainTextContainer>
-                <MainText><Bold>요리에만 집중하세요.</Bold></MainText>
-                <MainText><Bold>운영지원</Bold>은 본사가 할게요.</MainText>                
+                {/*<MainText><Bold>요리에만 집중하세요.</Bold></MainText>*/}
+                <MainText>본사가 확실한</MainText>                
+                <MainText><Bold>운영지원</Bold> 합니다!</MainText>                
             </MainTextContainer>
         </Fade>
         <Fade bottom distance={'30%'} delay={300}> 

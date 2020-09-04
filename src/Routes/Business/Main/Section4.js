@@ -96,9 +96,10 @@ const Section6 = () => {
 
             <SubTextContainer>
                     <SubText>
-                    주방과 주방기구를 <Bold>최적으로 디자인</Bold>하여,
-                    <br/>여러 브랜드를 <Bold>효율적으로 조리</Bold>하고
-                    <br/><Bold>운영</Bold>할 수 있도록 했습니다.</SubText>
+			<Bold>운영이 간편한</Bold> 주방
+			<br/>시스템 주방으로 운영효율 <Bold>최적화</Bold>
+			<br/>간편 메뉴얼로 메뉴세팅 <Bold>6 분!</Bold>
+                        </SubText>
             </SubTextContainer>
             </Fade>
         </TextContainer>

@@ -64,20 +64,6 @@ const Map = ({onStoreClick, center, setCenter}) => {
     let [zoom, setZoom] = useState(0); // 지도의 zoom 값
 
 
-//     const addr ="경남 진주시 하대로117번길 7"
-//     const clientID = "9pj6u5x2ps";
-//     const clientSecret = "ZoMXAoWgD4knNIMkUupoaiYuqjeWJg1iVO9y2GWG";
-//     const url = `https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=${addr}`;
-//     const getConfig = {
-//        headers: {
-//        "X-NCP-APIGW-API-KEY-ID": `${clientID}`,
-//        "X-NCP-APIGW-API-KE" : `${clientSecret}`
-//        }
-//    };
-
-
-//     const { state, refetch } = useAxios(url,getConfig);
-  
 
     // Get Map Center data
     useEffect(() => {
