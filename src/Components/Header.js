@@ -7,6 +7,9 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { actionCreators } from './StoreRedux';
 
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
+
 
 import '../Styles/Header.css';
 
@@ -66,6 +69,19 @@ const Logo = styled.img`
     }
 `;
 
+const BusinessLogo = styled.img`
+    float: left;
+    width: 13.625rem;
+    height: auto;
+    padding-left: 3rem;
+
+    @media screen and (max-width:768px) {
+        float: none;
+        padding-left: 0rem;
+        width: 100px;
+        height: auto;
+    }
+`;
 const MenuBox = styled.div`
     height: 65px;
     float: right;
@@ -199,8 +215,6 @@ const HeaderLink = styled(Link)`
     cursor: pointer;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
-
-
     ${props => {
             if (props.iswhiteheader) {
                 return css `
@@ -327,16 +341,37 @@ const MobileHeaderLink = styled(Link)`
 `;
 
 
-const ToBusiness = styled.img`
+const LinkButton = styled.div`
     vertical-align: middle;
     width: 6.875rem;
+    height: 4.045rem;
+background: #E50012;
+border-radius: 2.719rem;
+
+    -moz-box-shadow: 0px 0.188rem 0px 0px #FFFFFF;
+    -webkit-box-shadow: 0px 0.188rem 0px 0px #FFFFFF;
+    box-shadow: 0px 0.188rem 0px 0px #FFFFFF;
+   &:hover {
+
+	color: #E50012;
+    background: #ffffff;
+    -moz-box-shadow: 0px 0.188rem 0px 0px #E50012;
+    -webkit-box-shadow: 0px 0.188rem 0px 0px #E50012;
+    box-shadow: 0px 0.188rem 0px 0px #E50012;
+   }
+
     @media screen and (max-width:768px) {
         display: block;
         width: 60px;
         height: auto;
     }
+    
 `;
 
+const ButtonText = styled.p`
+   line-height: 4.063rem;
+
+`;
 const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
@@ -344,7 +379,7 @@ const Header = ({changePageTo}) => {
     const brandLinks = ["/about/1", "/store", "/news", "/business"];
     const brandHeaders = ['/','/about','/about/1','/about/2','/about/3','/store','/news'];
 
-    const businessMenus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드 홈페이지"];
+    const businessMenus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드"];
     const businessLinks = ["/success", "/info", "/consult", "/"];
     const businessHeaders = ['/business','/success','/info','/consult'];
 
@@ -403,9 +438,18 @@ const Header = ({changePageTo}) => {
   return (
         <NavBar active={showMenu} iswhiteheader={isWhiteHeader? 1 : 0}>
         <NavContainer>
-            <Link to="/" onClick={clearMenu}>
-                <Logo src="/Images/Logo_KR.png"  alt="Logo"/> 
-            </Link>
+                {isBrandPage 
+		? (
+		    <Link to="/" onClick={clearMenu}>
+			<Logo src="/Images/LogoBrand.png" alt="Logo"/>
+		    </Link>
+
+		)
+		: (
+		    <Link to="/business" onClick={clearMenu}>
+			<BusinessLogo src="/Images/LogoBusiness.png" alt="LogoBusiness"/>
+		    </Link>
+		)}
 
 
             <MenuBox active={showMenu}>
@@ -422,10 +466,19 @@ const Header = ({changePageTo}) => {
                         <MenuItem>
                             { showMenu 
                             ? (<p><HeaderLink to={links[3]} onClick={clearMenu}>{menus[4]}</HeaderLink></p>)
-                            : (<HeaderLink to={links[3]} onClick={onClick}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></HeaderLink>)
+                            : (
+				<HeaderLink to={links[3]} onClick={onClick}>
+					<LinkButton>
+					<ButtonText>{menus[4]}</ButtonText></LinkButton>
+			      	</HeaderLink>
+				)
                             }
                         </MenuItem>
                     </Menu>
+
+
+
+
 
                     <MobileMenu className="navlinks">
                         <MenuPart>

@@ -32,6 +32,7 @@
     "react": "^16.13.1",
     "react-apollo-hooks": "^0.5.0",
     "react-app-polyfill": "^1.0.6",
+    "react-awesome-button": "^6.5.1",
     "react-awesome-modal": "^2.0.5",
     "react-bootstrap": "^1.0.1",
     "react-device-detect": "^1.13.1",
@@ -95,5 +96,4 @@
     "puppeteerExecutablePath": "/usr/bin/google-chrome-stable"
   },
   "homepage": "https://deliverycook.kr/"
-
 }
