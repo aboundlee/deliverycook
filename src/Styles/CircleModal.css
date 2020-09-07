@@ -46,14 +46,6 @@ body {
   }
 }
 
-a {
-  color: $color--blue;
-  text-decoration: none;
-  
-  &:focus, &:hover {
-    color: $color--dark-blue;
-  }
-}
 
 
 .button {
