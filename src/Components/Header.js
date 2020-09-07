@@ -351,13 +351,15 @@ border-radius: 2.719rem;
     -moz-box-shadow: 0px 0.188rem 0px 0px #FFFFFF;
     -webkit-box-shadow: 0px 0.188rem 0px 0px #FFFFFF;
     box-shadow: 0px 0.188rem 0px 0px #FFFFFF;
+       transition: margin-top 0.5s;
    &:hover {
 
 	color: #E50012;
     background: #ffffff;
-    -moz-box-shadow: 0px 0.188rem 0px 0px #E50012;
-    -webkit-box-shadow: 0px 0.188rem 0px 0px #E50012;
-    box-shadow: 0px 0.188rem 0px 0px #E50012;
+    -moz-box-shadow: 0px 0px 0px 0px #E50012;
+    -webkit-box-shadow: 0px 0px 0px 0px #E50012;
+    box-shadow: 0px 0px 0px 0px #E50012;
+       margin-top: 0.188rem;
    }
 
     @media screen and (max-width:768px) {
