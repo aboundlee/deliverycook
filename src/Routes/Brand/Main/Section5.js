@@ -86,7 +86,7 @@ const Section5 = () => {
                 <MainText>드세요</MainText>
             </MainTextContainer>
             <SubTextContainer>
-                <Logo src="/Images/Logo_KR.png" alt="딜리버리쿡"/>
+                <Logo src="/Images/LogoBrand.png" alt="딜리버리쿡"/>
             </SubTextContainer>
         
         </TextContainer>
