@@ -178,7 +178,7 @@ const Section2 = () => {
             
             <TextContainer>
                 <Fade bottom distance={'30%'} delay={400}> 
-                <MainText><Bold>하나의 주방</Bold>에서 <br/><Bold>2개 이상</Bold>의 <Bold>브랜드</Bold>를 <br/>운영해보세요</MainText>
+                <MainText><Bold>업종 변경 고민</Bold> 없는<br/><Bold>맞춤형 브랜드 창업</Bold>을 <br/><Bold>한 번</Bold>에 하세요</MainText>
                 </Fade>
             </TextContainer>
 

@@ -96,7 +96,7 @@ const Detail = styled.p`
 `;
 
 const Menu = ({brand, index, name, subtitle, detail}) => {
-    const image_url = `/Images/Brand/About/Brand${brand}/${index}.png`;
+    const image_url = `/Images/Brand/About/Brand${brand}/${index}.jpg`;
     const image_alt = `deliverycook_${index}`;
     let border = false;
     let splited_name = name.split(" ");
