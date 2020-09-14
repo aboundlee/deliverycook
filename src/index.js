@@ -11,15 +11,16 @@ import store from './Components/StoreRedux';
 
 import  { render } from "react-dom";
 
+
 const rootElement = document.getElementById("root");
 
-	render(
-	  <Provider store={store}>
-	  
-	    <App />
-	    </Provider>
-	  ,rootElement
-	);
+render(
+  <Provider store={store}>
+
+  <App />
+  </Provider>,
+  rootElement
+);
 
 
 // If you want your app to work offline and load faster, you can change

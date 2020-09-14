@@ -16,9 +16,19 @@ import Routes from "./Router";
 import Header from "./Header";
 import PopUpModal from "./ImageModal";
 import CircleModal from "./CircleModal";
+import ReactGA from 'react-ga';
+
 //server-side rendering for react-reveal
 import config from 'react-reveal/globals';
+
 config({ ssrFadeout: true });
+
+ReactGA.initialize('UA-177892543-1');
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+}
 // import createBrowserHistory from 'history/createBrowserHistory';
 
 
@@ -91,7 +101,7 @@ const App = () => {
 
             </Helmet>
          
-      <Router basename="/">
+      <Router basename="/"  onUpdate={logPageView}>
 
         <Header/>
 	{ loading 
