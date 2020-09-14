@@ -17,13 +17,14 @@ import Header from "./Header";
 import PopUpModal from "./ImageModal";
 import CircleModal from "./CircleModal";
 import ReactGA from 'react-ga';
-
 //server-side rendering for react-reveal
 import config from 'react-reveal/globals';
+import dotenv from 'dotenv';
 
+dotenv.config();
 config({ ssrFadeout: true });
 
-ReactGA.initialize('UA-177892543-1');
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY);
 
 function logPageView() {
   ReactGA.set({ page: window.location.pathname });
