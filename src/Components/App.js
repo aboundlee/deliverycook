@@ -20,9 +20,9 @@ import ReactGA from 'react-ga';
 //server-side rendering for react-reveal
 import config from 'react-reveal/globals';
 import dotenv from 'dotenv';
+config({ ssrFadeout: true });
 
 dotenv.config();
-config({ ssrFadeout: true });
 
 ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY);
 
