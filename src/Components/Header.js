@@ -429,14 +429,14 @@ const Header = ({changePageTo}) => {
     let links = [];
     const brandMenus = ["브랜드&메뉴", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
     const brandLinks = ["/about/1", "/store", "/news", "/business"];
-    const brandHeaders = ['/','/about','/about/1','/about/2','/about/3','/store','/news'];
+    const brandHeaders = ['/','/company', '/about','/about/1','/about/2','/about/3','/store','/news'];
 
     const businessMenus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드"];
     const businessLinks = ["/success", "/info", "/consult", "/"];
     const businessHeaders = ['/business','/success','/info','/consult'];
 
 
-    const whiteHeaders = ['/about','/about/1','/about/2','/about/3','/store','/news'];
+    const whiteHeaders = ['/company', '/about','/about/1','/about/2','/about/3','/store','/news'];
 
     let pageChanger = true;
     const [trigger, setTrigger] = useState();
@@ -519,8 +519,13 @@ const Header = ({changePageTo}) => {
 
 
             <MenuBox active={showMenu}>
+			{ isBrandPage  
+                        ? (
                     <Menu className="navlinks">
                         <MenuItem>
+                            <HeaderLink to={'/company'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
+                        </MenuItem>
+			<MenuItem>
                             <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
 					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
@@ -554,6 +559,32 @@ const Header = ({changePageTo}) => {
                             }
                         </MenuItem>
                     </Menu>
+		     )
+                    : (
+                    <Menu className="navlinks">
+			<MenuItem>
+                            <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+                        </MenuItem>
+                        <MenuItem>
+                            <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+                        </MenuItem>
+                        <MenuItem>
+                            <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+                        </MenuItem>
+                        <MenuItem>
+                            { showMenu 
+                            ? (<p><HeaderLink to={links[3]} onClick={clearMenu}>{menus[4]}</HeaderLink></p>)
+                            : (
+				<HeaderLink to={links[3]} onClick={onClick}>
+					<LinkButton>
+					<ButtonText>{menus[4]}</ButtonText></LinkButton>
+			      	</HeaderLink>
+				)
+                            }
+                        </MenuItem>
+                    </Menu>
+
+                   )}
 
 
 

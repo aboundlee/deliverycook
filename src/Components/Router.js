@@ -6,6 +6,7 @@ import Loader from "./Loader";
 //import { actionCreators } from './Store';
 
 const BrandMain = React.lazy(() => import("../Routes/Brand/Main/BrandMain"));
+const BrandCompany = React.lazy(() =>  import("../Routes/Brand/BrandCompany"));
 const BrandAbout = React.lazy(() =>  import("../Routes/Brand/BrandAbout"));
 const BrandStore = React.lazy(() => import("../Routes/Brand/BrandStore"));
 const BrandNews = React.lazy(() => import("../Routes/Brand/BrandNews"));
@@ -27,6 +28,7 @@ const AppRouter = () => {
         <Route exact path="/" component={BrandMain} />
 
         {/* <Route exact path="/brand" component={withRouter(BrandMain)} /> */}
+        <Route path="/company" component={BrandCompany} />
         <Route path="/about/:brand" component={BrandAbout} />
 
         {/* <Route path="/about" component={BrandAbout} /> */}
