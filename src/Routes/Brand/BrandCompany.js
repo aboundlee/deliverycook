@@ -13,6 +13,10 @@ const Page = styled.section`
     padding: 0 5rem;
     background-color: #242424;
     color: #fff;
+    overflow: hidden;
+    @media (max-width:480px) {
+      padding: 0;
+    }
 
 `;
 

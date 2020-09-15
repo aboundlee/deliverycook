@@ -4,6 +4,7 @@ import styled, {css} from "styled-components";
 //import Fade from 'react-reveal/Fade';
 import BrandDetail from '../../Components/BrandDetail';
 import BrandMenu from '../../Components/BrandMenu';
+import BrandAll from './BrandAll';
 import { Link, withRouter, useLocation } from "react-router-dom";
 
 const Page = styled.section`
@@ -83,6 +84,15 @@ export default ({match}) => {
 
 
     let next = String(parseInt(brand)+1);
+    let isAll=true;
+
+
+    if (brand === 'all') {
+       isAll=true;
+
+    } else { 
+       isAll=false;
+    }
 
     if (parseInt(brand) >= 3){
         next = '1';
@@ -90,8 +100,17 @@ export default ({match}) => {
 
     return (
         <Page>
+       { isAll ? (
+         <BrandAll/>
+       ) 
+       : ( 
+          <>
             <BrandDetail brand={brand}/>
             <BrandMenu brand={brand}/>
+          </>
+
+        ) 
+       }
 
             <Navigator>
                 <BrandLinks>
