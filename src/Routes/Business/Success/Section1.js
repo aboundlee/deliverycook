@@ -120,6 +120,9 @@ const SubText = styled.p`
 `;
 
 
+const NavText = styled.p`
+
+`;
 
 const Section1 = () =>    {
 
@@ -141,7 +144,7 @@ const Section1 = () =>    {
             </Fade>
         </TextContainer>
         <Navigator>
-            <p>딜리버리쿡<br/><Bold>성공가이드북</Bold></p>
+            <p>배달푸드코트<br/><Bold>성공가이드북</Bold></p>
             <Circle>
                 <div className="arrow arrow-first"></div>
                 <div className="arrow arrow-second"></div>
