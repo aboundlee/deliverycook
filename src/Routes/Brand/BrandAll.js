@@ -2,6 +2,8 @@
 import React from "react";
 import styled, {css} from "styled-components";
 
+import Fade from 'react-reveal/Fade';
+
 
 const Page = styled.section`
     width: 100%;
@@ -119,12 +121,79 @@ const Logo = styled.img`
 `;
 
 
+const TextContainer = styled.div`
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    color: #242424;
+    @media (max-width: 480px) {
+      padding-left: 4%;
+    }
+`;
+
+
+const MainTextWrapper = styled.div`
+    margin-bottom: 2rem;
+`;
+
+const MainText = styled.p`
+   font-style: normal;
+    font-size: 3.75rem;
+    line-height: 5rem;
+    font-weight: normal;
+    margin-left: 1.4rem;
+    @media (max-width: 480px) {
+      font-size: 3rem;
+    }
+
+`;
+
+const SubTextWrapper = styled.div`
+   margin-top: 14px;
+    z-index: 4;
+`;
+
+const SubText = styled.p`
+    vertical-align:middle;
+    line-height: 2.7rem;
+
+    font-size: 1.75em;
+    font-style: normal;
+    margin-left: 1.4rem;
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      padding-right: 10rem;
+    }
+
+`;
 
 export default () => {
 
     return (
         <Page>
-          <MainContainer></MainContainer>
+          <MainContainer/>
+
+          <TextContainer>
+            <Fade bottom distance={'30%'}> 
+                <MainTextWrapper>
+                   <MainText><Bold>딜리버리쿡</Bold>은,</MainText>
+                </MainTextWrapper>
+            </Fade>
+            <Fade bottom distance={'30%'}> 
+                <SubTextWrapper>
+                    <SubText>딜리버리쿡은 <Bold>재료, 사람, 환경</Bold>의 <Bold>3 COOK</Bold> 경영 철학을 갖고 만들어졌습니다.
+                    <br/>현재 <Bold>딜리버리 삼겹살쿡, 딜리버리 돈까스쿡, 딜리버리 떡볶이쿡</Bold> 3개의 브랜드를 통해 
+		    <br/><Bold>믿을 수 있는 배달음식</Bold>을 만들고 있습니다.</SubText>
+                </SubTextWrapper>
+            </Fade>
+
+          </TextContainer>
         <Wrapper>
             <LogoSection bgImage={'1'}>
                 <Filter/>
