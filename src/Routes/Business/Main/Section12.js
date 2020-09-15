@@ -87,9 +87,9 @@ const Section12 = () => {
             </Fade>
             <Fade bottom distance={'30%'}> 
                 <SubTextWrapper>
-                    <SubText>하나의 매장에서 <Bold>여러개의 브랜드</Bold>를 운영함으로서</SubText>
-                    <SubText>푸드코트처럼 <Bold>여러 고객의 니즈</Bold>를 충족시켜 <Bold>수익을 다각화</Bold>하며</SubText>
-		    <SubText><Bold>상권에 따라</Bold> 최적의 브랜드를 <Bold>맞춤형으로 창업</Bold>하는 비즈니스입니다.</SubText>
+                    <SubText>하나의 매장에서 <Bold>여러개의 브랜드</Bold>를 운영함으로서
+                    <br/>푸드코트처럼 <Bold>여러 고객의 니즈</Bold>를 충족시켜 <Bold>수익을 다각화</Bold>하며
+		    <br/><Bold>상권에 따라</Bold> 최적의 브랜드를 <Bold>맞춤형으로 창업</Bold>하는 비즈니스입니다.</SubText>
                 </SubTextWrapper>
             </Fade>
         </TextContainer>

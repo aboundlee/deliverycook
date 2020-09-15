@@ -51,7 +51,7 @@ const SectionAdder = styled.section`
 const FullpageWrapper = () => {
    
 
-//    if (isIE) {
+    if (isIE) {
 
         return (
             <Wrapper>
@@ -64,7 +64,8 @@ const FullpageWrapper = () => {
 	        <SectionAdder className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북"/></SectionAdder>
         </Wrapper>
         );
- //   }
+    }
+
     return (
     <ReactFullpage
         licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}
@@ -76,6 +77,7 @@ const FullpageWrapper = () => {
             {/* <div className="section"><BrandSection1/></div> */}
 
             <div className="section"><Section1/></div>
+            <div className="section"><Section12/></div>
             <div className="section"><Section2/></div>
             <div className="section"><Section3/></div>
             <div className="section"><Section4/></div>

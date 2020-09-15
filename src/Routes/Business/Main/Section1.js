@@ -13,6 +13,7 @@ const Page2 = styled(Page)`
     background-position: center;
     background-size: cover;
 
+    position: relative;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -28,10 +29,10 @@ const Filter = styled.div`
    position: absolute;
     background-color: #242424;
 
-    filter:alpha(opacity=70);
-    -moz-opacity:0.7;
-    -khtml-opacity: 0.7;
-    opacity: 0.7;
+    filter:alpha(opacity=85);
+    -moz-opacity:0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
     height: 100%;
     width: 100%;
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, {css} from "styled-components";
 
 import { Link, withRouter, useLocation } from "react-router-dom";
@@ -34,6 +34,25 @@ const NavBar = styled.div`
                 `;
             }
     }}
+
+    @media screen and (min-width:768px) {
+
+      ${props => {
+            if (props.hover && !props.brand) {
+                return css `
+		 background: #fff;
+		 height: 109px;
+                `;
+            } else if (props.hover && props.brand) {
+                return css `
+		 background: #fff;
+		 height: 15.5rem;
+                `;
+            }
+      }}
+
+    }
+
     @media screen and (max-width:768px) {
        height: 80px;
         ${props => {
@@ -151,28 +170,47 @@ const MainMenuItem = styled.li`
     font-weight: bold;
     font-size: 2.5rem;
 
-${'' /* 
-        a {
-            text-align: center;
-
-            display: block;
-            margin: 0 auto;
-            padding: 0;
-
-            height: 5rem;
-
-            color: #E50012; 
-	    margin-top: 20px;
-
-       	    line-height: 5rem;
-
-            width: 80%;
-	    background: url("/Images/mobile_HeaderLink.png") no-repeat; 
-	    background-position: center;
-	    background-size: contain;
-
-        } */}
 `;
+
+const AdditionalMenu = styled.ul`
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    display: none;
+
+    -webkit-transition: display 0.4s ease;
+    transition: display 0.4s ease;
+
+    ${props => {
+        if (props.hover) {
+           return css `
+              display: block;
+           `;
+        }
+     }}
+    ${props => {
+        if (!props.brand) {
+           return css `
+              display: none;
+           `;
+        }
+     }}
+    
+    @media screen and (max-width:768px) {
+        display: none;
+    }
+`;
+
+const AdditionalMenuItem = styled.li`
+   width: auto;
+    padding: 0;
+    font-size: 1rem;
+     height: 2rem;
+`;
+
 const SubMenuItems = styled.div`
     width: 50%;
     text-align: left;
@@ -192,13 +230,13 @@ const MenuPart = styled.div`
 `;
 
 const MenuItem = styled.li`
-   width: auto;
-    height: 65px;
+     width: 10rem;
+    iheight: 65px;
     padding: 0;
-    padding-right: 3rem;
     font-size: 1.25rem;
 
     @media screen and (max-width:768px) {
+     width: auto;
 
         height: 5rem;
         font-size: 2rem;
@@ -216,7 +254,15 @@ const HeaderLink = styled(Link)`
     text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
     ${props => {
-            if (props.iswhiteheader) {
+            if (props.iswhiteheader){
+                return css `
+                    color: #242424;
+                    text-shadow: none;
+                `;
+            }
+        }}
+    ${props => {
+            if (props.hover){
                 return css `
                     color: #242424;
                     text-shadow: none;
@@ -227,8 +273,8 @@ const HeaderLink = styled(Link)`
         color: #E50012;
     }
 
-    @media screen and (max-width:768px) {
 
+    @media screen and (max-width:768px) {
         width: 100%;
 
         color: #fff;
@@ -237,9 +283,12 @@ const HeaderLink = styled(Link)`
         &:hover {
             color: #fff;
         }
-
-   
     }
+`;
+const AdditionalHeaderLink = styled(HeaderLink)`
+
+   line-height: 1rem;
+
 `;
 
 const MobileMenuUI = styled.span`
@@ -391,6 +440,13 @@ const Header = ({changePageTo}) => {
     let pageChanger = true;
     const [trigger, setTrigger] = useState();
     const [showMenu, setShowMenu] = useState(false);
+    const [hoverMenu, setHoverMenu] = useState(false);
+
+    useEffect(() => {
+
+    window.scrollTo(0, 0);
+
+   }, []);
 
     let isBrandPage; 
     let isWhiteHeader;
@@ -421,7 +477,6 @@ const Header = ({changePageTo}) => {
         links = businessLinks;
         pageChanger = "brandPage";
     }
-    window.scrollTo(0, 0);
 
     function onClick () {
         changePageTo(pageChanger);
@@ -437,8 +492,17 @@ const Header = ({changePageTo}) => {
         setShowMenu(false);
    }
 
+  function hoverMenuIn () {
+    setHoverMenu(true);
+  }
+
+  function hoverMenuOut () {
+    setHoverMenu(false);
+
+  }
+
   return (
-        <NavBar active={showMenu} iswhiteheader={isWhiteHeader? 1 : 0}>
+        <NavBar active={showMenu} iswhiteheader={isWhiteHeader? 1 : 0} onMouseEnter={() => setHoverMenu(true)} onMouseLeave={() => setHoverMenu(false)} hover={hoverMenu} brand={isBrandPage}>
         <NavContainer>
                 {isBrandPage 
 		? (
@@ -457,13 +521,27 @@ const Header = ({changePageTo}) => {
             <MenuBox active={showMenu}>
                     <Menu className="navlinks">
                         <MenuItem>
-                            <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>{menus[0]}</HeaderLink>
+                            <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
+					<AdditionalMenuItem>
+					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리쿡</AdditionalHeaderLink>
+					</AdditionalMenuItem>
+					<AdditionalMenuItem>
+					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리삼겹살쿡</AdditionalHeaderLink>
+					</AdditionalMenuItem>
+					<AdditionalMenuItem>
+					    <AdditionalHeaderLink to={'/about/2'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리떡볶이쿡</AdditionalHeaderLink>
+					</AdditionalMenuItem>
+					<AdditionalMenuItem>
+					    <AdditionalHeaderLink to={'/about/3'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리돈까스쿡</AdditionalHeaderLink>
+					</AdditionalMenuItem>
+				    </AdditionalMenu>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>{menus[1]}</HeaderLink>
+                            <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>{menus[2]}</HeaderLink>
+                            <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
                         </MenuItem>
                         <MenuItem>
                             { showMenu 
@@ -527,8 +605,6 @@ const Header = ({changePageTo}) => {
                 <MenuUI/>
                 <MenuUI/>
             </MobileMenuUI>
-            
-            {/* <MobileHeaderLink onClick={onClick} to={links[3]}><ToBusiness src={menus[3]} alt="Link"></ToBusiness></MobileHeaderLink> */}
         </NavContainer>
     </NavBar>
   );
