@@ -597,6 +597,9 @@ const Header = ({changePageTo}) => {
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
+                                    <HeaderLink to={'/'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
+                                </MenuItem>
+                                <MenuItem>
                                     <HeaderLink to={'/company'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>회사소개</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
@@ -615,7 +618,9 @@ const Header = ({changePageTo}) => {
                                 <HeaderLink to={'/business'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
                             </MainMenuItem>
                             <SubMenuItems>
-
+                                <MenuItem>
+                                    <HeaderLink to={'/business'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
+                                </MenuItem>
                                 <MenuItem>
                                     <HeaderLink to={'/success'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>성공가이드북</HeaderLink>
                                 </MenuItem>
