@@ -50,6 +50,7 @@ const SectionAdder = styled.section`
 
 const FullpageWrapper = () => {
    
+    window.scrollTo(0, 0);
 
     if (isIE) {
 
