@@ -534,10 +534,10 @@ const Header = ({changePageTo}) => {
 						<AdditionalMenuItem>딜리버리삼겹살쿡</AdditionalMenuItem>
 					    </AdditionalHeaderLink>
 				       <AdditionalHeaderLink to={'/about/2'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
-					  <AdditionalMenuItem>딜리버리떡볶이쿡 </AdditionalMenuItem>
+					  <AdditionalMenuItem>딜리버리돈까스쿡</AdditionalMenuItem>
 					</AdditionalHeaderLink>
 					<AdditionalHeaderLink to={'/about/3'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
-				 	    <AdditionalMenuItem>딜리버리돈까스쿡 </AdditionalMenuItem>
+				 	    <AdditionalMenuItem>딜리버리떡볶이쿡</AdditionalMenuItem>
 					</AdditionalHeaderLink>
 				    </AdditionalMenu>
                         </MenuItem>
