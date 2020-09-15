@@ -6,6 +6,7 @@ import {isIE} from 'react-device-detect';
 import styled from "styled-components";
 
 import Section1 from './Section1';
+import Section12 from './Section12';
 import Section2 from './Section2';
 import Section3 from './Section3';
 import Section4 from './Section4';
@@ -55,6 +56,7 @@ const FullpageWrapper = () => {
         return (
             <Wrapper>
             <Section className="section"><Section1/></Section>
+            <Section className="section"><Section12/></Section>
             <Section className="section"><Section2/></Section>
             <Section className="section"><Section3/></Section>
             <Section className="section"><Section4/></Section>

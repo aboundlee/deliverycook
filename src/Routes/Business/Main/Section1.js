@@ -8,7 +8,11 @@ import { Page, Bold } from './Styles';
 import useInterval from "../../../Hooks/useInterval";
 
 const Page2 = styled(Page)`
-    background-color: #242424;
+//    background-color: #242424;
+    background: url("/Images/Business/p6.jpg") no-repeat; 
+    background-position: center;
+    background-size: cover;
+
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -18,6 +22,18 @@ const Page2 = styled(Page)`
     @media (max-width: 768px) {
         flex-direction: column-reverse;
     }    
+`;
+
+const Filter = styled.div`
+   position: absolute;
+    background-color: #242424;
+
+    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
 `;
 
 const CaroselContainer = styled.div`
@@ -40,7 +56,7 @@ const TextContainer = styled.div`
 
     width: 100%;
     height: 100%;
-    margin-left: 3rem;
+    padding-left: 3rem;
     @media (max-width: 768px) {
 
         padding-top: 14.5vh;
@@ -157,6 +173,7 @@ const Section2 = () => {
     
     return (
         <Page2>
+        <Filter/>
             {/* <CaroselContainer>
                 <MenuCarosuel category="Business" mobileItem="2"/>
             </CaroselContainer> */}

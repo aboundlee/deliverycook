@@ -13,6 +13,7 @@ const Page4 = styled(Page)`
     position:relative;
     height: 100%;
 
+    overflow: hidden;
     /*max-height: 1000px;*/
 
     background: url("/Images/Business/p4.jpg") no-repeat; 
