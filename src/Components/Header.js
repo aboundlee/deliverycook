@@ -444,10 +444,8 @@ const Header = ({changePageTo}) => {
     const [hoverMenu, setHoverMenu] = useState(false);
 
     useEffect(() => {
-
     window.scrollTo(0, 0);
-
-   }, trigger);
+   }, [trigger]);
 
     let isBrandPage; 
     let isWhiteHeader;
@@ -490,6 +488,7 @@ const Header = ({changePageTo}) => {
     }
 
    function clearMenu () {
+        setTrigger(Math.random());
         setShowMenu(false);
    }
 
