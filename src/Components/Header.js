@@ -377,7 +377,7 @@ const ButtonText = styled.p`
 const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
-    const brandMenus = ["브랜드소개", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
+    const brandMenus = ["브랜드&메뉴", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
     const brandLinks = ["/about/1", "/store", "/news", "/business"];
     const brandHeaders = ['/','/about','/about/1','/about/2','/about/3','/store','/news'];
 
@@ -489,7 +489,7 @@ const Header = ({changePageTo}) => {
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
-                                    <HeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드소개</HeaderLink>
+                                    <HeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
                                     <HeaderLink to={'/store'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>

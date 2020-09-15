@@ -54,10 +54,13 @@ const MainText = styled.h2`
     line-height: 5rem;
     font-weight: normal;
     @media (max-width: 768px) {
-        font-size: 3.75rem;
+        font-size: 3.3rem;
     }
 `;
 
+const Small = styled.span`
+    font-size: 2rem;
+`;
 
 const BrandContainer = styled.div`
     position: relative;
@@ -178,7 +181,7 @@ const Section2 = () => {
             
             <TextContainer>
                 <Fade bottom distance={'30%'} delay={400}> 
-                <MainText><Bold>업종 변경 고민</Bold> 없는<br/><Bold>맞춤형 브랜드 창업</Bold>을 <br/><Bold>한 번</Bold>에 하세요</MainText>
+                <MainText><Small>배달 시장의 혁신 !</Small><br/><Bold>배달 푸드코트 비즈니스</Bold><br/>맞춤형 창업 시작하세요</MainText>
                 </Fade>
             </TextContainer>
 

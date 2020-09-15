@@ -89,13 +89,38 @@ const Detail = styled.p`
     color: #727171;
     margin-top: 2.5rem;
     text-align: left;
+    line-height: 1.75rem;
 
     @media (max-width:768px) {
         margin-top: 1rem;
     }
 `;
 
-const Menu = ({brand, index, name, subtitle, detail}) => {
+const TextHighlight = styled.span`
+    font-size: 1.25rem;
+    color: #fff;
+    text-align: left;
+    width: max-content;
+    line-height: 1.75rem;
+
+    ${props => {
+        if (props.brand === '1') {
+          return css`
+    	  background-color: #D53833;
+          `;
+        } else if (props.brand === '2'){
+          return css`
+    	  background-color: rgb(244, 158, 33);
+          `;
+        } else if (props.brand === '3'){
+          return css`
+    	  background-color: #C5171E;
+          `;
+        }
+    }}
+`;
+
+const Menu = ({brand, index, name, subtitle, detail, highlightText}) => {
     const image_url = `/Images/Brand/About/Brand${brand}/${index}.jpg`;
     const image_alt = `deliverycook_${index}`;
     let border = false;
@@ -119,6 +144,7 @@ const Menu = ({brand, index, name, subtitle, detail}) => {
                     <Title key={index}>{each_name}</Title>
                 ))}
                 <Detail>{detail}</Detail>
+                <TextHighlight brand={brand}>{highlightText}</TextHighlight>
 
             </Content>
         </GridItem>

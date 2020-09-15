@@ -24,7 +24,7 @@ config({ ssrFadeout: true });
 
 dotenv.config();
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY);
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY, {debug: true});
 
 function logPageView() {
   ReactGA.set({ page: window.location.pathname });

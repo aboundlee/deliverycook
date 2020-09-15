@@ -102,7 +102,7 @@ export default ({brand}) => {
 
                 <GridMenus container>
                     { Menus  && Menus.map((menu, index) => (
-                        <Menu brand={brand} index={menu.index} name={menu.name} subtitle={menu.subtitle} detail={menu.detail} key={index}/>
+                        <Menu brand={brand} index={menu.index} name={menu.name} subtitle={menu.subtitle} detail={menu.detail} highlightText={menu.highlightText} key={index}/>
                                 ))}
                 </GridMenus> 
 

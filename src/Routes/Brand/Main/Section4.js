@@ -349,7 +349,7 @@ const SubText = styled.p`
     @media screen and (max-width:480px) {
 
 
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 2.25rem;
     }
 `;
@@ -368,7 +368,7 @@ const SubText2 = styled(SubText)`
   @media screen and (max-width:480px) {
 
     top: 110.625rem;
-    margin-left: 4rem;
+    margin-left: 3rem;
 }
 `;
 
@@ -415,8 +415,8 @@ const Content = styled.p`
             width: 100%;
     `} 
     @media screen and (max-width:480px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7rem;
     }
 `;
 const Content1 = styled(Content)`
