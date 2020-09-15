@@ -428,15 +428,15 @@ const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
     const brandMenus = ["브랜드&메뉴", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
-    const brandLinks = ["/about/1", "/store", "/news", "/business"];
-    const brandHeaders = ['/','/company', '/about','/about/1','/about/2','/about/3','/store','/news'];
+    const brandLinks = ["/about/all", "/store", "/news", "/business"];
+    const brandHeaders = ['/','/company', '/about', '/about/all', '/about/1','/about/2','/about/3','/store','/news'];
 
     const businessMenus = ["성공가이드북", "창업안내", "문의하기", "/Images/BrandLink.svg","브랜드"];
     const businessLinks = ["/success", "/info", "/consult", "/"];
     const businessHeaders = ['/business','/success','/info','/consult'];
 
 
-    const whiteHeaders = ['/company', '/about','/about/1','/about/2','/about/3','/store','/news'];
+    const whiteHeaders = ['/company', '/about','/about/all','/about/1','/about/2','/about/3','/store','/news'];
 
     let pageChanger = true;
     const [trigger, setTrigger] = useState();
@@ -528,7 +528,7 @@ const Header = ({changePageTo}) => {
 			<MenuItem>
                             <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
-					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					    <AdditionalHeaderLink to={'/about/all'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 					        <AdditionalMenuItem> 딜리버리쿡 </AdditionalMenuItem></AdditionalHeaderLink>
 					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 						<AdditionalMenuItem>딜리버리삼겹살쿡</AdditionalMenuItem>
@@ -597,7 +597,10 @@ const Header = ({changePageTo}) => {
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
-                                    <HeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
+                                    <HeaderLink to={'/company'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>회사소개</HeaderLink>
+                                </MenuItem>
+                                <MenuItem>
+                                    <HeaderLink to={'/about/all'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
                                     <HeaderLink to={'/store'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>
