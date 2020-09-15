@@ -270,7 +270,7 @@ export default () => {
                 <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
             </DetailSection>
         </Wrapper>
-        <DivLinker link={'/About/1'} text={'삼겹살쿡'}  />
+        <DivLinker link={'/about/1'} text={'삼겹살쿡'}  />
         </Page>
     );
   };

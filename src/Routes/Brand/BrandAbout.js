@@ -122,7 +122,7 @@ export default ({match}) => {
           <>
             <BrandDetail brand={brand}/>
             <BrandMenu brand={brand}/>
-             <DivLinker link={`/About/${next}`} text={nextName}  />
+             <DivLinker link={`/about/${next}`} text={nextName}  />
           </>
 
         ) 
