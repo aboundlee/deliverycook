@@ -14,7 +14,7 @@ import "react-awesome-button/dist/styles.css";
 import '../Styles/Header.css';
 
 const NavBar = styled.div`
-    z-index: 101;
+    z-index: 1001;
     width: 100%;
     height: 65px;
     position: fixed;
@@ -408,6 +408,7 @@ border-radius: 2.719rem;
     -moz-box-shadow: 0px 0px 0px 0px #E50012;
     -webkit-box-shadow: 0px 0px 0px 0px #E50012;
     box-shadow: 0px 0px 0px 0px #E50012;
+       border: 1px solid #E50012;
        margin-top: 0.188rem;
    }
 
@@ -446,7 +447,7 @@ const Header = ({changePageTo}) => {
 
     window.scrollTo(0, 0);
 
-   }, []);
+   }, trigger);
 
     let isBrandPage; 
     let isWhiteHeader;
@@ -523,18 +524,17 @@ const Header = ({changePageTo}) => {
                         <MenuItem>
                             <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
-					<AdditionalMenuItem>
-					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리쿡</AdditionalHeaderLink>
-					</AdditionalMenuItem>
-					<AdditionalMenuItem>
-					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리삼겹살쿡</AdditionalHeaderLink>
-					</AdditionalMenuItem>
-					<AdditionalMenuItem>
-					    <AdditionalHeaderLink to={'/about/2'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리떡볶이쿡</AdditionalHeaderLink>
-					</AdditionalMenuItem>
-					<AdditionalMenuItem>
-					    <AdditionalHeaderLink to={'/about/3'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>딜리버리돈까스쿡</AdditionalHeaderLink>
-					</AdditionalMenuItem>
+					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					        <AdditionalMenuItem> 딜리버리쿡 </AdditionalMenuItem></AdditionalHeaderLink>
+					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+						<AdditionalMenuItem>딜리버리삼겹살쿡</AdditionalMenuItem>
+					    </AdditionalHeaderLink>
+				       <AdditionalHeaderLink to={'/about/2'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					  <AdditionalMenuItem>딜리버리떡볶이쿡 </AdditionalMenuItem>
+					</AdditionalHeaderLink>
+					<AdditionalHeaderLink to={'/about/3'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+				 	    <AdditionalMenuItem>딜리버리돈까스쿡 </AdditionalMenuItem>
+					</AdditionalHeaderLink>
 				    </AdditionalMenu>
                         </MenuItem>
                         <MenuItem>
