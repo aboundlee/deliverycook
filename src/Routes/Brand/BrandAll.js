@@ -24,6 +24,7 @@ const MainContainer = styled.div`
 	    height: 30%;
     		background-size: 90%;
     	    background-position: center;
+          background-color: #fff;
     }
 `;
 const DetailSection = styled.div`
@@ -141,23 +142,11 @@ const TextContainer = styled.div`
     position: relative;
     @media (max-width: 480px) {
       padding-left: 4%;
-       height: 60%;
+        background-color: #fff;
+       height: 70%;
     }
 `;
 
-const Background = styled.div`
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-  
-    opacity: 0.1;
-    background: url("/Images/LogoBrand.png") no-repeat; 
-    background-color: #fff;
-    background-position: center;
-    background-size: 20%;
-`;
 
 
 const MainTextWrapper = styled.div`
@@ -191,8 +180,8 @@ const SubText = styled.p`
 
     @media (max-width: 480px) {
       font-size: 1.5rem;
-      line-height: 1.7rem;
-      padding-right: 10rem;
+      line-height: 2rem;
+      padding-right: 9rem;
     }
 
 `;

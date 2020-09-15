@@ -67,8 +67,8 @@ const SubText = styled.p`
 
     @media (max-width: 480px) {
       font-size: 1.5rem;
-      line-height: 1.7rem;
-      padding-right: 3rem;
+      line-height: 2rem;
+      padding-right: 9rem;
     }
 
 `;
