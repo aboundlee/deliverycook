@@ -134,7 +134,7 @@ const TextContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 80%;
+    height: 100%;
     padding-left: 10%;
     color: #242424;
 

@@ -87,6 +87,7 @@ export default ({match}) => {
     let isAll=true;
 
 
+    window.scrollTo(0, 0);
     if (brand === 'all') {
        isAll=true;
 
