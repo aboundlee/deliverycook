@@ -8,6 +8,7 @@ import Fade from 'react-reveal/Fade';
 const Page = styled.section`
     width: 100%;
     height: 100%;
+  padding-top: 70px;
 `;
 
 
@@ -18,6 +19,12 @@ const MainContainer = styled.div`
     background-size: 70%;
     width: 100%;
     height: 100%;
+    @media (max-width: 480px) {
+	    background: url("/Images/Brand/About/deliverycookMobile.png") no-repeat; 
+	    height: 30%;
+    		background-size: 90%;
+    	    background-position: center;
+    }
 `;
 const DetailSection = styled.div`
     width: 100%;
@@ -127,12 +134,29 @@ const TextContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 80%;
     padding-left: 10%;
     color: #242424;
+
+    position: relative;
     @media (max-width: 480px) {
       padding-left: 4%;
+       height: 60%;
     }
+`;
+
+const Background = styled.div`
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+  
+    opacity: 0.1;
+    background: url("/Images/LogoBrand.png") no-repeat; 
+    background-color: #fff;
+    background-position: center;
+    background-size: 20%;
 `;
 
 

@@ -45,6 +45,7 @@ const Modal = styled.div`
 
 const CircleBtn = styled.button`
 
+   z-index: 10001;
 
   ${props => {
 		if (props.active) {
