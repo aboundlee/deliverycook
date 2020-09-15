@@ -5,6 +5,7 @@ import styled, {css} from "styled-components";
 import BrandDetail from '../../Components/BrandDetail';
 import BrandMenu from '../../Components/BrandMenu';
 import BrandAll from './BrandAll';
+import DivLinker from '../../Components/DivLinker.js';
 import { Link, withRouter, useLocation } from "react-router-dom";
 
 const Page = styled.section`
@@ -84,6 +85,7 @@ export default ({match}) => {
 
 
     let next = String(parseInt(brand)+1);
+    let nextName;
     let isAll=true;
 
 
@@ -98,6 +100,18 @@ export default ({match}) => {
     if (parseInt(brand) >= 3){
         next = '1';
     }
+    if (brand === '1'){
+ 
+        nextName = '돈까스쿡';
+
+    }
+    else if (brand === '2'){
+        nextName = '떡볶이쿡';
+    }
+    else if (brand === '3'){
+        nextName = '삼겹살쿡';
+    }
+
 
     return (
         <Page>
@@ -108,6 +122,7 @@ export default ({match}) => {
           <>
             <BrandDetail brand={brand}/>
             <BrandMenu brand={brand}/>
+             <DivLinker link={`/About/${next}`} text={nextName}  />
           </>
 
         ) 

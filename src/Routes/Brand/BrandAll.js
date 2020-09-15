@@ -3,6 +3,7 @@ import React from "react";
 import styled, {css} from "styled-components";
 
 import Fade from 'react-reveal/Fade';
+import DivLinker from '../../Components/DivLinker.js';
 
 
 const Page = styled.section`
@@ -269,6 +270,7 @@ export default () => {
                 <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
             </DetailSection>
         </Wrapper>
+        <DivLinker link={'/About/1'} text={'삼겹살쿡'}  />
         </Page>
     );
   };
