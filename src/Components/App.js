@@ -12,6 +12,8 @@ import styled from "styled-components";
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
 import { BrowserRouter as Router} from "react-router-dom";
+import { createBrowserHistory } from 'history';
+
 import Routes from "./Router";
 import Header from "./Header";
 import PopUpModal from "./ImageModal";
@@ -24,22 +26,29 @@ config({ ssrFadeout: true });
 
 dotenv.config();
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY, {debug: true});
+const history = createBrowserHistory();
+
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY, { standardImplementation: true });
+
 
 function logPageView() {
+ console.log("!!");
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname);
 }
-// import createBrowserHistory from 'history/createBrowserHistory';
+
+const Event = (category, action, label) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label
+  });
+};
 
 
-// const history = createBrowserHistory({
-//     basename: '/'
-// });
 
 
 
-//import Footer from './Footer'
 
 const Wrapper = styled.div`
     width: 100%;
@@ -102,7 +111,7 @@ const App = () => {
 
             </Helmet>
          
-      <Router basename="/"  onUpdate={logPageView}>
+      <Router basename="/">
 
         <Header/>
 	{ loading 
