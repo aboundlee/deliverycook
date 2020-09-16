@@ -1,7 +1,7 @@
 
 
 
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
 
@@ -78,17 +78,18 @@ const scaleUpDown = keyframes`
 
 export default () => {
     
+    const [typing, setTyping] = useState(false);
+    console.log(typing);
+
     ModalAnimation();
     return (
     <Wrapper>
-        <CircleBtn active data-modal="nav" data-action="open" className="nav-open button button--circular" type="button">
+        <CircleBtn active data-modal="nav" data-action="open" className="nav-open button button--circular" type="button" onClick={()=>setTyping(true)}>
             <Img src="/Images/Business/Link.png"  alt="Logo"/> 
 
         <span><i className="fa fa-bars"></i></span>
         
         </CircleBtn>
-
-
 
         <div className="overlay">
         <div className="overlay__ripple"></div>
@@ -97,9 +98,9 @@ export default () => {
 
         <ModalWrapper className="modal-wrapper">
             <Modal className="modal" data-modal="nav">
-                <ConsultForm /> 
+                <ConsultForm start={typing} /> 
             </Modal>
-            <a href="/" className="button button--circular close-button" data-action="close">
+            <a href="/" className="button button--circular close-button" data-action="close" onClick={()=>setTyping(false)}>
                 <Img src="/Images/Business/closebutton.png"  alt="Close"/> 
             </a>
         </ModalWrapper>

@@ -38,6 +38,7 @@ const MainTextContainer = styled.div`
 `;
 const MainText = styled.p`
     font-size: 3rem;
+    line-height: 4rem;
 
     @media (max-width: 480px) { 
         font-size: 2rem;
