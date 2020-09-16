@@ -79,7 +79,6 @@ const scaleUpDown = keyframes`
 export default () => {
     
     const [typing, setTyping] = useState(false);
-    console.log(typing);
 
     ModalAnimation();
     return (
@@ -98,7 +97,7 @@ export default () => {
 
         <ModalWrapper className="modal-wrapper">
             <Modal className="modal" data-modal="nav">
-                {typing && <ConsultForm start={typing} />}
+                {typing && <ConsultForm delay={typing} />}
             </Modal>
             <a href="/" className="button button--circular close-button" data-action="close" onClick={()=>setTyping(false)}>
                 <Img src="/Images/Business/closebutton.png"  alt="Close"/> 

@@ -64,7 +64,7 @@ const App = () => {
     setTimeout(function(){
     	setLoading(false);
         setModalVisible(true);
-    }, 1000);
+    }, 500);
   },[]);
 
         //<PopUpModal visible={modalVisible} setVisible={() => setModalVisible(false)} />

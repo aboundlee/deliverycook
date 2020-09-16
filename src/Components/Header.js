@@ -235,6 +235,7 @@ const MenuItem = styled.li`
     padding: 0;
     font-size: 1.25rem;
 
+    position: relative;
     @media screen and (max-width:768px) {
      width: auto;
 
@@ -285,6 +286,7 @@ const HeaderLink = styled(Link)`
         }
     }
 `;
+
 const AdditionalHeaderLink = styled(HeaderLink)`
 
    line-height: 1rem;
@@ -424,6 +426,14 @@ const ButtonText = styled.p`
    line-height: 4.063rem;
 
 `;
+
+const LinkHighLight = styled.img`
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%,0);
+`;
+
 const Header = ({changePageTo}) => {
     let menus = [];
     let links = [];
@@ -477,7 +487,7 @@ const Header = ({changePageTo}) => {
         pageChanger = "brandPage";
     }
 
-    function onClick () {
+    function onClick (e) {
         changePageTo(pageChanger);
         setTrigger();
         setShowMenu(false);
@@ -524,9 +534,11 @@ const Header = ({changePageTo}) => {
                     <Menu className="navlinks">
                         <MenuItem>
                             <HeaderLink to={'/company'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
+			    {headerLocation === '/company' && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
 			<MenuItem>
                             <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+			    {headerLocation === links[0]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
 					    <AdditionalHeaderLink to={'/about/all'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 					        <AdditionalMenuItem> 딜리버리쿡 </AdditionalMenuItem></AdditionalHeaderLink>
@@ -543,9 +555,11 @@ const Header = ({changePageTo}) => {
                         </MenuItem>
                         <MenuItem>
                             <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+			    {headerLocation === links[1]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             { showMenu 
@@ -564,12 +578,15 @@ const Header = ({changePageTo}) => {
                     <Menu className="navlinks">
 			<MenuItem>
                             <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+			    {headerLocation === links[0]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+			    {headerLocation === links[1]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             { showMenu 

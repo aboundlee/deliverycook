@@ -193,7 +193,7 @@ const SubText = styled.p`
 
 
 
-export default () => {
+export default (delay) => {
     /* For Modal */
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -221,7 +221,7 @@ export default () => {
     return (
         <Wrapper>
             <MainTextContainer>
-            <Typist>
+            <Typist cursor={{ show: false }} >
 
                <MainText><Bold>딜리버리쿡</Bold>과 함께 시작하세요.</MainText>
                <MainText>배달 시장을 <Bold>리딩</Bold> 하겠습니다.</MainText>
