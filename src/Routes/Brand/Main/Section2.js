@@ -13,8 +13,7 @@ background-color: #242424;
     
     text-align: center;
     color: #FFFFFF;
-    height: 100%;
-
+    padding-bottom: 5rem;
 `;
 
 const Bold = styled.span`

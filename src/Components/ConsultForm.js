@@ -16,8 +16,11 @@ const Wrapper = styled.div`
 
     flex-direction: column;
 
-    padding: 0 10rem;
+    padding: 0 5rem;
 
+    @media (max-width: 768px) { 
+        padding: 0 10rem;
+    }
     @media (max-width: 480px) { 
       padding: 0;
     }
