@@ -7,6 +7,8 @@ import '../Styles/ConsultForm.scss';
 
 import KakaoMessage from './KakaoMessage';
 import TextModal from './Modal';
+import Typist from 'react-typist';
+
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
@@ -35,7 +37,7 @@ const MainTextContainer = styled.div`
     margin-bottom: 5rem;
 `;
 const MainText = styled.p`
-    font-size: 2.75rem;
+    font-size: 3rem;
 
     @media (max-width: 480px) { 
         font-size: 2rem;
@@ -217,7 +219,11 @@ export default () => {
     return (
         <Wrapper>
             <MainTextContainer>
-            <MainText><Bold>딜리버리쿡</Bold>과 함께 시작해보세요.</MainText>
+            <Typist>
+
+               <MainText><Bold>딜리버리쿡</Bold>과 함께 시작하세요.</MainText>
+               <MainText>배달 시장을 <Bold>리딩</Bold> 하겠습니다.</MainText>
+            </Typist>
             </MainTextContainer>
             <FormWrapper>
     

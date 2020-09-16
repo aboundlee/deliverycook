@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import TextModal from '../../Components/Modal';
 
 import KakaoMessage from '../../Components/KakaoMessage';
+import ConsultForm from '../../Components/ConsultForm';
 
 const Page = styled.section`
     display: flex;
@@ -300,6 +301,8 @@ export default () => {
 
     return (
 	  <Page> 
+	<ConsultForm/>
+{/*
         <MainTextContainer>
         <MainText><Bold>딜리버리쿡</Bold>과 함께 시작해보세요.</MainText>
         </MainTextContainer>
@@ -402,6 +405,7 @@ export default () => {
 
         </FormWrapper>
 
+*/}
     </Page>
           
     );
