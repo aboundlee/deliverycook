@@ -16,6 +16,11 @@ const Wrapper = styled.div`
 
     flex-direction: column;
 
+    padding: 0 10rem;
+
+    @media (max-width: 480px) { 
+      padding: 0;
+    }
 
 
 `;
@@ -35,6 +40,9 @@ const FormWrapper = styled.div`
 const MainTextContainer = styled.div`
     width: 90%;
     margin-bottom: 5rem;
+    @media (max-width: 480px) { 
+    margin-bottom: 2rem;
+    }
 `;
 const MainText = styled.p`
     font-size: 3rem;
@@ -203,6 +211,11 @@ export default (delay) => {
 
     const { register, errors, reset, handleSubmit } = useForm();
     const onSubmit = ({name, phone, address,check},e) => {
+        e.target.reset();
+        KakaoMessage({name, phone, address});
+    };
+
+    const alertError = () => {
         if (errors.name) {
             alert ("성함을 입력해주세요.");
         } else if (errors.phone) {
@@ -212,11 +225,7 @@ export default (delay) => {
         } else if (errors.check) {
             alert ("개인정보 수집에 동의해주세요.");
         } 
-
-        e.target.reset();
-        KakaoMessage({name, phone, address});
     };
-
      
     return (
         <Wrapper>
@@ -270,7 +279,7 @@ export default (delay) => {
 			        <TextModal show={show} handleShow={handleShow} handleClose={handleClose}/>
               
                                 
-                        <Submit type="submit" value="가맹문의 하기"/>
+                        <Submit type="submit" value="가맹문의 하기" onClick={()=>alertError()}/>
                     </AgreeDiv>
                 </Form>
 
