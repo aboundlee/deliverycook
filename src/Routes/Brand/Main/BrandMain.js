@@ -36,6 +36,11 @@ const Section= styled.div`
 `;
 
 const SectionContainer2 = styled.div`
+ height: auto;
+ position: relative;
+`;
+
+const SectionContainer3 = styled.div`
  position: relative;
  width: 100%;
     min-height: 820px;
@@ -56,7 +61,7 @@ const FullpageWrapper = () => {
          <Section className="section"><Section1/></Section>
          <Section className="section"><Section2/></Section>
          <Section className="section"><Section3/></Section>
-              <SectionContainer2 className="section"><SectionAddition/></SectionContainer2>
+              <SectionContainer3 className="section"><SectionAddition/></SectionContainer3>
          <LongSection className="section"><Section4/></LongSection>
          <Section className="section"><Section5/><Footer/></Section>
          </>
