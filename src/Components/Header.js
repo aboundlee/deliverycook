@@ -538,7 +538,7 @@ const Header = ({changePageTo}) => {
                         </MenuItem>
 			<MenuItem>
                             <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
-			    {headerLocation === links[0]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
+			    {headerLocation.includes('/about')  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
 					    <AdditionalHeaderLink to={'/about/all'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 					        <AdditionalMenuItem> 딜리버리쿡 </AdditionalMenuItem></AdditionalHeaderLink>
