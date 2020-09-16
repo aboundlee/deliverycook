@@ -59,7 +59,7 @@ const FullpageWrapper = () => {
 
      return (<>
          <Section className="section"><Section1/></Section>
-         <Section className="section"><Section2/></Section>
+         <SectionContainer2 className="section"><Section2/></SectionContainer2>
          <Section className="section"><Section3/></Section>
               <SectionContainer3 className="section"><SectionAddition/></SectionContainer3>
          <LongSection className="section"><Section4/></LongSection>
