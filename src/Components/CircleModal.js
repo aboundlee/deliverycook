@@ -98,7 +98,7 @@ export default () => {
 
         <ModalWrapper className="modal-wrapper">
             <Modal className="modal" data-modal="nav">
-                <ConsultForm start={typing} /> 
+                {typing && <ConsultForm start={typing} />}
             </Modal>
             <a href="/" className="button button--circular close-button" data-action="close" onClick={()=>setTyping(false)}>
                 <Img src="/Images/Business/closebutton.png"  alt="Close"/> 

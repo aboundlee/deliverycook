@@ -200,6 +200,7 @@ export default () => {
     const handleShow = () => setShow(true);
   
 
+
     const { register, errors, reset, handleSubmit } = useForm();
     const onSubmit = ({name, phone, address,check},e) => {
         if (errors.name) {
