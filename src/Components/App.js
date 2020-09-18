@@ -3,8 +3,9 @@ import {Helmet} from "react-helmet";
 //import ClipLoader from "react-spinners/ClipLoader";
 import Loader from './Loader';
 
+import { initGA, PageView } from '../Utils/GaTracker';
 
-//import { gql } from 'apollo-boost';
+
 
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
@@ -12,7 +13,6 @@ import styled from "styled-components";
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
 import { BrowserRouter as Router} from "react-router-dom";
-import { createBrowserHistory } from 'history';
 
 import Routes from "./Router";
 import Header from "./Header";
@@ -25,31 +25,6 @@ import dotenv from 'dotenv';
 config({ ssrFadeout: true });
 
 dotenv.config();
-
-const history = createBrowserHistory();
-
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY, { standardImplementation: true });
-//ReactGA.pageview(window.location.pathname + window.location.search);
-
-
-
-function logPageView() {
- console.log("!!");
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
-}
-
-const Event = (category, action, label) => {
-  ReactGA.event({
-    category: category,
-    action: action,
-    label: label
-  });
-};
-
-
-
-
 
 
 const Wrapper = styled.div`
@@ -72,6 +47,10 @@ const App = () => {
 
 
   useEffect(() => {
+    initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY);
+    PageView();
+
+
     setTimeout(function(){
     	setLoading(false);
         setModalVisible(true);
