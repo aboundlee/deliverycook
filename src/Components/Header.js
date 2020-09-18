@@ -434,7 +434,7 @@ const LinkHighLight = styled.img`
     transform: translate(-50%,0);
 `;
 
-const Header = ({changePageTo}) => {
+const Header = ({changePageTo, history}) => {
     let menus = [];
     let links = [];
     const brandMenus = ["브랜드&메뉴", "매장안내", "딜쿡소식", "/Images/BusinessLink.svg", "창업 센터"];
@@ -461,6 +461,7 @@ const Header = ({changePageTo}) => {
     let isWhiteHeader;
 
     let headerLocation = useLocation().pathname;
+console.log( headerLocation);
  
     if (businessHeaders.includes(headerLocation)) {
         isBrandPage = false;
@@ -533,7 +534,7 @@ const Header = ({changePageTo}) => {
                         ? (
                     <Menu className="navlinks">
                         <MenuItem>
-                            <HeaderLink to={'/company'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
+                            <HeaderLink to={'/company'} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
 			    {headerLocation === '/company' && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
 			<MenuItem>

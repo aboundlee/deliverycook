@@ -12,7 +12,10 @@ import styled from "styled-components";
 
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
+//import { BrowserRouter as Router} from "react-router-dom";
 import { BrowserRouter as Router} from "react-router-dom";
+import { createBrowserHistory } from 'history';
+
 
 import Routes from "./Router";
 import Header from "./Header";
@@ -25,6 +28,12 @@ import dotenv from 'dotenv';
 config({ ssrFadeout: true });
 
 dotenv.config();
+
+const history = createBrowserHistory();
+
+history.listen(({location, action}) => {
+    ReactGA.pageview(location.pathname + location.search);
+});
 
 
 const Wrapper = styled.div`
@@ -92,7 +101,8 @@ const App = () => {
 
             </Helmet>
          
-      <Router basename="/">
+      <Router history={history}>
+
 
         <Header/>
 	{ loading 
