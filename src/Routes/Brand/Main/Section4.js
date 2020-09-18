@@ -95,8 +95,8 @@ const ImageContainer = styled.div`
 `;
 
 const ImageContainer1 = styled(ImageContainer)`
-    width: 20.625rem;
-    height: 23.75rem;
+    width: 27.625rem;
+    height: 24.938rem;
     @media (max-width: 480px) {
         width: 12rem;
         height: 14rem;
@@ -119,14 +119,23 @@ const ImageContainer2  = styled(ImageContainer)`
 `;
 
 const ImageContainer3 = styled(ImageContainer)`
-    width: 29.25rem;
-    height: 25.25rem;
+    width: 31.676rem;
+    height: 17.375rem;
     @media (max-width: 480px) {
-        width: 14.4375rem;
-        height: 18.4375rem;
-	top: 70.625rem;
-        margin-left: 10rem;
+        width: 16.4375rem;
+        height: 10.4375rem;
+        top: 44.625rem;
+        margin-left: 9rem;
+`;
 
+const ImageContainer3_2 = styled(ImageContainer)`
+    width: 32.567rem;
+    height: 21rem;
+    @media (max-width: 480px) {
+      width: 17.4375rem;
+      height: 12.4375rem;
+      top: 71.625rem;
+      margin-left: 8rem;
     }
 `;
 
@@ -611,7 +620,7 @@ const Section4 = () => {
             </Content5>
 
         
-            <ImageContainer1 top={"12.188rem"} toLeft={"-22rem"} >
+            <ImageContainer1 top={"22.188rem"} toLeft={"-28rem"} >
                 <Image  src="/Images/Brand/p4_no1.png" alt="food1"/>
            </ImageContainer1>
 
@@ -619,9 +628,13 @@ const Section4 = () => {
                 <Image  src="/Images/Brand/p4_no2.png" alt="food2"/>
            </ImageContainer2>
 
-            <ImageContainer3 top={"93.625rem"} toLeft={"22rem"} >
+            <ImageContainer3 top={"44rem"} toLeft={"25rem"} >
                 <Image  src="/Images/Brand/p4_no3.png" alt="food3"/>
            </ImageContainer3>
+
+            <ImageContainer3_2 top={"104rem"} toLeft={"23.5rem"} >
+                <Image  src="/Images/Brand/p4_no3_2.png" alt="food1"/>
+           </ImageContainer3_2>
 
             <ImageContainer4 top={"133.75rem"} toLeft={"-23rem"} >
                 <Image  src="/Images/Brand/p4_no4.png" alt="food4"/>

@@ -9,6 +9,7 @@ import Loader from '../../../Components/Loader';
 
 const Page = styled.section`
 width: 100%;
+height: 100%;
 background-color: #242424;
     
     text-align: center;

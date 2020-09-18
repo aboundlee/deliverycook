@@ -36,8 +36,9 @@ const Section= styled.div`
 `;
 
 const SectionContainer2 = styled.div`
- height: auto;
+ height: 100%;
  position: relative;
+
 `;
 
 const SectionContainer3 = styled.div`
