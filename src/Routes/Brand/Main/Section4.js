@@ -2,6 +2,7 @@ import React, {useRef, useState, useEffect} from 'react';
 import styled, {css} from "styled-components";
 
 import Fade from 'react-reveal/Fade';
+import {isBrowser} from 'react-device-detect';
 
 
 
@@ -512,18 +513,21 @@ const Section4 = () => {
         let yOffset = window.pageYOffset;
         let divOffset = screenSize*4 + 300; // Svg 의 margin-top 반영
     
-        let pathEndSCroll1 = divOffset + pathHeight[0]; // 현재 div 사이즈가 600vh 이므로
-        let pathEndSCroll2 = pathEndSCroll1 + pathHeight[1]; // 현재 div 사이즈가 600vh 이므로
+        let pathEndScroll1 = divOffset + pathHeight[0] ; // 현재 div 사이즈가 600vh 이므로
+
+	if (isBrowser) {
+          pathEndScroll1 = pathEndScroll1 + 300;
+	}
         
         let scrollPercentage1 = (yOffset - divOffset) / (pathHeight[0]);
-        let scrollPercentage2 = (yOffset - pathEndSCroll1) / (pathHeight[1]);
+        let scrollPercentage2 = (yOffset - pathEndScroll1) / (pathHeight[1]);
     
 
         // console.log(`yOffset : ${yOffset}`);
-        // console.log(`pathEndSCroll1 : ${pathEndSCroll1}`);
+        // console.log(`pathEndScroll1 : ${pathEndScroll1}`);
         //  console.log(screenSize);
         //  console.log(`percent : ${scrollPercentage1}`);
-         //console.log(`pathEndSCroll2 : ${pathEndSCroll2}`);
+         //console.log(`pathEndScroll2 : ${pathEndScroll2}`);
    
     
     
