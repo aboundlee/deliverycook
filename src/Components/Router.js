@@ -25,21 +25,21 @@ const AppRouter = () => {
 
             <Switch>
                  
-        <Route exact path="/" component={BrandMain} />
+		<Route exact path="/" component={BrandMain} />
 
-        {/* <Route exact path="/brand" component={withRouter(BrandMain)} /> */}
-        <Route path="/company" component={BrandCompany} />
-        <Route path="/about/:brand" component={BrandAbout} />
+		{/* <Route exact path="/brand" component={withRouter(BrandMain)} /> */}
+		<Route path="/company" component={BrandCompany} />
+		<Route path="/about/:brand" component={BrandAbout} />
 
-        {/* <Route path="/about" component={BrandAbout} /> */}
-        <Route path="/store" component={BrandStore} />
-        <Route path="/news" component={BrandNews} />
-        
-        <Route path="/business" component={BusinessMain} />
-        <Route path="/success" component={BusinessSuccess} />
-        <Route path="/info" component={BusinessInfo} />
-        <Route path="/consult" component={BusinessConsult} />
-                 
+		{/* <Route path="/about" component={BrandAbout} /> */}
+		<Route path="/store" component={BrandStore} />
+		<Route path="/news" component={BrandNews} />
+		
+		<Route path="/business" component={BusinessMain} />
+		<Route path="/success" component={BusinessSuccess} />
+		<Route path="/info" component={BusinessInfo} />
+		<Route path="/consult" component={BusinessConsult} />
+			 
             </Switch>
       </Suspense>
 

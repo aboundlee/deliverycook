@@ -29,6 +29,8 @@ dotenv.config();
 const history = createBrowserHistory();
 
 ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY, { standardImplementation: true });
+//ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 
 function logPageView() {
