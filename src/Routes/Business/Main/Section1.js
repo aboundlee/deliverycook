@@ -199,7 +199,7 @@ const Section2 = () => {
             
             <TextContainer>
                 <Fade bottom distance={'30%'} delay={400}> 
-                <MainText><Small>배달 시장의 혁신 !</Small><br/><Bold>배달 푸드코트 비즈니스</Bold><br/>맞춤형 창업 시작하세요</MainText>
+                <MainText><Small>배달 시장의 혁신, 국내최초</Small><br/><Bold>배달 푸드코트 비즈니스</Bold><br/>맞춤형 창업 시작하세요</MainText>
                 </Fade>
             </TextContainer>
 
