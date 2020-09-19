@@ -81,7 +81,7 @@ const App = () => {
 
                 <meta property="og:title" content="딜리버리쿡" key="ogtitle" />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
+                <meta property="og:image" content="https://www.deliverycook.kr/Images/thumbnail.jpg" />
                 <meta property="og:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
 
                 <meta name="description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요." data-react-helmet="true"/>
@@ -92,7 +92,7 @@ const App = () => {
                 <meta property="twitter:url" content="https://deliverycook.kr/" />
                 <meta property="twitter:title" content="딜리버리쿡" />
                 <meta property="twitter:description" content="하나의 매장에서 2개 이상의 브랜드를 운영하세요."/>
-                <meta property="twitter:image" content="https://www.deliverycook.kr/Images/thumbnail.png" />
+                <meta property="twitter:image" content="https://www.deliverycook.kr/Images/thumbnail.jpg" />
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Content-Type" content="text/xml; charset=utf-8" />
