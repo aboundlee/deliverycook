@@ -178,15 +178,15 @@ const Section2 = () =>    {
             <ImgContainer>
 		<ImgDiv1>
                         <Fade bottom>
-                        <BookImg1 src="/Images/Business/bps3_left.png" alt="highlight"></BookImg1>
+                        <BookImg1 src="/Images/Business/bps3_left.jpg" alt="bps3_left"></BookImg1>
                         </Fade>
 		</ImgDiv1>
 		<ImgDiv2>
                         <Fade top>
-                        <BookImg2 src="/Images/Business/bps3_right_top.png" alt="highlight"></BookImg2>
+                        <BookImg2 src="/Images/Business/bps3_right_top.jpg" alt="bps3_right_top"></BookImg2>
                         </Fade>
                         <Fade right>
-                        <BookImg3 src="/Images/Business/bps3_right_bottom.png" alt="highlight"></BookImg3>
+                        <BookImg3 src="/Images/Business/bps3_right_bottom.jpg" alt="bps3_right_bottom"></BookImg3>
                         </Fade>
 		</ImgDiv2>
 

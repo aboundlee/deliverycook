@@ -102,7 +102,7 @@ const Section2 = () =>    {
                 <ImgContainer>
                     <Fade left> 
 
-                        <BookImg src="/Images/Business/bps2.png" alt="highlight"></BookImg>
+                        <BookImg src="/Images/Business/bps2.jpg" alt="highlight"></BookImg>
                     </Fade>
 
                 </ImgContainer>

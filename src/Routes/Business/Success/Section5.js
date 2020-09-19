@@ -131,7 +131,7 @@ const Section5 = () =>    {
             <ImgContainer>
                     <Fade right> 
 
-                        <BookImg src="/Images/Business/bps5.png" alt="highlight"></BookImg>
+                        <BookImg src="/Images/Business/bps5.jpg" alt="bps5"></BookImg>
                     </Fade>
 
             </ImgContainer>

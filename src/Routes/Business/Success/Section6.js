@@ -153,7 +153,7 @@ const Section6 = () =>    {
             </TextContainer>
             <ImgContainer>
                     <Fade bottom> 
-                        <BookImg src="/Images/Business/bps6.png" alt="highlight"></BookImg> 
+                        <BookImg src="/Images/Business/bps6.jpg" alt="bps6"></BookImg> 
                     </Fade>
 
             </ImgContainer>
