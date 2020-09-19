@@ -563,15 +563,12 @@ const Header = ({changePageTo, history}) => {
 			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            { showMenu 
-                            ? (<p><HeaderLink to={links[3]} onClick={()=> {Event('링크', '링크 클릭', '창업센터 링크');}}>{menus[4]}</HeaderLink></p>)
-                            : (
-				<HeaderLink to={links[3]} onClick={onClick}>
+                        
+				<HeaderLink to={links[3]} onClick={() => {onClick(); Event('링크', '링크 클릭', '창업센터 링크');}}>
 					<LinkButton>
 					<ButtonText>{menus[4]}</ButtonText></LinkButton>
 			      	</HeaderLink>
-				)
-                            }
+		
                         </MenuItem>
                     </Menu>
 		     )
@@ -590,15 +587,13 @@ const Header = ({changePageTo, history}) => {
 			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            { showMenu 
-                            ? (<p><HeaderLink to={links[3]} onClick={()=> {Event('링크', '링크 클릭', '브랜드 링크');}}>{menus[4]}</HeaderLink></p>)
-                            : (
-				<HeaderLink to={links[3]} onClick={onClick}>
-					<LinkButton>
-					<ButtonText>{menus[4]}</ButtonText></LinkButton>
-			      	</HeaderLink>
-				)
-                            }
+				            <HeaderLink to={links[3]} onClick={()=> {onClick();Event('링크', '링크 클릭', '브랜드 링크');}}>
+					            <LinkButton>
+					                <ButtonText>{menus[4]}</ButtonText>
+                                </LinkButton>
+			      	        </HeaderLink>
+				
+                            
                         </MenuItem>
                     </Menu>
 
@@ -610,42 +605,42 @@ const Header = ({changePageTo, history}) => {
                     <MobileMenu className="navlinks">
                         <MenuPart>
                             <MainMenuItem>
-                                <HeaderLink to={'/'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '브랜드 카테고리');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
+                                <HeaderLink to={'/'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '브랜드 카테고리');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
-                                    <HeaderLink to={'/'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '브랜드');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
+                                    <HeaderLink to={'/'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '브랜드');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/company'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '회사소개');}} iswhiteheader={isWhiteHeader? 1 : 0}>회사소개</HeaderLink>
+                                    <HeaderLink to={'/company'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '회사소개');}} iswhiteheader={isWhiteHeader? 1 : 0}>회사소개</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/about/all'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '브랜드&메뉴');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
+                                    <HeaderLink to={'/about/all'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '브랜드&메뉴');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/store'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '매장안내');}} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>
+                                    <HeaderLink to={'/store'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '매장안내');}} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/news'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '딜쿡소식');}} iswhiteheader={isWhiteHeader? 1 : 0}>딜쿡소식</HeaderLink>
+                                    <HeaderLink to={'/news'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '딜쿡소식');}} iswhiteheader={isWhiteHeader? 1 : 0}>딜쿡소식</HeaderLink>
                                 </MenuItem>
                             </SubMenuItems>
                         </MenuPart>
                         <MenuPart>
                             <MainMenuItem>
-                                <HeaderLink to={'/business'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '창업센터 카테고리');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
+                                <HeaderLink to={'/business'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '창업센터 카테고리');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
-                                    <HeaderLink to={'/business'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '창업센터');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
+                                    <HeaderLink to={'/business'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '창업센터');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/success'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '성공가이드북');}} iswhiteheader={isWhiteHeader? 1 : 0}>성공가이드북</HeaderLink>
+                                    <HeaderLink to={'/success'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '성공가이드북');}} iswhiteheader={isWhiteHeader? 1 : 0}>성공가이드북</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/info'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '창업안내');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업안내</HeaderLink>
+                                    <HeaderLink to={'/info'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '창업안내');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업안내</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/consult'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '문의하기');}} iswhiteheader={isWhiteHeader? 1 : 0}>문의하기</HeaderLink>
+                                    <HeaderLink to={'/consult'} onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '문의하기');}} iswhiteheader={isWhiteHeader? 1 : 0}>문의하기</HeaderLink>
                                 </MenuItem>
                             </SubMenuItems>
 
@@ -655,7 +650,7 @@ const Header = ({changePageTo, history}) => {
             </MenuBox>
 
 
-           <MobileMenuUI active={showMenu} onClick={()=> {clearMenu(); Event('모바일 메뉴', '클릭', '모바일 메뉴 클릭');}}>
+           <MobileMenuUI active={showMenu} onClick={()=> {clickMenu(); Event('모바일 메뉴', '클릭', '모바일 메뉴 클릭');}}>
                 <MenuUI/>
                 <MenuUI/>
                 <MenuUI/>
