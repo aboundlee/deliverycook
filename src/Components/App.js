@@ -13,7 +13,7 @@ import styled from "styled-components";
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
 //import { BrowserRouter as Router} from "react-router-dom";
-import { BrowserRouter as Router} from "react-router-dom";
+import {Router} from "react-router-dom";
 import { createBrowserHistory } from 'history';
 
 
@@ -31,7 +31,7 @@ dotenv.config();
 
 const history = createBrowserHistory();
 
-history.listen(({location, action}) => {
+history.listen((location, action) => {
     ReactGA.pageview(location.pathname + location.search);
 });
 

@@ -461,7 +461,6 @@ const Header = ({changePageTo, history}) => {
     let isWhiteHeader;
 
     let headerLocation = useLocation().pathname;
-console.log( headerLocation);
  
     if (businessHeaders.includes(headerLocation)) {
         isBrandPage = false;
