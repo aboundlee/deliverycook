@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { actionCreators } from './StoreRedux';
 
+import { Event } from '../Utils/GaTracker';
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 
@@ -516,13 +517,13 @@ const Header = ({changePageTo, history}) => {
         <NavContainer>
                 {isBrandPage 
 		? (
-		    <Link to="/" onClick={clearMenu}>
+		    <Link to="/" onClick={()=> {clearMenu(); Event('링크', '링크 클릭', '브랜드 로고');}}>
 			<Logo src="/Images/LogoBrand.png" alt="Logo"/>
 		    </Link>
 
 		)
 		: (
-		    <Link to="/business" onClick={clearMenu}>
+		    <Link to="/business" onClick={() => {clearMenu(); Event('링크', '링크 클릭', '창업센터 로고');}}>
 			<BusinessLogo src="/Images/LogoBusiness.png" alt="LogoBusiness"/>
 		    </Link>
 		)}
@@ -533,37 +534,37 @@ const Header = ({changePageTo, history}) => {
                         ? (
                     <Menu className="navlinks">
                         <MenuItem>
-                            <HeaderLink to={'/company'} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
+                            <HeaderLink to={'/company'} onClick={()=> {Event('링크', '링크 클릭', '회사소개');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
 			    {headerLocation === '/company' && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
 			<MenuItem>
-                            <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+                            <HeaderLink to={links[0]}  onClick={()=> {Event('링크', '링크 클릭', '브랜드&메뉴');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 			    {headerLocation.includes('/about')  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
-					    <AdditionalHeaderLink to={'/about/all'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					    <AdditionalHeaderLink to={'/about/all'} onClick={()=> {Event('링크', '링크 클릭', '딜리버리쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 					        <AdditionalMenuItem> 딜리버리쿡 </AdditionalMenuItem></AdditionalHeaderLink>
-					    <AdditionalHeaderLink to={'/about/1'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					    <AdditionalHeaderLink to={'/about/1'} onClick={()=> {Event('링크', '링크 클릭', '삼겹살쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 						<AdditionalMenuItem>딜리버리삼겹살쿡</AdditionalMenuItem>
 					    </AdditionalHeaderLink>
-				       <AdditionalHeaderLink to={'/about/2'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+				       <AdditionalHeaderLink to={'/about/2'} onClick={()=> {Event('링크', '링크 클릭', '돈까스쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 					  <AdditionalMenuItem>딜리버리돈까스쿡</AdditionalMenuItem>
 					</AdditionalHeaderLink>
-					<AdditionalHeaderLink to={'/about/3'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					<AdditionalHeaderLink to={'/about/3'} onClick={()=> {Event('링크', '링크 클릭', '떡볶이쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
 				 	    <AdditionalMenuItem>딜리버리떡볶이쿡</AdditionalMenuItem>
 					</AdditionalHeaderLink>
 				    </AdditionalMenu>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+                            <HeaderLink to={links[1]} onClick={()=> {Event('링크', '링크 클릭', '매장안내');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
 			    {headerLocation === links[1]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+                            <HeaderLink to={links[2]} onClick={()=> {Event('링크', '링크 클릭', '딜쿡소식');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
 			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             { showMenu 
-                            ? (<p><HeaderLink to={links[3]} onClick={clearMenu}>{menus[4]}</HeaderLink></p>)
+                            ? (<p><HeaderLink to={links[3]} onClick={()=> {Event('링크', '링크 클릭', '창업센터 링크');}}>{menus[4]}</HeaderLink></p>)
                             : (
 				<HeaderLink to={links[3]} onClick={onClick}>
 					<LinkButton>
@@ -577,20 +578,20 @@ const Header = ({changePageTo, history}) => {
                     : (
                     <Menu className="navlinks">
 			<MenuItem>
-                            <HeaderLink to={links[0]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+                            <HeaderLink to={links[0]} onClick={()=> {Event('링크', '링크 클릭', '성공가이드북');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 			    {headerLocation === links[0]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+                            <HeaderLink to={links[1]} onClick={()=> {Event('링크', '링크 클릭', '창업안내');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
 			    {headerLocation === links[1]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+                            <HeaderLink to={links[2]} onClick={()=> {Event('링크', '링크 클릭', '문의하기');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
 			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
                             { showMenu 
-                            ? (<p><HeaderLink to={links[3]} onClick={clearMenu}>{menus[4]}</HeaderLink></p>)
+                            ? (<p><HeaderLink to={links[3]} onClick={()=> {Event('링크', '링크 클릭', '브랜드 링크');}}>{menus[4]}</HeaderLink></p>)
                             : (
 				<HeaderLink to={links[3]} onClick={onClick}>
 					<LinkButton>
@@ -605,47 +606,46 @@ const Header = ({changePageTo, history}) => {
 
 
 
-
-
+                    {/* 모바일 메뉴 */}
                     <MobileMenu className="navlinks">
                         <MenuPart>
                             <MainMenuItem>
-                                <HeaderLink to={'/'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
+                                <HeaderLink to={'/'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '브랜드 카테고리');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
-                                    <HeaderLink to={'/'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
+                                    <HeaderLink to={'/'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '브랜드');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/company'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>회사소개</HeaderLink>
+                                    <HeaderLink to={'/company'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '회사소개');}} iswhiteheader={isWhiteHeader? 1 : 0}>회사소개</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/about/all'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
+                                    <HeaderLink to={'/about/all'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '브랜드&메뉴');}} iswhiteheader={isWhiteHeader? 1 : 0}>브랜드&메뉴</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/store'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>
+                                    <HeaderLink to={'/store'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '매장안내');}} iswhiteheader={isWhiteHeader? 1 : 0}>매장안내</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/news'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>딜쿡소식</HeaderLink>
+                                    <HeaderLink to={'/news'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '딜쿡소식');}} iswhiteheader={isWhiteHeader? 1 : 0}>딜쿡소식</HeaderLink>
                                 </MenuItem>
                             </SubMenuItems>
                         </MenuPart>
                         <MenuPart>
                             <MainMenuItem>
-                                <HeaderLink to={'/business'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
+                                <HeaderLink to={'/business'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '창업센터 카테고리');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
                             </MainMenuItem>
                             <SubMenuItems>
                                 <MenuItem>
-                                    <HeaderLink to={'/business'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
+                                    <HeaderLink to={'/business'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '창업센터');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업센터</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/success'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>성공가이드북</HeaderLink>
+                                    <HeaderLink to={'/success'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '성공가이드북');}} iswhiteheader={isWhiteHeader? 1 : 0}>성공가이드북</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/info'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>창업안내</HeaderLink>
+                                    <HeaderLink to={'/info'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '창업안내');}} iswhiteheader={isWhiteHeader? 1 : 0}>창업안내</HeaderLink>
                                 </MenuItem>
                                 <MenuItem>
-                                    <HeaderLink to={'/consult'} onClick={clearMenu} iswhiteheader={isWhiteHeader? 1 : 0}>문의하기</HeaderLink>
+                                    <HeaderLink to={'/consult'} onClick={()=> {clearMenu(); Event('모바일링크', '링크 클릭', '문의하기');}} iswhiteheader={isWhiteHeader? 1 : 0}>문의하기</HeaderLink>
                                 </MenuItem>
                             </SubMenuItems>
 
@@ -655,7 +655,7 @@ const Header = ({changePageTo, history}) => {
             </MenuBox>
 
 
-           <MobileMenuUI active={showMenu} onClick={clickMenu}>
+           <MobileMenuUI active={showMenu} onClick={()=> {clearMenu(); Event('모바일 메뉴', '클릭', '모바일 메뉴 클릭');}}>
                 <MenuUI/>
                 <MenuUI/>
                 <MenuUI/>

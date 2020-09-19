@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styled, {css} from "styled-components";
 
 import { Link, withRouter, useLocation } from "react-router-dom";
+import { Event } from '../Utils/GaTracker';
 
 const Wrapper = styled.div`
     width: 100%;
@@ -66,7 +67,7 @@ const DivLinker = ({link, text, background=''}) => {
 
     return (
        <Wrapper>
-            <Link to={link}>
+            <Link to={link}  onClick={()=> {Event('블럭 링크', '클릭', `${text}로 이동`);}}>
 		<Background>
 		<MainTextContainer>
                 	<MainText><Bold>{text}</Bold> 보기</MainText>
