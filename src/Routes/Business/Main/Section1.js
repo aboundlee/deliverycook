@@ -6,12 +6,23 @@ import './Styles';
 import MenuCarosuel from "../../../Components/Carousel";
 import { Page, Bold } from './Styles';
 import useInterval from "../../../Hooks/useInterval";
+import {isBrowser} from 'react-device-detect';
 
 const Page2 = styled(Page)`
-//    background-color: #242424;
-    background: url("/Images/Business/p6.jpg") no-repeat; 
-    background-position: center;
-    background-size: cover;
+    background-color: #242424;
+    ${props => {
+            if (props.isBrowser) {
+                return css` 
+                    background: url("/Images/Business/p6.jpg") no-repeat
+    	  	    background-position: center;
+    		    background-size: cover;
+		`; 
+            } 
+         }};
+
+            
+    }}
+
 
     position: relative;
     text-align: center;
@@ -173,7 +184,7 @@ const Section2 = () => {
       }, 600);
     
     return (
-        <Page2>
+        <Page2 isBrowser={isBrowser}>
         <Filter/>
             {/* <CaroselContainer>
                 <MenuCarosuel category="Business" mobileItem="2"/>

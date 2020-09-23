@@ -7,6 +7,7 @@ import './Styles';
 import useInterval from "../../../Hooks/useInterval";
 
 import { Page, Bold } from './Styles';
+import {isBrowser} from 'react-device-detect';
 
 
 const Page4 = styled(Page)`
@@ -15,10 +16,22 @@ const Page4 = styled(Page)`
 
     overflow: hidden;
     /*max-height: 1000px;*/
+    ${props => {
+            if (props.isBrowser) {
+                return css` 
+		    background: url("/Images/Business/p4.jpg") no-repeat; 
+		    background-position: center;
+		    background-size: cover;
+		`; 
+            } else {
+		 
+                return css` 
+		    background-color: #242424;
+		`; 
+	     }
+         }};
 
-    background: url("/Images/Business/p4.jpg") no-repeat; 
-    background-position: center;
-    background-size: cover;
+
 
     color: white;
 
@@ -197,7 +210,7 @@ const Section4 = () => {
         
 
     return (
-        <Page4>
+        <Page4 isBrowser={isBrowser}>
         <Filter/>
         <TextContainer>
         <Fade bottom cascade distance={'30%'}> 
