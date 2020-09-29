@@ -11,24 +11,46 @@ const Page = styled.section`
 width: 100%;
 height: 100%;
 background-color: #242424;
+    position: relative;
     
+    background: url("/Images/Brand/p1_background.jpg") no-repeat; 
+    background-position: center;
+    background-size: cover;
+    height: 100%;    
     text-align: center;
+    
     color: #FFFFFF;
     padding-bottom: 5rem;
 `;
 
+const Filter = styled.div`
+  position: absolute;
+    background-color: #242424;
+
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+
+    height: 100%;
+   /* max-height: 1000px;*/
+
+    width: 100%;
+
+`;
+
 const Bold = styled.span`
-font-weight: 900;
+font-weight: bold;
 
 `;
 
 const TextContainer = styled.div`
-    padding-top: 6.5rem;
+    padding-top: 9.5rem;
+    margin-bottom: 2rem;
 
-    margin-bottom: 50px;
     height: 30%;
     @media (max-width: 480px) {
-    padding-top: 14.5vh;
+    padding-top: 17.5vh;
     }
 
 `;
@@ -42,7 +64,7 @@ const MainTextContainer = styled.div`
 const MainText = styled.p`
     font-style: normal;
     font-weight: normal;
-    font-size: 3.125rem;
+    font-size: 3.5rem;
     line-height: 5rem;
 `;
 
@@ -50,6 +72,7 @@ const SubText = styled.p`
     font-style: normal;
     font-weight: normal;
     font-size: 1.875rem;
+    margin-bottom: 0.5rem;
 `;
 
 const SubTextContainer = styled.div`
@@ -97,12 +120,14 @@ const Section2 = () => {
 
     return (
         <Page>
+        <Filter/>
         <Fade bottom cascade distance={'30%'}> 
 
             <TextContainer>
 
                 <MainTextContainer>
-                    <MainText>딜리버리쿡의 브랜드는<br/><Bold>무엇이 특별할까요?</Bold></MainText>
+                <SubText>내 입맛대로 다양하게 즐기는</SubText>
+                    <MainText>우리동네 작은 <Bold>푸드코트</Bold></MainText>
                 </MainTextContainer>
 
 

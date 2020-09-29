@@ -24,7 +24,7 @@ background-color: rgba(229, 0, 18, 0.9);
 `;
 
 const Bold = styled.span`
-font-weight: 900;
+font-weight: bold;
 
 `;
 
@@ -211,7 +211,7 @@ const Section2 = () => {
 
 		<G>
 
-		    <ThumbNail src="/Images/Brand/News/1.png" alt="deliverycook_1"/>
+		    <ThumbNail src="/Images/Brand/3cook-1.jpg" alt="3cook-1"/>
             <Paper>
                 <Fade bottom cascade distance={'30%'}> 
                     <TitleCook>1 COOK</TitleCook>
@@ -226,7 +226,7 @@ const Section2 = () => {
 		<GridItem item lg={4} md={4} sm={4} xs={12} onClick={()=>onGridClick()}>
 		<G>
 		
-		    <ThumbNail src="/Images/Brand/News/2.png" alt="deliverycook_2"/>
+		    <ThumbNail src="/Images/Brand/3cook-2.jpg" alt="3cook-2"/>
                 <Paper>   
                     <Fade bottom cascade distance={'30%'} delay={300}> 
                         <TitleCook>2 COOK</TitleCook>

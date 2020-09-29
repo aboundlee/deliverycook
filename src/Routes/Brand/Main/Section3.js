@@ -41,7 +41,7 @@ const Filter = styled.div`
     }
 `;
 const Bold = styled.span`
-font-weight: 900;
+font-weight: bold;
 
 `;
 

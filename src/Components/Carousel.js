@@ -13,10 +13,13 @@ const Item = styled.div`
 
 const MenuImg = styled.img`
     z-index: 1;
-    width: 80%;
+    width: 16rem;
+    height: 16rem;
     max-width: 400px;
-    height: auto;
-    min-height: 1px;
+    @media (max-width: 480px) {
+        height: auto;
+    
+    }
 `;
 const LogoImg = styled.img`
     margin-top: 20px;
@@ -84,28 +87,28 @@ const MenuCarosuel = ({category, mobileItem}) => {
             slidesToSlide={1}
             >
         <Item>
-            <MenuImg src={"/Images/".concat(category,"/p2_menu1.png")} />
-            <LogoImg src={"/Images/".concat(category,"/p2_logo1.svg")} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu1.png")} alt="menu1" />
+            <LogoImg src={"/Images/".concat(category,"/p2_logo1.svg")} alt="logo1"/>
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/".concat(category,"/p2_menu2.png")} />
-            <LogoImg src={"/Images/".concat(category,"/p2_logo2.svg")} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu2.png")} alt="menu2"/>
+            <LogoImg src={"/Images/".concat(category,"/p2_logo2.svg")} alt="logo2"/>
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/".concat(category,"/p2_menu3.png")} />
-            <LogoImg src={"/Images/".concat(category,"/p2_logo3.svg")} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu3.png")} alt="menu3"/>
+            <LogoImg src={"/Images/".concat(category,"/p2_logo3.svg")} alt="logo3"/>
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/".concat(category,"/p2_menu4.png")} />
-            <LogoImg src={"/Images/".concat(category,"/p2_logo4.svg")} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu4.png")} alt="menu4"/>
+            <LogoImg src={"/Images/".concat(category,"/p2_logo4.svg")} alt="logo4"/>
 
         </Item>
         <Item>
-            <MenuImg src={"/Images/".concat(category,"/p2_menu5.png")} />
-            <LogoImg src={"/Images/".concat(category,"/p2_logo5.svg")} />
+            <MenuImg src={"/Images/".concat(category,"/p2_menu5.png")} alt="menu5"/>
+            <LogoImg src={"/Images/".concat(category,"/p2_logo5.svg")} alt="logo5"/>
 
         </Item>
         </Carousel>

@@ -14,16 +14,23 @@ const Item = styled.div`
 
 const MenuImg = styled.img`
     z-index: 1;
-    width: 60%;
+    width: 16rem;
+    height: 16rem;
     max-width: 400px;
     @media (max-width: 480px) {
-    width: 50%;
-
-   }
+        width: 22rem;
+        height: 22rem;
+    }
 `;
 const LogoImg = styled.img`
     margin-top: 20px;
-    width: 30%;
+    width: 9rem;
+    height: 6.78rem;
+    height: auto;
+    min-height: 1px;
+    @media (max-width: 480px) {
+        width: 12rem;
+    }
 
 `;
 
@@ -111,27 +118,27 @@ const MenuCarosuel = () => {
             >
         <Item>
             <MenuImg src="/Images/Brand/p2_menu1.png" />
-            <LogoImg src="/Images/Brand/p2_logo1.svg" />
+            <LogoImg src="/Images/Brand/p2_logo1.svg" viewBox="0 0 640 480"/>
 
         </Item>
         <Item>
             <MenuImg src="/Images/Brand/p2_menu2.png" />
-            <LogoImg src="/Images/Brand/p2_logo2.svg" />
+            <LogoImg src="/Images/Brand/p2_logo2.svg" viewBox="0 0 640 480"/>
 
         </Item>
         <Item>
             <MenuImg src="/Images/Brand/p2_menu3.png" />
-            <LogoImg src="/Images/Brand/p2_logo3.svg" />
+            <LogoImg src="/Images/Brand/p2_logo3.svg" viewBox="0 0 640 480"/>
 
         </Item>
         <Item>
             <MenuImg src="/Images/Brand/p2_menu4.png" />
-            <LogoImg src="/Images/Brand/p2_logo4.svg" />
+            <LogoImg src="/Images/Brand/p2_logo4.svg" viewBox="0 0 640 480"/>
 
         </Item>
         <Item>
             <MenuImg src="/Images/Brand/p2_menu5.png" />
-            <LogoImg src="/Images/Brand/p2_logo5.svg" />
+            <LogoImg src="/Images/Brand/p2_logo5.svg" viewBox="0 0 640 480"/>
 
         </Item>
         </Carousel>

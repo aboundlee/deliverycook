@@ -41,7 +41,7 @@ const FormWrapper = styled.div`
 `;
 
 const MainTextContainer = styled.div`
-    width: 90%;
+    width: 100%;
     margin-bottom: 5rem;
     @media (max-width: 480px) { 
     margin-bottom: 2rem;

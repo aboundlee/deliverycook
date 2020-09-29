@@ -59,7 +59,7 @@ const FullpageWrapper = () => {
      
 
      return (<>
-         <Section className="section"><Section1/></Section>
+
          <SectionContainer2 className="section"><Section2/></SectionContainer2>
          <Section className="section"><Section3/></Section>
               <SectionContainer3 className="section"><SectionAddition/></SectionContainer3>
@@ -82,7 +82,7 @@ const FullpageWrapper = () => {
       
           return (
               <ReactFullpage.Wrapper>
-              <div className="section"><Section1/></div>
+
               <div className="section"><Section2/></div>
               <div className="section"><Section3/></div>
               <div className="section"><SectionAddition/></div>

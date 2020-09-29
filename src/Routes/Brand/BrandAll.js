@@ -10,23 +10,30 @@ const Page = styled.section`
     width: 100%;
     height: 100%;
   padding-top: 70px;
+  
 `;
 
-
 const MainContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+`;
+const MainWrapper = styled.div`
+    background: url("/Images/Brand/About/brandBackground.jpg") no-repeat; 
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+`;
+
+const ImageContainer = styled.div`
     background: url("/Images/Brand/About/deliverycook.png") no-repeat; 
-    background-color: #fff;
     background-position: center;
     background-size: 70%;
     width: 100%;
     height: 100%;
-    @media (max-width: 480px) {
-	    background: url("/Images/Brand/About/deliverycookMobile.png") no-repeat; 
-	    height: 30%;
-    		background-size: 90%;
-    	    background-position: center;
-          background-color: #fff;
-    }
+
 `;
 const DetailSection = styled.div`
     width: 100%;
@@ -131,21 +138,17 @@ const Logo = styled.img`
 
 
 const TextContainer = styled.div`
-
+ 
+    z-index:10;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
     padding-left: 10%;
-    color: #242424;
+    color: #ffffff;
 
     position: relative;
-    @media (max-width: 480px) {
-      padding-left: 4%;
-        background-color: #fff;
-       height: 70%;
-    }
 `;
 
 
@@ -156,7 +159,7 @@ const MainTextWrapper = styled.div`
 
 const MainText = styled.p`
    font-style: normal;
-    font-size: 3.75rem;
+    font-size: 3rem;
     line-height: 5rem;
     font-weight: normal;
     margin-left: 1.4rem;
@@ -191,24 +194,55 @@ export default () => {
 
     return (
         <Page>
-          <MainContainer/>
+            <MainWrapper>
+          <Filter/>
 
-          <TextContainer>
-            <Fade bottom distance={'30%'}> 
-                <MainTextWrapper>
-                   <MainText><Bold>딜리버리쿡</Bold>은,</MainText>
-                </MainTextWrapper>
-            </Fade>
-            <Fade bottom distance={'30%'}> 
-                <SubTextWrapper>
-                    <SubText>딜리버리쿡은 <Bold>재료, 사람, 환경</Bold>의 <Bold>3 COOK</Bold> 경영 철학을 갖고 만들어졌습니다.
-                    <br/>현재 <Bold>딜리버리 삼겹살쿡, 딜리버리 돈까스쿡, 딜리버리 떡볶이쿡</Bold> 3개의 브랜드를 통해 
-		    <br/><Bold>믿을 수 있는 배달음식</Bold>을 만들고 있습니다.</SubText>
-                </SubTextWrapper>
-            </Fade>
+		  <TextContainer>
+		    <Fade bottom distance={'30%'}> 
+			<MainTextWrapper>
+			   <MainText><Bold>딜리버리쿡</Bold>은,</MainText>
+			</MainTextWrapper>
+		    </Fade>
+		    <Fade bottom distance={'30%'}> 
+			<SubTextWrapper>
+			     <SubText>
+				<Bold>배달&테이크아웃</Bold> 전문점입니다.
+				<br/><Bold>우리 동네 작은 푸드코트</Bold> 컨셉으로
+				<br/>주방에서 갓 나온 음식을 다양하게 선택하여 <Bold>포장과 배달</Bold>로 즐길 수 있습니다.
+				<br/>직접 조리하고 싶은 경우, <Bold>HMR (밀키트)</Bold>도 이용이 가능합니다.
+				<br/> <br/>
 
-          </TextContainer>
+				<br/> 고객을 위한 <Bold>좋은 재료</Bold>,
+				<br/> 고객을 위한 <Bold>깨끗한 환경</Bold>,
+				<br/> 고객을 위한 <Bold>전문 쉐프</Bold>의 음식으로 정성스러운 먹거리를 선사하겠습니다.
+			     </SubText>
+
+
+			</SubTextWrapper>
+		    </Fade>
+
+		  </TextContainer>
+          </MainWrapper>
         <Wrapper>
+	  <ImageContainer/>
+            <DetailSection bgColor={'#242424'}>
+                <Accent src={`/Images/Brand/About/accent1.png`} alt="accent1"/>
+
+                <Title>
+                    우리 동네 작은 <Bold>푸드코트</Bold>
+                </Title>
+                <SubTitle>
+                    한결같이 사랑받는<br/>메뉴만을 
+                    모았습니다.
+                    <br/>내 취향대로 골라먹는
+                    <br/>재미를 느껴보세요.
+                </SubTitle>
+                <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
+
+            </DetailSection>
+        </Wrapper>
+
+        <ReverseWrapper>
             <LogoSection bgImage={'1'}>
                 <Filter/>
                 <Logo src={`/Images/Brand/About/Brand1/brandLogo.png`} alt="logo"/>
@@ -228,8 +262,8 @@ export default () => {
                 <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
 
             </DetailSection>
-        </Wrapper>
-        <ReverseWrapper>
+        </ReverseWrapper>
+        <Wrapper>
             <LogoSection bgImage={'2'}>
                 <Filter/>
                 <Logo src={`/Images/Brand/About/Brand2/brandLogo.png`} alt="logo"/>
@@ -248,9 +282,9 @@ export default () => {
                 </SubTitle>
                 <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
             </DetailSection>
-        </ReverseWrapper>
+        </Wrapper>
 
-        <Wrapper>
+        <ReverseWrapper>
             <LogoSection bgImage={'3'}>
                 <Filter/>
                 <Logo src={`/Images/Brand/About/Brand3/brandLogo.png`} alt="logo"/>
@@ -269,7 +303,7 @@ export default () => {
                 </SubTitle>
                 <Accent src={`/Images/Brand/About/accent2.png`} alt="accent2"/>
             </DetailSection>
-        </Wrapper>
+        </ReverseWrapper>
         <DivLinker link={'/about/1'} text={'삼겹살쿡'}  />
         </Page>
     );

@@ -5,6 +5,8 @@ import {withRouter} from 'react-router-dom';
 import {isIE} from 'react-device-detect';
 import styled from "styled-components";
 
+
+
 import Section1 from './Section1';
 import Section12 from './Section12';
 import Section2 from './Section2';
@@ -12,6 +14,9 @@ import Section3 from './Section3';
 import Section4 from './Section4';
 import Section5 from './Section5';
 import Footer from '../../../Components/Footer';
+
+import DetailTitle from './Strengths/DetailTitle';
+
 
 import BrandSection1 from '../../Brand/Main/Section1';
 import DivLinker from '../../../Components/DivLinker';
@@ -47,17 +52,24 @@ const SectionAdder = styled.section`
     position: relative;
 `;
 
+const SmallSection = styled.section`
+
+`;
 
 const FullpageWrapper = () => {
    
+    
+
     window.scrollTo(0, 0);
-
-    if (isIE) {
-
         return (
             <Wrapper>
-            <Section className="section"><Section1/></Section>
+            <Section className="section"><BrandSection1/></Section>
+            {/* <Section className="section"><Section1/></Section> */}
             <Section className="section"><Section12/></Section>
+            <SmallSection className="section"><DetailTitle/></SmallSection>
+ 
+
+
             <Section className="section"><Section2/></Section>
             <Section className="section"><Section3/></Section>
             <Section className="section"><Section4/></Section>
@@ -65,29 +77,32 @@ const FullpageWrapper = () => {
 	        <SectionAdder className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북"/></SectionAdder>
         </Wrapper>
         );
-    }
+    
 
-    return (
-    <ReactFullpage
-        licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}
-        navigation
+        
 
-        render={({ state, fullpageApi }) => {
-        return (
-            <ReactFullpage.Wrapper>
-            {/* <div className="section"><BrandSection1/></div> */}
+    // return (
+    // <ReactFullpage
+    //     licenseKey = {process.env.REACT_APP_FULLPAGE_KEY}
+    //     navigation
 
-            <div className="section"><Section1/></div>
-            <div className="section"><Section12/></div>
-            <div className="section"><Section2/></div>
-            <div className="section"><Section3/></div>
-            <div className="section"><Section4/></div>
-            <div className="section"><Section5/><Footer/></div>
-	    <div className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북"/></div>
-            </ReactFullpage.Wrapper>
-        );
-    }}
-     />);
+    //     render={({ state, fullpageApi }) => {
+    //     return (
+    //         <ReactFullpage.Wrapper>
+    //         {/* <div className="section"><BrandSection1/></div> */}
+    //         <div className="section"><BrandSection1/></div>
+    //         <div className="section"><Section1/></div>
+    //         <div className="section"><Section12/></div>
+    //         <div className="section"><Section2/></div>
+    //         <div className="section"><Section3/></div>
+    //         <div className="section"><Section4/></div>
+    //         <div className="section"><Section5/><Footer/></div>
+	//     <div className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북"/></div>
+    //         </ReactFullpage.Wrapper>
+    //     );
+    // }}
+    //  />
+    //  );
 
 };
 

@@ -72,7 +72,7 @@ const Logo = styled.img`
 `;
 
 const Bold = styled.span`
-    font-weight: 900;
+    font-weight: bold;
 `;
 const Section5 = () => {
 

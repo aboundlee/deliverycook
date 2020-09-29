@@ -30,7 +30,7 @@ const Background = styled.div`
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 1rem;
 
 `;
 
@@ -54,18 +54,20 @@ const MainText = styled.h1`
 `;
 
 
-const SubTextContainer = styled.div`
+const SubImageContainer = styled.div`
 
     margin-top: 2.5rem;
 `;
 
+const SubTextContainer = styled.div`
+    margin-bottom: 0.5rem;
 
-
+`;
 const SubText = styled.p`
     vertical-align:middle;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.563rem;
+    font-size: 2rem;
 `;
 
 
@@ -80,7 +82,7 @@ const Logo = styled.img`
 `;
 
 const Bold = styled.span`
-    font-weight: 900;
+    font-weight: bold;
 `;
 const Section1 = () => {
 
@@ -89,15 +91,19 @@ const Section1 = () => {
 	<Background/>
         <Fade duration={2000}> 
         <TextContainer>
-            <MainTextContainer>
-                <MainText>대한민국 </MainText>
-                <MainText><Bold>배달음식</Bold>의 </MainText>
-                <MainText>대표브랜드</MainText>
-            </MainTextContainer>
             <SubTextContainer>
+            <SubText>
+                    배달 & Take Out 전문
+                </SubText>
+            </SubTextContainer>
+            <MainTextContainer>
+                <MainText><Bold>푸드코트 </Bold></MainText>
+                <MainText>비즈니스</MainText>
+            </MainTextContainer>
+            <SubImageContainer>
 
                 <Logo src="/Images/LogoBrand.png" alt="딜리버리쿡"/>
-            </SubTextContainer>
+            </SubImageContainer>
         
         </TextContainer>
         </Fade>

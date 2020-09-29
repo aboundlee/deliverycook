@@ -511,7 +511,7 @@ const Section4 = () => {
         let screenSize = document.documentElement.clientHeight;
         
         let yOffset = window.pageYOffset;
-        let divOffset = screenSize*4 + 300; // Svg 의 margin-top 반영
+        let divOffset = screenSize*3 + 300; // Svg 의 margin-top 반영
     
         let pathEndScroll1 = divOffset + pathHeight[0] ; // 현재 div 사이즈가 600vh 이므로
 
