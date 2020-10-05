@@ -47,7 +47,8 @@ const NavBar = styled.div`
             } else if (props.hover && props.brand) {
                 return css `
 		 background: #fff;
-		 height: 15.5rem;
+		 //height: 15.5rem;
+		 height: 109px;
                 `;
             }
       }}
@@ -208,8 +209,17 @@ const AdditionalMenu = styled.ul`
 const AdditionalMenuItem = styled.li`
    width: auto;
     padding: 0;
+    background: #E50012;
     font-size: 1rem;
-     height: 2rem;
+   line-height: 2.2rem;
+     height: 2.2rem;
+    color: #fff;
+    &:hover {
+
+    color: #E50012;
+    background: #fff;
+
+    } 
 `;
 
 const SubMenuItems = styled.div`

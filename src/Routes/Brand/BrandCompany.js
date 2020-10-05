@@ -67,7 +67,7 @@ const SubText = styled.h2`
 const Column1 = styled.div`
     text-align: center;
   display: flex;
-    text-align: center;
+    text-align: left;
   align-items: center;
   justify-content: center;
    padding: 3rem;
@@ -76,8 +76,9 @@ const Column1 = styled.div`
    
 `;
 const Content = styled.p`
-  font-size: 1.5rem;
-  line-height: 3rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  width: 100%;
 
 `;
 const Bold = styled.span`

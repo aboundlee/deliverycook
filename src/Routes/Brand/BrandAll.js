@@ -194,6 +194,7 @@ export default () => {
 
     return (
         <Page>
+	{/*
             <MainWrapper>
           <Filter/>
 
@@ -241,6 +242,8 @@ export default () => {
 
             </DetailSection>
         </Wrapper>
+
+	*/}
 
         <ReverseWrapper>
             <LogoSection bgImage={'1'}>
