@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import styled from "styled-components";
 import Timeline from  '../../Components/Timeline.js';
 import Fade from 'react-reveal/Fade';
+import {isIE} from 'react-device-detect';
 
 //import Fade from 'react-reveal/Fade';
 
@@ -153,7 +154,7 @@ export default () => {
               </Content>
                 </Fade>
             </Column1>
-	<Timeline/>
+	{ (!isIE) && <Timeline/> }
 
 </Page>
     );
