@@ -405,7 +405,7 @@ const MobileHeaderLink = styled(Link)`
 
 const LinkButton = styled.div`
     vertical-align: middle;
-    width: 6.875rem;
+    width: 7.2rem;
     height: 4.045rem;
 background: #E50012;
 border-radius: 2.719rem;

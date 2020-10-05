@@ -94,7 +94,6 @@ const GridItem = styled(Grid)`
     padding: 1rem 1.5rem;
     width: 26.125rem;
     height: 29.563rem;
-    cursor: pointer;
 
    @media(max-width: 480px) {
     height: 15.563rem;
@@ -104,6 +103,8 @@ const GridItem = styled(Grid)`
    
 
     
+/*
+    cursor: pointer;
     &:hover {
         background: rgba(0, 0, 0, 0.05);
         border: 2px solid #fff;
@@ -111,6 +112,7 @@ const GridItem = styled(Grid)`
     $:active {
         background: rgba(0, 0, 0, 0.05);
     }
+*/
 `;
 const G = styled.div`
 
