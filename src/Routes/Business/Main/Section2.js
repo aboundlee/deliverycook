@@ -115,7 +115,6 @@ const Phone = styled.img`
     z-index: 4;
     height: 29.813rem;
     width: auto;    
-
     @media (max-width: 480px) {
         height: 400px;
     }

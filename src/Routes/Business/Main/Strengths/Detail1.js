@@ -118,14 +118,16 @@ const Datail1 = () =>    {
                 <TextContainer>
                         <div className="main_text_div">
                             <Fade right>
-                                <MainText>홀 없는 푸드코트 매장</MainText>
+                                <MainText>실속있는 가성비 전략</MainText>
                             </Fade>
     
                             <Fade right>
                             <Content>
-                            <TextHighlight>각 전문점이 한 곳에 모여있는</TextHighlight> 매장에서
-                            <br/>고객이 편리하게 쇼핑하듯
-                            <br/>조리한 메뉴를 골라가는 시스템입니다.
+                                취향존중, 내맘대로 고르는 요리.
+                                <br/>삼겹살, 돈까스, 닭볶이, 부대찌개 등 
+                                <br/>실속 있는 <TextHighlight>메인 요리</TextHighlight>들을 
+                                <br/><TextHighlight>7,000원대</TextHighlight>의 저렴한 가격에 
+                                <br/>고객이 직접 골라가는 시스템입니다.
                             </Content>
                             </Fade>
 
@@ -136,4 +138,5 @@ const Datail1 = () =>    {
     );
 };
 
+//메인 요리 중심</TextHighlight>으로 된
 export default Datail1;

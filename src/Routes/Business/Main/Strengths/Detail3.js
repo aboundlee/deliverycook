@@ -212,12 +212,12 @@ const Datail = () =>    {
             <TextContainer>
                     <div className="main_text_div">
                         <Fade right>
-                            <MainText>전문점을 모았다!</MainText>
+                            <MainText>비수기가 없습니다.</MainText>
                         </Fade>
  
                         <Fade right>
                         <Content>
-                        비수기가 없습니다.
+                        
                         <br/>한결같이 사랑받는 <TextHighlight>스테디셀러 메뉴</TextHighlight>들로
                         <br/>상권, 계절, 시간 어떤 변수에도
                         <br/>안정적으로 운영 해보세요.

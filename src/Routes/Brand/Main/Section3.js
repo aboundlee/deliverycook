@@ -65,7 +65,7 @@ const MainTextContainer = styled.div`
 const MainText = styled.p`
    font-style: normal;
     font-weight: normal;
-    font-size: 3.75rem;
+    font-size: 3rem;
     line-height: 5rem;
 `;
 
@@ -106,10 +106,10 @@ const Section3 = () => {
                 <Fade bottom distance={'30%'}> 
 
                 <SubTextContainer>
-                    <SubText>딜리버리쿡의 <Bold>특별함</Bold></SubText>
+                    <SubText>딜리버리쿡,<Bold></Bold></SubText>
                 </SubTextContainer>
                 <MainTextContainer>
-                        <MainText><Bold>배달음식</Bold>을<br/><Bold>믿고 먹을 수 </Bold>있도록 하다.</MainText>
+                        <MainText><Bold>고객의 기다림이</Bold><br/><Bold>설레임</Bold>이 되도록</MainText>
                         <Hilight src="/Images/Brand/p5_redline.svg" alt="highlight"></Hilight>
 
                 </MainTextContainer>

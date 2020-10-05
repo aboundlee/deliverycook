@@ -130,7 +130,7 @@ const Datail = () =>    {
                             오랜시간 공들여 자체 개발한 <TextHighlight>원팩 시스템</TextHighlight>으로
                         <br/>누구나 손 쉬운 조리가 가능합니다.
                         <br/>조리는 간편하게! 맛은 더 좋게!
-                        <br/>노래 한곡이면 당신의 요리가 완성됩니다.
+                        <br/><TextHighlight>3분이면</TextHighlight> 당신의 요리가 완성됩니다.
                         </Content>
                         </Fade>
 

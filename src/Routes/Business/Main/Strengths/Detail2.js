@@ -120,14 +120,14 @@ const Datail = () =>    {
             <TextContainer>
                     <div className="main_text_div">
                         <Fade left>
-                            <MainText>판매 방식의 다각화</MainText>
+                            <MainText>판매 방식의 확장</MainText>
                         </Fade>
  
                         <Fade left>
                         <Content>
-                            <TextHighlight>테이크 아웃</TextHighlight>, <TextHighlight>배달</TextHighlight>, <TextHighlight>HMR</TextHighlight> 까지 
-                        <br/>딜리버리쿡은 고객 니즈에 맞춘 접근성으로
-                        <br/>판매 방식을 다각화하여 안정적인 운영을 만들었습니다.
+                            <TextHighlight>테이크 아웃</TextHighlight>, <TextHighlight>배달</TextHighlight>, <TextHighlight>HMR 제품</TextHighlight> 까지 
+                        <br/>고객 편리성에 맞춘 판매 방식으로
+                        <br/>안정적인 운영 구조를 제공합니다.
                         </Content>
                         </Fade>
 

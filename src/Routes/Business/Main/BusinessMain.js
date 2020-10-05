@@ -72,7 +72,6 @@ const FullpageWrapper = () => {
 
             <Section className="section"><Section2/></Section>
             <Section className="section"><Section3/></Section>
-            <Section className="section"><Section4/></Section>
             <Section className="section"><Section5/><Footer/></Section>
 	        <SectionAdder className="section  fp-auto-height"><DivLinker link={'/success'} text="성공가이드북"/></SectionAdder>
         </Wrapper>

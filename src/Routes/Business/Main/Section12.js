@@ -42,7 +42,7 @@ const MainTextWrapper = styled.div`
 
 const MainText = styled.p`
    font-style: normal;
-    font-size: 3rem;
+    font-size: 2.75rem;
     line-height: 5rem;
     font-weight: normal;
     margin-left: 1.4rem;
@@ -82,15 +82,17 @@ const Section12 = () => {
         <TextContainer>
             <Fade bottom distance={'30%'}> 
                 <MainTextWrapper>
-                    <MainText><Bold>배달 & Take Out 푸드코트 비즈니스</Bold>란?</MainText>
+                    <MainText><Bold>이제는 집에서 밥을 해먹지 않는 시대!</Bold></MainText>
                 </MainTextWrapper>
             </Fade>
             <Fade bottom distance={'30%'}> 
                 <SubTextWrapper>
-                    <SubText>언택트 시대의 라이프 스타일 변화에 맞춘 새로운 비즈니스 형태입니다.
-                    <br/>하나의 매장에서 <Bold>여러개의 전문 브랜드</Bold>를 운영함으로서
-                    <br/>푸드코트처럼 <Bold>여러 고객의 니즈</Bold>를 충족시킵니다.
-		            <br/><Bold>상권에 따라</Bold> 최적의 브랜드를 <Bold>맞춤형으로 성공적인 창업</Bold>을 해보세요.</SubText>
+                    <SubText><Bold>배달 & Take Out 푸드코트 비즈니스</Bold>는,
+                    <br/>바쁜 현대인, 언택트 시대에 적합한 최적의 비즈니스.
+                    <br/>
+                    <br/>반찬이 아니라 <Bold>메인 요리</Bold>를 골라 담아
+                    <br/>푸짐한 한상 차림을 배달과 포장으로 즐깁니다.
+		            </SubText>
                 </SubTextWrapper>
             </Fade>
         </TextContainer>

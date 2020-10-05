@@ -48,7 +48,7 @@ const BookImg = styled.img`
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    width: 45vw;
     padding-left: 10%;
     color: #242424;
 
@@ -124,11 +124,10 @@ const Section4 = () =>    {
                         <SubText>Good Cook 교육, 좋은 요리사로 재탄생하다.</SubText>
                         </Fade>
                         <Fade bottom>
-                        <Content>음식점의 본질은 요리입니다.
-                            <br/>음식이 맛이 있어야 해요.
-                            <br/>아, 너무 걱정하진 마세요.
-                            <br/>실력이 좋은, 마인드가 좋은 요리사로 거듭나도록
-                            <br/>본사에서 특별한 교육을 지원합니다.</Content>
+                        <Content>
+                            체계적인 교육 시스템과 간편한 조리 방법 개발로
+                            <br/>초보 요리사도 쉽게 실력 있는 요리사로 거듭나도록
+                            <br/>본사만의 특별한 교육을 지원합니다.</Content>
                         </Fade>
 
                     </div>
