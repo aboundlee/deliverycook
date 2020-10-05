@@ -27,6 +27,21 @@ const NavBar = styled.div`
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+
+    ${props => {
+            if (props.whiteByScroll) {
+                return css `
+                    height: 109px;
+                    background: #fff;
+                `;
+            } else {
+                return css `
+                    height: 109px;
+                    background: transparent;
+                `;
+         }
+    }}
+
     ${props => {
             if (props.iswhiteheader) {
                 return css `
@@ -263,16 +278,28 @@ const HeaderLink = styled(Link)`
     color: #fff;
     line-height: 65px;
     cursor: pointer;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+
+
+    ${props => {
+            if (props.whiteByScroll) {
+                return css `
+                    color: #242424;
+                `;
+            } else {
+                return css `
+                    color: #fff;
+                `;
+         }
+    }}
 
     ${props => {
             if (props.iswhiteheader){
                 return css `
                     color: #242424;
-                    text-shadow: none;
                 `;
             }
         }}
+
     ${props => {
             if (props.hover){
                 return css `
@@ -463,10 +490,19 @@ const Header = ({changePageTo, history}) => {
     const [trigger, setTrigger] = useState();
     const [showMenu, setShowMenu] = useState(false);
     const [hoverMenu, setHoverMenu] = useState(false);
+    const [whiteByScroll, setWhiteByScroll] = useState(false);
 
     useEffect(() => {
     window.scrollTo(0, 0);
    }, [trigger]);
+    
+    useEffect(() => {
+	window.addEventListener('scroll', handleScroll);
+	return (() =>  window.removeEventListener('scroll', handleScroll));
+
+    },[]);
+
+
 
     let isBrandPage; 
     let isWhiteHeader;
@@ -498,6 +534,16 @@ const Header = ({changePageTo, history}) => {
         pageChanger = "brandPage";
     }
 
+    const handleScroll=()=>{
+    if (window.pageYOffset > 0) {
+        setWhiteByScroll(true);
+        
+    } else{
+        setWhiteByScroll(false);
+    }
+   
+    }
+
     function onClick (e) {
         changePageTo(pageChanger);
         setTrigger();
@@ -523,7 +569,7 @@ const Header = ({changePageTo, history}) => {
   }
 
   return (
-        <NavBar active={showMenu} iswhiteheader={isWhiteHeader? 1 : 0} onMouseEnter={() => setHoverMenu(true)} onMouseLeave={() => setHoverMenu(false)} hover={hoverMenu} brand={isBrandPage}>
+        <NavBar active={showMenu} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} onMouseEnter={() => setHoverMenu(true)} onMouseLeave={() => setHoverMenu(false)} hover={hoverMenu} brand={isBrandPage}>
         <NavContainer>
                 {isBrandPage 
 		? (
@@ -544,32 +590,32 @@ const Header = ({changePageTo, history}) => {
                         ? (
                     <Menu className="navlinks">
                         <MenuItem>
-                            <HeaderLink to={'/company'} onClick={()=> {Event('링크', '링크 클릭', '회사소개');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
+                            <HeaderLink to={'/company'} onClick={()=> {Event('링크', '링크 클릭', '회사소개');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>회사소개</HeaderLink>
 			    {headerLocation === '/company' && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
 			<MenuItem>
-                            <HeaderLink to={links[0]}  onClick={()=> {Event('링크', '링크 클릭', '브랜드&메뉴');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+                            <HeaderLink to={links[0]}  onClick={()=> {Event('링크', '링크 클릭', '브랜드&메뉴');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 			    {headerLocation.includes('/about')  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
 				    <AdditionalMenu className="navlinks" hover={hoverMenu} brand={isBrandPage}>
-					    <AdditionalHeaderLink to={'/about/all'} onClick={()=> {Event('링크', '링크 클릭', '딜리버리쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					    <AdditionalHeaderLink to={'/about/all'} onClick={()=> {Event('링크', '링크 클릭', '딜리버리쿡');}} hover={hoverMenu}>
 					        <AdditionalMenuItem> 딜리버리쿡 소개</AdditionalMenuItem></AdditionalHeaderLink>
-					    <AdditionalHeaderLink to={'/about/1'} onClick={()=> {Event('링크', '링크 클릭', '삼겹살쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					    <AdditionalHeaderLink to={'/about/1'} onClick={()=> {Event('링크', '링크 클릭', '삼겹살쿡');}} hover={hoverMenu}>
 						<AdditionalMenuItem>딜리버리삼겹살쿡</AdditionalMenuItem>
 					    </AdditionalHeaderLink>
-				       <AdditionalHeaderLink to={'/about/2'} onClick={()=> {Event('링크', '링크 클릭', '돈까스쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+				       <AdditionalHeaderLink to={'/about/2'} onClick={()=> {Event('링크', '링크 클릭', '돈까스쿡');}} hover={hoverMenu}>
 					  <AdditionalMenuItem>딜리버리돈까스쿡</AdditionalMenuItem>
 					</AdditionalHeaderLink>
-					<AdditionalHeaderLink to={'/about/3'} onClick={()=> {Event('링크', '링크 클릭', '떡볶이쿡');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>
+					<AdditionalHeaderLink to={'/about/3'} onClick={()=> {Event('링크', '링크 클릭', '떡볶이쿡');}} hover={hoverMenu}>
 				 	    <AdditionalMenuItem>딜리버리떡볶이쿡</AdditionalMenuItem>
 					</AdditionalHeaderLink>
 				    </AdditionalMenu>
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={()=> {Event('링크', '링크 클릭', '매장안내');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+                            <HeaderLink to={links[1]} onClick={()=> {Event('링크', '링크 클릭', '매장안내');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
 			    {headerLocation === links[1]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={()=> {Event('링크', '링크 클릭', '딜쿡소식');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+                            <HeaderLink to={links[2]} onClick={()=> {Event('링크', '링크 클릭', '딜쿡소식');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
 			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
@@ -585,15 +631,15 @@ const Header = ({changePageTo, history}) => {
                     : (
                     <Menu className="navlinks">
 			<MenuItem>
-                            <HeaderLink to={links[0]} onClick={()=> {Event('링크', '링크 클릭', '성공가이드북');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
+                            <HeaderLink to={links[0]} onClick={()=> {Event('링크', '링크 클릭', '성공가이드북');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[0]}</HeaderLink>
 			    {headerLocation === links[0]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[1]} onClick={()=> {Event('링크', '링크 클릭', '창업안내');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
+                            <HeaderLink to={links[1]} onClick={()=> {Event('링크', '링크 클릭', '창업안내');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[1]}</HeaderLink>
 			    {headerLocation === links[1]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
-                            <HeaderLink to={links[2]} onClick={()=> {Event('링크', '링크 클릭', '문의하기');}} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
+                            <HeaderLink to={links[2]} onClick={()=> {Event('링크', '링크 클릭', '문의하기');}} whiteByScroll={whiteByScroll} iswhiteheader={isWhiteHeader? 1 : 0} hover={hoverMenu}>{menus[2]}</HeaderLink>
 			    {headerLocation === links[2]  && (<LinkHighLight src="/Images/HeaderHighLight.svg" />)}
                         </MenuItem>
                         <MenuItem>
