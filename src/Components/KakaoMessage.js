@@ -87,6 +87,14 @@ console.log(result2);
 
     } else {
 	/* 네이버 전환률 스크립트*/
+	if (typeof(window.wcs) != "undefined") {
+		if (!window.wcs_add) var wcs_add={};
+		wcs_add["wa"] = "s_2cb627ab1fea";
+		var _nasa={};
+		_nasa["cnv"] = window.wcs.cnv("4","1");
+		window.wcs_do(_nasa);
+	}
+
         alert ("성공적으로 문의하였습니다.")
     }
   
